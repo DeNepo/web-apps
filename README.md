@@ -16,11 +16,7 @@
   * [Prep Work](./week-X#prep-work)
   * [Lesson Plan](./week-X#lesson-plan)
   * [Assignments](./week-X#assignments)
-* [Example Projects](./example-projects)
-* [In-Class Exercises](./javascripting)
-* [Study Links](https://study.hackyourfuture.be) (external)
-* [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
-* [Curriculum](https://curriculum.hackyourfuture.be/) (external)
+* [Helpful Links](#helpful-links)
 
 ---
 
@@ -39,6 +35,18 @@
 ### Integrating JavaScript
 
 ### Tooling
+
+[TOP](#overview)
+
+---
+
+## Helpful Links
+
+* [Example Projects](./example-projects)
+* [In-Class Exercises](./javascripting)
+* [Study Links](https://study.hackyourfuture.be) (external)
+* [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
+* [Curriculum](https://curriculum.hackyourfuture.be/) (external)
 
 [TOP](#overview)
 

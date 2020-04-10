@@ -26,11 +26,11 @@
 
 ### Isolate
 
-* \_: [examples](../javascripting/_/REVIEW.md), [exercises](../javascripting/_/REVIEW.md)
+* \_: [examples](../isolate/_/REVIEW.md), [exercises](../isolate/_/REVIEW.md)
 
 ### Integrate
 
-* \_: [stepped](../example-projects/_), [separated](../example-projects/_)
+* \_: [stepped](../integrate/_), [separated](../integrate/_)
 * [\_](https://github.com/hackyourfuturebelgium/coming-soon) (starter repo)
 
 ---

@@ -10,4 +10,4 @@ Screen recordings of class.  Coaches, when sending your PR's with links please m
 
 ---
 
-## Class X
+## Class 7 & 8

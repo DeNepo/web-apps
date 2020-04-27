@@ -55,7 +55,9 @@
 
 * [\_](_)
 
-### Project: `repo-name`
+### Project
+
+#### `repo-name`
 
 > [project type](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 

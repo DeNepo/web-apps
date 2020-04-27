@@ -12,12 +12,12 @@
 
 * [Module Summary](#module-summary)
 * [Learning Objectives](#learning-objectives)
-* [Week X](./week-X)
-  * [Prep Work](./week-X#prep-work)
-  * [Lesson Plan](./week-X#lesson-plan)
-  * [Assignments](./week-X#assignments)
-* [Isolate](./isolate)
-* [Integrate](./integrate)
+* [Week 1](./week-1)
+  * [Prep Work](./week-1#prep-work)
+  * [Lesson Plan](./week-1#lesson-plan)
+  * [Assignments](./week-1#assignments)
+* [Isolate](./isolate) - snippets and exercises
+* [Integrate](./integrate) - projects to study
 * [Class Recordings](./class-recordings.md)
 * [Study Links](https://study.hackyourfuture.be) (external)
 * [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)

@@ -5,22 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Module Name: Week X</title>
+  <title>Web Apps: Week X</title>
 
-  <script src='../dependencies/code-along.js'></script>
-
-  <link rel="stylesheet" href="../dependencies/reveal.js/css/reset.css">
-  <link rel="stylesheet" href="../dependencies/reveal.js/css/reveal.css">
-  <link rel="stylesheet" href="../dependencies/reveal.js/css/theme/night.css">
-
-  <script src='../dependencies/beautify.js'></script>
-
-  <!-- why won't local parser-babylon work -->
-  <script src="../dependencies/prettier/standalone.js"></script>
-  <!-- <script src="https://unpkg.com/prettier@1.13.0/standalone.js"></script> -->
-  <!-- <script src="./prettier/parser-babylon.js"></script> -->
-  <script src="https://unpkg.com/prettier@1.13.0/parser-babylon.js"></script>
-  <!-- <script src="../dependencies/beautify.js"></script> -->
+  <link rel="stylesheet" href="../reveal.js/css/reset.css">
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/night.css">
 
   <style>
     /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
@@ -36,12 +25,11 @@
 
 <body>
 
-
   <div class="reveal">
     <div class='footer'>
       <ul id='footer-links' style='visibility: hidden;'>
         <li>
-          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/module-name" target="_blank">
+          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/asynchronous-programming" target="_blank">
             <code>module repository</code>
           </a>
         </li>
@@ -59,14 +47,14 @@
     <div class="slides">
 
       <section id='cover-slide'>
-        <h2>Module Name</h2>
+        <h2>NodeJS</h2>
         <br>
-        <h3>Week X</h3>
+        <h3>Week 1</h3>
         <br>
         <code>"s"</code> for speaker notes
         <br>
         <br>
-        <a href="https://github.com/hackyourfuturebelgium/module-name/tree/master/week-X" target='_blank'>
+        <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1" target='_blank'>
           -- back to repo --
         </a>
       </section>
@@ -85,14 +73,16 @@
           <h3>Isolate</h3>
           <br>
           <ul>
-            <li></li>
+            <li>cli</li>
+            <li><code>request</code></li>
+            <li><code>fs</code></li>
           </ul>
         </section>
         <section>
           <h3>Integrate</h3>
           <br>
           <ul>
-            <li></li>
+            <li>CLI Todo App</li>
           </ul>
         </section>
       </section>
@@ -108,38 +98,17 @@
           <br>
           <code>(~30 min)</code>
         </section>
-        <section id="js-code-along">
-          <script>
-            codeAlong({
-              title: '',
-              container: 'js-code-along',
-              type: 'js',
-              source: []
-            })
-          </script>
-        </section>
-        <section id="document-code-along">
-          <script>
-            codeAlong({
-              title: '',
-              container: 'document-code-along',
-              type: 'document',
-              source: []
-            })
-          </script>
-        </section>
       </section>
 
       <section id='what-you-will-build'>
         <section>
           <h1>What You'll Build</h1>
           <br>
-          <p>_</p>
+          <p>CLI Todo App</p>
         </section>
         <section>
-          <h3>_</h3>
-          <iframe style='background-color:white; height: 75vh; width: 100%;'
-            src='../integrate/_-separated/index.html'></iframe>
+          <img src='https://www.omgubuntu.co.uk/wp-content/uploads/2018/08/taskbook-cli-app.jpg'>
+          </img>
         </section>
       </section>
 
@@ -148,41 +117,27 @@
         <h1>New Material</h1>
       </section>
 
-      <section id='_'>
+      <section id='the-event-loop'>
         <section>
-          <h2>_</h2>
+          <h2>Accepting Command Line Input</h2>
           <br>
           <code>(pair programming)</code>
         </section>
-        <section id='_-examples'>
-          <script>
-            codeAlong({
-              title: '_: Examples',
-              container: '_-examples',
-              type: 'js',
-              source: [
-                {
-                  name: '_',
-                  path: '../isolate/_',
-                },
-              ]
-            })
-          </script>
-        </section>
-        <section id='_-exercises'>
-          <script>
-            codeAlong({
-              title: '_: Exercises',
-              container: '_-exercises',
-              type: 'js',
-              source: [
-                {
-                  name: '_',
-                  path: '../isolate/_',
-                },
-              ]
-            })
-          </script>
+        <section>
+          <h3>Helpful Links</h3>
+          <br>
+          <ul>
+            <li>
+              <a href='https://example.org/what-is-the-command-line' target='_blank'>
+                What is the commandline?
+              </a>
+            </li>
+            <li>
+              <a href='https://example.org/nodejs-argsv' target='_blank'>
+                NodeJS: argsv
+              </a>
+            </li>
+          </ul>
         </section>
       </section>
 
@@ -199,49 +154,34 @@
           <br>
           <p>finished code for inspiration</p>
         </section>
-        <section id='_-stepped'>
-          <script>
-            codeAlong({
-              title: '_: stepped',
-              container: '_-stepped',
-              type: 'document',
-              source: [
-                {
-                  name: '0. Setup',
-                  path: '../integrate/_-stepped/0-setup.html'
-                },
-              ]
-            })
-          </script>
-        </section>
         <section>
-          <h2>_: Separated</h2>
+          <h2>Weather.It</h2>
           <br>
           <ul>
-            <li><a href='../integrate/_/index.html' target='_blank'>live project</a>
+            <li>
+              <a href='../integrate/weather-it/index.html' target='_blank'>live project</a>
             </li>
-            <li><a href='https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/integrate/_'
-                target='_blank'>source code</a></li>
+            <li>
+              <a href='https://github.com/hackyourfuturebelgium/Node.js/tree/master/integrate/weather-it '
+                target='_blank'>
+                source code
+              </a>
+            </li>
           </ul>
         </section>
       </section>
 
       <section id='in-class-project'>
         <section id='in-class-cover'>
-          <h2>In-Class Project</h2>
-          <br>
-          <p>_</p>
-          <br>
-          <code>(pair programming)</code>
-        </section>
-        <section>
-          <h2>_</h2>
+          <h2>CLI Todo</h2>
           <br>
           <p>
-            <a href='https://github.com/HackYourFutureBelgium/coming-soon' target='_blank'>
-              Starter Repository Link
+            <a href='https://github.com/HackYourFutureBelgium/cli-todo' target='_blank'>
+              Starter Repository
             </a>
           </p>
+          <br>
+          <code>(pair programming)</code>
         </section>
       </section>
 
@@ -252,8 +192,12 @@
           <p>It's only just beginning :)</p>
         </section>
         <section>
-          <h2><a href='https://github.com/hackyourfuturebelgium/encapsulation/tree/master/week-2' target='_blank'>
-              The Assignments</a></h2>
+          <h2>
+            <a href='https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-1'
+              target='_blank'>
+              The Assignments
+            </a>
+          </h2>
         </section>
         <section>
           <h2><a href='https://github.com/HackYourFutureBelgium/homework-submission#homework-issues' target='_blank'>
@@ -265,7 +209,8 @@
             <li><a
                 href='https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users'
                 target='_blank'>
-                Assign</a>, it to yourself</li>
+                Assign</a>, it to yourself
+            </li>
             <li><a
                 href='https://help.github.com/en/github/managing-your-work-on-github/applying-labels-to-issues-and-pull-requests'
                 target='_blank'>
@@ -280,14 +225,14 @@
       </section>
 
       <section id='cover-slide'>
-        <h2>Module Name</h2>
+        <h2>Asynchronous Programming</h2>
         <br>
-        <h3>Week X</h3>
+        <h3>Week 1</h3>
         <br>
         <code>"s"</code> for speaker notes
         <br>
         <br>
-        <a href="https://github.com/hackyourfuturebelgium/module-name/tree/master/week-X" target='_blank'>
+        <a href="https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-1" target='_blank'>
           -- back to repo --
         </a>
       </section>
@@ -295,7 +240,8 @@
     </div>
   </div>
 
-  <script src="../dependencies/reveal.js/js/reveal.js"></script>
+
+  <script src="../reveal.js/js/reveal.js"></script>
 
   <script>
     // More info about config & dependencies:
@@ -308,21 +254,9 @@
       help: true,
       width: "100%",
       height: "100%",
-      keyboard: {
-        // 67: function () { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
-        // 66: function () { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
-        // 46: function () { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
-        // 8: function () { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
-        // 68: function () { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
-        // 88: function () { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
-        // 89: function () { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
-      },
       dependencies: [
-        // { src: 'plugin/markdown/marked.js' },
-        // { src: 'plugin/markdown/markdown.js' },
-        { src: '../dependencies/reveal.js/plugin/notes/notes.js', async: true },
-        // { src: '../dependencies/reveal.js/plugin/chalkboard/chalkboard.js' },
-        // { src: 'plugin/highlight/highlight.js', async: true }
+        { src: '../reveal.js/plugin/notes/notes.js', async: true },
+        { src: '../reveal.js/plugin/highlight/highlight.js', async: true }
       ],
     });
 

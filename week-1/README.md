@@ -1,4 +1,4 @@
-# Week X
+# Week 1
 
 ## Module Name
 
@@ -14,7 +14,10 @@
 
 ## Prep Work
 
-... things to read/watch/try before coming in on sunday ...
+### Node 101
+
+* [Mosh]()
+* [Traversy]()
 
 ---
 
@@ -22,16 +25,18 @@
 
 > [Lesson Plan Slides](https://hackyourfuture.be/module-name/week-X)
 
-... a few words ...
+* Command line arguments: `argsv`
+* Native Node.js modules: `fs`, `assert`
 
 ### Isolate
 
-* \_: [examples](../isolate/_/REVIEW.md), [exercises](../isolate/_/REVIEW.md)
+* `assert`: [examples](../isolate/assert). (no `assert` exercises, the `fs` exercises use `assert`)
+* `fs`: [examples](../isolate/fs-examples), [exercises](../isolate/fs-exercises)
 
 ### Integrate
 
-* \_: [stepped](../integrate/_), [separated](../integrate/_)
-* [\_](https://github.com/hackyourfuturebelgium/coming-soon) (starter repo)
+* [weather-it](../integrate/weather-it)
+* [json-todo-cli](https://github.com/hackyourfuturebelgium/coming-soon) (starter repo)
 
 ---
 
@@ -43,27 +48,25 @@
 
 #### Isolating JavaScript
 
-* links to exercises. repositories, tutorial sites, ...
-* [\_](https://github.com/hackyourfuturebelgium/coming-soon)
+* [request-module](https://github.com/hackyourfuturebelgium/request-module)
+  * Practice making http requests from Node
+  * `request` is the Node.js equivalent of `fetch` in the browser
 
 #### Integrating JavaScript
 
-* Finish the in-class project from Sunday
-* other tiny projects, preferably collaborative
-
-#### Challenge Exercises
-
-* [\_](_)
+* [cowsaydex](https://github.com/hackyourfuturebelgium/cowsaydex)
+  * Practice integrating NPM Packages into your projects, starting with [cowsay](https://github.com/piuccio/cowsay)
+  * There is an obfuscated demo and a completed `development-strategy.md`.  Make it work!
 
 ### Project
 
-#### `repo-name`
+#### `api-deep-freeze`
 
 > [project type](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
-This week's project is to study the [link to project (starter repo, tutorial, ...)](_).  _more about the project, what it covers, any extra info_
+This week's project is to fork and complete the [`api-deep-freeze` repository](https://github.com/hackyourfuturebelgium/api-deep-freeze).  This is a 'simple' node script that fetches data from an API and saves it locally.
 
-You will be expected to turn in your code from his tutorial on a new repository called `repo-name`.  This should be a complete project repository including:
+You will be expected to turn in your code from his tutorial on a new repository called `api-deep-freeze`.  This should be a complete project repository including:
 
 * A `development-strategy.md` file to explain how you built the app in small pieces (this file doesn't need to match the tutorial!)
 * One branch per step in your `development-strategy.md`
@@ -72,7 +75,3 @@ You will be expected to turn in your code from his tutorial on a new repository 
 
 You will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.
 
----
----
-
-### <a href="https://hackyourfuture.be" target="_blank"><img src="https://user-images.githubusercontent.com/18554853/63941625-4c7c3d00-ca6c-11e9-9a76-8d5e3632fe70.jpg" width="100" height="100" alt="Hack Your Future: Belgium"></a>

@@ -34,11 +34,24 @@
 
 ### Programming Skills
 
-### Isolating JavaScript
+* Comfortably manipulate local directories
+* Build basic fullstack projects (SPA/API) that save to the file system
+* Write RESTful APIs for data types with simple relationships
+* Finding and integrating NPM Packages into your projects
+* Using Postman to develop APIs without a frontend
+* Running and writing tests for API routes
 
-### Integrating JavaScript
+### Native Node.js
 
-### Tooling
+* Node.js CLI scripts
+  * `argsv`
+* Native Node.js modules
+  * `assert`, `fs`, `path`, `request`, `http`
+
+### NPM Packages
+
+* for fun: `cowsay`, ...
+* for serious: `express`, `body-parser`, `cors`
 
 [TOP](#overview)
 
@@ -56,5 +69,3 @@
 
 ---
 ---
-
-### <a href="https://hackyourfuture.be" target="_blank"><img src="https://user-images.githubusercontent.com/18554853/63941625-4c7c3d00-ca6c-11e9-9a76-8d5e3632fe70.jpg" width="100" height="100" alt="Hack Your Future: Belgium"></a>

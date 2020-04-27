@@ -31,7 +31,7 @@
 ### Isolate
 
 * `assert`: [examples](../isolate/assert). (no `assert` exercises, the `fs` exercises use `assert`)
-* `fs`: [examples](../isolate/fs-examples), [exercises](../isolate/fs-exercises)
+* `fs` (with callbacks): [examples](../isolate/fs-examples), [exercises](../isolate/fs-exercises)
 
 ### Integrate
 
@@ -48,6 +48,8 @@
 
 #### Isolating JavaScript
 
+* [promisify-fs](https://github.com/hackyourfuturebelgium/promisify-fs)
+  * Learn how to use `fs` with promises
 * [request-module](https://github.com/hackyourfuturebelgium/request-module)
   * Practice making http requests from Node
   * `request` is the Node.js equivalent of `fetch` in the browser

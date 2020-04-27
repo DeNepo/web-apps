@@ -15,6 +15,7 @@ const weatherAPIKey = require('../config').WEATHER_API_KEY
  *
  * @property {object} condition
  * @property {string} condition.text
+ * @property {string} condition.icon
  */
 
 /**

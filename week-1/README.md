@@ -50,9 +50,9 @@
 
 * [promisify-fs](https://)
   * Learn how to use `fs` with promises
-* [request-module](https://github.com/hackyourfuturebelgium/request-module)
+* [learn-node-fetch](https://github.com/hackyourfuturebelgium/learn-node-fetch)
   * Practice making http requests from Node
-  * `request` is the Node.js equivalent of `fetch` in the browser
+  * `node-fetch` is an NPM package that allows you to make HTTP request from Node.js with the same syntax & behavior as `fetch` in the browser
 
 #### Integrating JavaScript
 

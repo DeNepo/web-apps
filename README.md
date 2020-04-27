@@ -51,7 +51,7 @@
 ### NPM Packages
 
 * for fun: `cowsay`, ...
-* for serious: `request`, `request-promisify`, `express`, `body-parser`, `cors`
+* for serious: `node-fetch`, `express`, `body-parser`, `cors`
 
 [TOP](#overview)
 

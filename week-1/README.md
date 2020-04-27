@@ -48,7 +48,7 @@
 
 #### Isolating JavaScript
 
-* [promisify-fs](https://github.com/hackyourfuturebelgium/promisify-fs)
+* [promisify-fs](https://)
   * Learn how to use `fs` with promises
 * [request-module](https://github.com/hackyourfuturebelgium/request-module)
   * Practice making http requests from Node

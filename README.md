@@ -46,12 +46,12 @@
 * Node.js CLI scripts
   * `argsv`
 * Native Node.js modules
-  * `assert`, `fs`, `path`, `request`, `http`
+  * `assert`, `fs`, `path`, `http`
 
 ### NPM Packages
 
 * for fun: `cowsay`, ...
-* for serious: `express`, `body-parser`, `cors`
+* for serious: `request`, `request-promisify`, `express`, `body-parser`, `cors`
 
 [TOP](#overview)
 

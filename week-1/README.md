@@ -48,8 +48,8 @@
 
 #### Isolating JavaScript
 
-* [promisify-fs](https://)
-  * Learn how to use `fs` with promises
+* [learn-util-promisify](https://)
+  * Learn how to convert functions with callbacks to promises using `util.promisify`
 * [learn-node-fetch](https://github.com/hackyourfuturebelgium/learn-node-fetch)
   * Practice making http requests from Node
   * `node-fetch` is an NPM package that allows you to make HTTP request from Node.js with the same syntax & behavior as `fetch` in the browser

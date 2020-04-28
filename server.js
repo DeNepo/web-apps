@@ -24,10 +24,9 @@ try {
 };
 
 const log = (msg) => {
-  // more readable callstack, and to practice finding own files
-  const cleanedMsg = msg.replace(__dirname, ' [ ... ] ');
+  const cleanedMsg = msg.split(__dirname).join(' [ ... ] ');
   console.log(cleanedMsg);
-  fs.appendFileSync(LOG_DIR + LOG_FILE, cleanedMsg + '\n');
+  fs.appendFileSync('./' + REPORT_NAME, cleanedMsg + '\n');
 };
 
 const mime = {

@@ -14,12 +14,20 @@
 
 ## Prep Work
 
+### Error-First Callbacks
+
+* [thenodeway](http://thenodeway.io/posts/understanding-error-first-callbacks/) (article)
+* [fredkschott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (article)
+* [Sid Harder](JavaScript Error First Callback functions) (video)
+* [David Connelly](https://www.youtube.com/watch?v=Pov477mI57A) (video)
+
 ### Node.js 101
 
 Both of these are long videos, you don't need to finish them before class. But they are great videos! Finish studying them over the next week for gud learns.
 
-* [Mosh](https://www.youtube.com/watch?v=uVwtVBpw7RQ&list=PLTjRvDozrdlydy3uUBWZlLUTNpJSGGCEm&index=1)
-* [Traversy](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
+* [Mosh: Node.js in 1 hour](https://www.youtube.com/watch?v=uVwtVBpw7RQ&list=PLTjRvDozrdlydy3uUBWZlLUTNpJSGGCEm&index=1)
+* [Traversy: Node for Absolute Beginners](https://www.youtube.com/watch?v=U8XF6AFGqlc)
+* [Traversy: Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
 
 ---
 
@@ -32,6 +40,7 @@ Both of these are long videos, you don't need to finish them before class. But t
 
 ### Isolate
 
+* `process.argv`: [examples](../isolate/process-argv)
 * `assert`: [examples](../isolate/assert)
 * `fs` (with callbacks): [examples](../isolate/fs-examples), [exercises](../isolate/fs-exercises)
 
@@ -66,7 +75,11 @@ Both of these are long videos, you don't need to finish them before class. But t
 
 > [Code-Along](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
-This week's project is to follow the  [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh.  Besides just Express and writing RESTful routes you will learn how to use _JSON schemas_, test your API's with _Postman_, use _environmental variables-, and practice continuous development using _nodemon_.  But that's not enough! After finishing with the tutorial you will need to refactor the code so that:
+This week's project is to follow the  [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh.  Besides just Express and writing RESTful routes you will learn how to use _JSON schemas_, test your API's with _Postman_, use _environmental variables-, and practice continuous development using _nodemon_.
+
+Don't worry if you don't understand everything in this project.  The tutorial covers a lot of material very quickly, we'll spend the next weeks going deeper into the topics Mosh covers here.  Think of this week's project as a sneak preview of the coming 3 weeks.
+
+Just copying his code is not all! After finishing with the tutorial you will need to refactor the code so that:
 
 * It reads and writes from a file called `courses.json` instead of using a local variable.
 

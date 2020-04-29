@@ -1,1 +1,1 @@
-examples and exercises used in class
+examples and exercises for in class

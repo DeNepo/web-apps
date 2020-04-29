@@ -34,24 +34,30 @@
 
 ### Programming Skills
 
-* Comfortably manipulate local directories
+* Comfortably work with the file system
 * Build basic fullstack projects (SPA/API) that save to the file system
-* Write RESTful APIs for data types with simple relationships
-* Finding and integrating NPM Packages into your projects
+* Write RESTful APIs for simple data relationships
+* Using NPM Packages in your projects
 * Using Postman to develop APIs without a frontend
 * Running and writing tests for API routes
+* Documenting your code with JSDoc
 
 ### Native Node.js
 
 * Node.js CLI scripts
   * `argsv`
 * Native Node.js modules
-  * `assert`, `fs`, `path`, `http`
+  * `assert`, `fs`, `path`, `http`, `util`
 
 ### NPM Packages
 
 * for fun: `cowsay`, ...
 * for serious: `node-fetch`, `express`, `body-parser`, `cors`
+
+### Development Tools
+
+* [JSDoc](https://github.com/jsdoc/jsdoc)
+* [Postman](https://www.postman.com/)
 
 [TOP](#overview)
 

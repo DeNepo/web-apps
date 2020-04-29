@@ -48,27 +48,23 @@
 
 #### Isolating JavaScript
 
-* [learn-util-promisify](https://)
+* [learn-util-promisify](https://github.com/hackyourfuturebelgium/learn-util-promisify)
   * Learn how to convert functions with callbacks to promises using `util.promisify`
-* [learn-node-fetch](https://github.com/hackyourfuturebelgium/learn-node-fetch)
-  * Practice making http requests from Node
-  * `node-fetch` is an NPM package that allows you to make HTTP request from Node.js with the same syntax & behavior as `fetch` in the browser
 
 #### Integrating JavaScript
 
 * [cowsaydex](https://github.com/hackyourfuturebelgium/cowsaydex)
   * Practice integrating NPM Packages into your projects, starting with [cowsay](https://github.com/piuccio/cowsay)
-  * There is an obfuscated demo and a completed `development-strategy.md`.  Make it work!
 
 ### Project
 
-#### `api-deep-freeze`
+#### `pokedex-deep-freeze`
 
 > [project type](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
-This week's project is to fork and complete the [`api-deep-freeze` repository](https://github.com/hackyourfuturebelgium/api-deep-freeze).  This is a 'simple' node script that fetches data from an API and saves it locally.
+This week's project is to fork and complete the [`api-deep-freeze` repository](https://github.com/hackyourfuturebelgium/pokedex-deep-freeze).  This is a 'simple' node script that fetches data from the [PokeAPI](https://pokeapi.co/) and saves it to your file system.
 
-You will be expected to turn in your code from his tutorial on a new repository called `api-deep-freeze`.  This should be a complete project repository including:
+You will be expected to turn in your code from his tutorial on a new repository called `pokedex-deep-freeze`.  This should be a complete project repository including:
 
 * A `development-strategy.md` file to explain how you built the app in small pieces (this file doesn't need to match the tutorial!)
 * One branch per step in your `development-strategy.md`

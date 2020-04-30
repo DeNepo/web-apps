@@ -5,7 +5,9 @@ const newContent = process.argv[3];
 
 const callBack = (err) => {
   if (err) {
-    console.error(err);
+    throw err;
+  } else {
+    console.log('done writing to ./' + process.argv[2]);
   };
 };
 

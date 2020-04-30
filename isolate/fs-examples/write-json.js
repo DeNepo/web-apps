@@ -16,7 +16,9 @@ const toWrite = JSON.stringify(toStringify, null, '  ');
 
 const callBack = (err) => {
   if (err) {
-    console.error(err);
+    throw err;
+  } else {
+    console.log('done writing to ./' + process.argv[2]);
   };
 };
 

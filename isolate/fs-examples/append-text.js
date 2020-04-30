@@ -4,7 +4,9 @@ const contentToAppend = process.argv[2] + '\n';
 
 const ifErrorCallback = (err) => {
   if (err) {
-    console.error(err);
+    throw err;
+  } else {
+    console.log('done appending to ./' + process.argv[2]);
   };
 };
 

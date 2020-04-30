@@ -4,7 +4,7 @@ const filePath = __dirname + '/' + process.argv[2];
 
 const callBack = (err, content) => {
   if (err) {
-    console.error(err);
+    throw err;
   } else {
     console.log(content);
     const contentAsString = content.toString();

@@ -5,7 +5,9 @@ const targetFile = __dirname + '/' + process.argv[3];
 
 const ifErrorCallback = (err) => {
   if (err) {
-    console.error(err);
+    throw err;
+  } else {
+    console.log('done copying to ./' + process.argv[2] + ' to ./' + process.argv[3]);
   };
 };
 

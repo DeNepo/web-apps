@@ -4,10 +4,10 @@
 // It is data the program receives from outside itself.
 
 
-// process.argv is where the program stores these arguments for you to use
+// process.argv is an array where the program stores these arguments for you to use
 console.log('all args')
+console.log(Array.isArray(process.argv))
 console.log(process.argv)
-
 
 // You'll notice the first 2 arguments are special.
 // They are always present, even if you don't provide any arguments.

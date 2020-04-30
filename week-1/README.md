@@ -35,14 +35,15 @@ Both of these are long videos, you don't need to finish them before class. But t
 
 > [Lesson Plan Slides](https://hackyourfuture.be/module-name/week-X)
 
-* Command line arguments: `argsv`
+* Command line arguments: `process.argv`
 * Native Node.js modules: `fs`, `assert`
 
 ### Isolate
 
 * `process.argv`: [examples](../isolate/process-argv)
 * `assert`: [examples](../isolate/assert)
-* `fs` (with callbacks): [examples](../isolate/fs-examples), [exercises](../isolate/fs-exercises)
+* `fs`: [examples](../isolate/fs-examples)
+* [week 1 exercises](../isolate/week-1-exercises)
 
 ### Integrate
 

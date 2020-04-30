@@ -1,4 +1,4 @@
-const assert = require('assert');
+const assert = require('assert')
 
 /* assert.ok
   For these exercises you will be using the 'assert' library that comes with Node.js
@@ -22,46 +22,49 @@ const assert = require('assert');
 
 // 'assert.ok throws an error if the first argument is falsey'
 try {
-  assert.ok(0);
+  assert.ok(0)
 } catch (err) {
-  console.log(err);
-};
+  console.log(err)
+}
+
 
 // 'and does nothing if the first argument is truthy'
-assert.ok(1);
+assert.ok(1)
+
 
 // 'pass a string as a second argument, that will be printed'
 try {
-  assert.ok(0, 'zero is falsey');
+  assert.ok(0, 'zero is falsey')
 } catch (err) {
-  console.log(err);
-};
+  console.log(err)
+}
+
 
 // 'and it still does nothing if the first argument is truthy'
-assert.ok(1, '1 is truthy');
-
+assert.ok(1, '1 is truthy')
 
 
 // 'how assert.ok vs. console.assert'
 // 'both do nothing if the first argument is truthy'
-console.assert(1, '1 is truthy');
-assert.ok(1, '1 is truthy');
+console.assert(1, '1 is truthy')
+assert.ok(1, '1 is truthy')
 
 // 'if the first argument is falsey, console.ok() throws an error ...'
 try {
-  assert.ok(0, '0 is falsey');
+  assert.ok(0, '0 is falsey')
 } catch (err) {
-  console.log(err);
-};
+  console.log(err)
+}
+
 // ... but console.assert doesn't
-console.assert(0, '0 is falsey');
+console.assert(0, '0 is falsey')
 
 
 // `be aware of NaN!`
-assert.ok(NaN !== NaN);
+assert.ok(NaN !== NaN)
 
 try {
-  assert.ok(NaN === NaN);
+  assert.ok(NaN === NaN)
 } catch (err) {
-  console.log(err);
-};
+  console.log(err)
+}

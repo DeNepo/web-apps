@@ -47,8 +47,7 @@ Both of these are long videos, you don't need to finish them before class. But t
 
 ### Integrate
 
-* [weather-it](../integrate/weather-it)
-* [json-todo-cli](https://github.com/hackyourfuturebelgium/coming-soon) (starter repo)
+* [entries-manager-cli](https://github.com/hackyourfuturebelgium/entries-manager-cli) (starter repo)
 
 ---
 
@@ -60,10 +59,9 @@ Both of these are long videos, you don't need to finish them before class. But t
 
 #### Isolating JavaScript
 
-* [learn-util-promisify](https://github.com/hackyourfuturebelgium/learn-util-promisify)
-  * Learn how to convert functions with callbacks to promises using [util.promisify](https://nodejs.org/api/util.html#util_util_promisify_original)
 * [node-fetchemon](https://github.com/hackyourfuturebelgium/node-fetchemon)
   * Practice making API calls from Node.js using the [node-fetch](https://www.npmjs.com/package/node-fetch) module
+  * To study a full app with `node-fetch`, head over to [weather-it-promised](../integrate/weather-it-promised) & [weather-it-async-await](../integrate/weather-it-async-await)
 
 #### Integrating JavaScript
 

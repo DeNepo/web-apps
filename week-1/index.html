@@ -50,18 +50,35 @@
     <div class="slides">
 
       <section id='cover-slide'>
-        <h2>NodeJS</h2>
-        <br>
-        <h3>Week 1</h3>
-        <br>
-        <code>"s"</code> for speaker notes
-        <br>
-        <br>
-        <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1" target='_blank'>
-          -- back to repo --
-        </a>
+        <aside class="notes">
+          Cover slide with basement slides, all go into the motivation for learning NodeJS.
+        </aside>
+        <section>
+          <h2>NodeJS</h2>
+          <br>
+          <h3>Week 1</h3>
+          <br>
+          <code>"s"</code> for speaker notes
+          <br>
+          <br>
+          <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1" target='_blank'>
+            -- back to repo --
+          </a>
+        </section>
+
       </section>
 
+      <section id='review'>
+        <section>
+          <h1>Review</h1>
+          <br>
+          <br>
+          <p>Any <code>sunday-review</code> issues?</p>
+          <p>Any other Questions?</p>
+          <br>
+          <code>(~30 min)</code>
+        </section>
+      </section>
 
       <section id="learning-objectives">
         <section>
@@ -76,8 +93,8 @@
           <h3>Isolate</h3>
           <br>
           <ul>
-            <li>cli</li>
-            <li><code>request</code></li>
+            <li>process.argv</li>
+            <li><code>assert</code></li>
             <li><code>fs</code></li>
           </ul>
         </section>
@@ -90,19 +107,6 @@
         </section>
       </section>
 
-
-      <section id='review'>
-        <section>
-          <h1>Review</h1>
-          <br>
-          <br>
-          <p>Any <code>sunday-review</code> issues?</p>
-          <p>Any other Questions?</p>
-          <br>
-          <code>(~30 min)</code>
-        </section>
-      </section>
-
       <section id='what-you-will-build'>
         <section>
           <h1>What You'll Build</h1>
@@ -112,27 +116,83 @@
         <section>
           <img src='https://www.omgubuntu.co.uk/wp-content/uploads/2018/08/taskbook-cli-app.jpg'>
           </img>
+          <aside>
+            This slide should show an image (or gif) of a cli todo app in action doing basic todo things.
+            The link will be to a uglified sample app that students can play around with.
+
+            Jump into the terminal and show app in action?
+          </aside>
         </section>
       </section>
 
+      <section>
+        <section id='new-material'>
+          <h1>New Material</h1>
+          <br>
+          <p>Node.js? Backend? huh?</p>
+        </section>
+        <section>
+          <h1>What and Why?</h1>
 
-      <section id='review'>
-        <h1>New Material</h1>
+          <p class="fragment fade-in-then-out">
+            NodeJS is Javascript on the server (also known as the "backend").
+            Many clients, such as your mobile phones, talk to a central server, such as Google or Facebook.
+          </p>
+
+          <p class="fragment fade-in-then-out">
+            When you upload pictures to the cloud, servers are what processes and stores them.
+          </p>
+
+          <p class="fragment fade-in-then-out">
+            If front-end applications (like the ones you build in your browser) are the restaurant floor, servers are
+            the
+            back kitchen.
+          </p>
+        </section>
+
+        <section>
+          <h1>Why a Node Server?</h1>
+
+          <p class="fragment fade-in-then-out">
+            We already know Javascript!
+          </p>
+
+          <p class="fragment fade-in-then-out">
+            Node is fast, and built for the web.
+          </p>
+
+          <div class="fragment fade-in-then-out">
+            Has some of the best support for libraries.
+
+            <p>
+              You want to resize and image? There is a library.
+            </p>
+            <p>
+              You want to encode video? There is a library.
+            </p>
+            <p>
+              You want to make a cow say ridiculous things? There. Is. A. Library.
+            </p>
+          </div>
+        </section>
       </section>
 
-      <section id='the-event-loop'>
+      <section id='cli-arguments'>
         <section>
           <h2>Accepting Command Line Input</h2>
           <br>
           <code>(pair programming)</code>
         </section>
         <section>
-          <pre><code class="hljs js javascript active" data-trim data-line-numbers="4">
-// colored code snippets that don't run
-const cliArgs = Array.from(argsv);
+          <pre>
+            <code class="hljs js javascript active" data-trim >
+process.argv[0] === "node"
 
-console.log(cliArgs);
-                      </code></pre>
+process.argv[1] === "file-name.js"
+
+process.argv[2] === "firstArg"
+            </code>
+          </pre>
         </section>
         <section>
           <h3>Helpful Links</h3>
@@ -144,7 +204,8 @@ console.log(cliArgs);
               </a>
             </li>
             <li>
-              <a href='https://example.org/nodejs-argsv' target='_blank'>
+              <a href='https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/'
+                target='_blank'>
                 NodeJS: argsv
               </a>
             </li>
@@ -152,6 +213,117 @@ console.log(cliArgs);
         </section>
       </section>
 
+      <section id='assert'>
+        <section>
+          <h2>Assert!</h2>
+          <br>
+          <code>(pair programming)</code>
+        </section>
+        <section>
+          <pre>
+            <code class="hljs js javascript active" data-trim >
+const name = "hyf";
+
+assert(name === "hyf");
+
+assert(name === "imnothyf");
+
+assert(name === "imnothyf", "name should be hyf!");
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>
+            Why Assert?
+          </h3>
+
+          <p>
+            Testing! Assertions help you test if what you thought to be true is actually true!
+          </p>
+        </section>
+
+        <section>
+          <h3>Helpful Links</h3>
+          <br>
+          <ul>
+            <li>
+              <a href='https://www.w3schools.com/nodejs/ref_assert.asp' target='_blank'>
+                w3schools
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section id='fs'>
+        <section>
+          <h2>fs - working with the (f)ile (s)ystem</h2>
+          <br>
+          <code>(pair programming)</code>
+        </section>
+        <section>
+          <pre>
+            <code class="hljs js javascript active" data-trim >
+const fs = require('fs')
+
+fs.readFile('./my_special_text.txt', (err, data) => {
+  if (err) {
+    console.log(err)
+    return
+  }
+  console.log(data)
+})
+
+fs.writeFile('./my_special_message.txt', 'Hello Node.js', (err) => {
+  if (err) {
+    console.log(err)
+    return
+  }
+  console.log('The file has been saved!');
+});
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>
+            Motivation for fs
+          </h3>
+
+          <p class="fragment fade-in-then-out">
+            Files let you store data long-term. We know this. But learning to work with files and manipulate file
+            contents in code gives you the ability to write real life applications.
+          </p>
+
+
+          <ul class="fragment fade-in-then-out">
+            <li>
+              Generate reports.
+            </li>
+            <li>
+              Process a document to remove bad words.
+            </li>
+
+            <li>
+              So much more!
+            </li>
+
+          </ul>
+        </section>
+
+        <section>
+          <h3>Helpful Links</h3>
+          <br>
+          <ul>
+            <li>
+              <a href='https://example.org/file-system' target='_blank'>
+                Node fs
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
 
       <section id='break'>
         <h1>Break!</h1>
@@ -167,11 +339,9 @@ console.log(cliArgs);
         </section>
         <section>
           <h2>Weather.It</h2>
-          <br>
           <ul>
-            <li>
-              <a href='../integrate/weather-it/index.html' target='_blank'>live project</a>
-            </li>
+
+            <aside class="notes">Jump to live demo</aside>
             <li>
               <a href='https://github.com/hackyourfuturebelgium/Node.js/tree/master/integrate/weather-it '
                 target='_blank'>
@@ -235,15 +405,15 @@ console.log(cliArgs);
         </section>
       </section>
 
-      <section id='cover-slide'>
-        <h2>Asynchronous Programming</h2>
+      <section id='finale-slide'>
+        <h2>NodeJS</h2>
         <br>
         <h3>Week 1</h3>
         <br>
         <code>"s"</code> for speaker notes
         <br>
         <br>
-        <a href="https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-1" target='_blank'>
+        <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1" target='_blank'>
           -- back to repo --
         </a>
       </section>
@@ -263,23 +433,22 @@ console.log(cliArgs);
       slideNumber: 'h/t',
       hash: true,
       help: true,
-      width: "100%",
-      height: "100%",
+      width: '100%',
+      height: '100%',
       dependencies: [
         { src: '../reveal.js/plugin/notes/notes.js', async: true },
         { src: '../reveal.js/plugin/highlight/highlight.js', async: true }
       ],
-    });
+    })
 
     Reveal.addEventListener('overviewshown', function (event) {
-      document.getElementById('footer-text').innerHTML = "ESC into slide";
-      document.getElementById('footer-links').style.visibility = 'visible';
-    });
+      document.getElementById('footer-text').innerHTML = 'ESC into slide'
+      document.getElementById('footer-links').style.visibility = 'visible'
+    })
     Reveal.addEventListener('overviewhidden', function (event) {
-      document.getElementById('footer-text').innerHTML = "ESC to overview";
-      document.getElementById('footer-links').style.visibility = 'hidden';
-    });
-
+      document.getElementById('footer-text').innerHTML = 'ESC to overview'
+      document.getElementById('footer-links').style.visibility = 'hidden'
+    })
 
 
   </script>

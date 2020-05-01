@@ -33,7 +33,7 @@ Both of these are long videos, you don't need to finish them before class. But t
 
 ## Lesson Plan
 
-> [Lesson Plan Slides](https://hackyourfuture.be/module-name/week-X)
+> [Lesson Plan Slides](https://hackyourfuture.be/web-apps/week-1)
 
 * Command line arguments: `process.argv`
 * Native Node.js modules: `fs`, `assert`

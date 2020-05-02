@@ -18,7 +18,7 @@
 
 * [thenodeway](http://thenodeway.io/posts/understanding-error-first-callbacks/) (article)
 * [fredkschott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (article)
-* [Sid Harder](JavaScript Error First Callback functions) (video)
+* [Sid Harder](https://www.youtube.com/watch?v=0h8r2K7ZHZU) (video)
 * [David Connelly](https://www.youtube.com/watch?v=Pov477mI57A) (video)
 
 ### Node.js 101

@@ -11,6 +11,9 @@ const log = (logId, value) => console.log(
   value,
 );
 
+// -- main script --
+debugger;
+
 log(0, 'begin!');
 
 fs.writeFileSync(FILE_PATH, '111111111111');

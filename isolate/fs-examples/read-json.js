@@ -14,6 +14,9 @@ const log = (logId, value) => console.log(
   value,
 );
 
+// -- main script --
+debugger;
+
 const filePath = __dirname + '/' + process.argv[2];
 log(1, filePath);
 

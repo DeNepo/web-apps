@@ -1,4 +1,10 @@
-// requier dependencies
+/* helpful examples
+  read-json.js
+  write-json.js
+  sync-vs-async.js
+*/
+
+// require dependencies
 const assert = require('assert');
 const fs = require('fs');
 

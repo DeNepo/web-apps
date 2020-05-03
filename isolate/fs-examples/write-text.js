@@ -22,7 +22,7 @@ const callBack = (err) => {
     return;
   }
 
-  log(4, err);
+  log(4, 'all done!');
 };
 
 fs.writeFile(filePath, newContent, callBack);

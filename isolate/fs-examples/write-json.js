@@ -33,7 +33,7 @@ const callBack = (err) => {
     return;
   }
 
-  log(5, err);
+  log(5, 'all done!');
 };
 
 fs.writeFile(filePath, toWrite, callBack);

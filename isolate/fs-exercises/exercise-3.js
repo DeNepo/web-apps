@@ -1,3 +1,8 @@
+/* helpful examples
+  read-text.js
+  write-text.js
+*/
+
 // require dependencies
 const fs = require('fs');
 const assert = require('assert');

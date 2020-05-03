@@ -1,3 +1,10 @@
+/* helpful examples
+  refactor-sync-to-async.js
+  sync-vs-async.js
+  append-text.js
+  copy.js
+*/
+
 // require dependencies
 const assert = require('assert');
 const fs = require('fs');

@@ -17,10 +17,11 @@ log(1, contentToAppend);
 
 const ifErrorCallback = (err) => {
   if (err) {
-    console.error(err);
-  } else {
-    log(3, 'done!');
-  };
+    log(3, err);
+    return;
+  }
+
+  log(3, 'done!');
 };
 
 fs.appendFile(__dirname + '/file.txt', contentToAppend, ifErrorCallback);

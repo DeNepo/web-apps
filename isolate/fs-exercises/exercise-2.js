@@ -26,21 +26,22 @@ log(2, stringToSave);
 
 const writeFileCallback = (err) => {
   if (err) {
-    console.error(err);
-  } else {
-    log(4, 'reading file ...');
-    // sync
-    const fileText = fs._(_, _);
+    log(4, err);
+    return;
+  }
 
-    log(5, fileText);
-    assert.strictEqual(fileText, stringToSave);
+  log(4, 'reading file ...');
+  // sync
+  const fileText = fs._(_, _);
 
-    const parsedFileContents = _._(fileText);
-    log(6, parsedFileContents);
-    assert.deepStrictEqual(parsedFileContents, objectToSave);
+  log(5, fileText);
+  assert.strictEqual(fileText, stringToSave);
 
-    log(7, 'pass!');
-  };
+  const parsedFileContents = _._(fileText);
+  log(6, parsedFileContents);
+  assert.deepStrictEqual(parsedFileContents, objectToSave);
+
+  log(7, 'pass!');
 };
 
 // async

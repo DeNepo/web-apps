@@ -29,10 +29,11 @@ log(3, toWrite);
 
 const callBack = (err) => {
   if (err) {
-    console.error(err);
-  } else {
     log(5, err);
-  };
+    return;
+  }
+
+  log(5, err);
 };
 
 fs.writeFile(filePath, toWrite, callBack);

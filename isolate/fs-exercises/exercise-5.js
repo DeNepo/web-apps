@@ -35,17 +35,18 @@ fs.writeFileSync(FILE_PATH, stringToSave);
 
 const readFileCallback = (err, fileText) => {
   if (err) {
-    console.error(err);
-  } else {
-    log(5, fileText);
-    assert.strictEqual(fileText, stringToSave);
+    log(5, err);
+    return;
+  }
 
-    const parsedFileContents = JSON.parse(fileText);
-    log(6, parsedFileContents);
-    assert.deepStrictEqual(parsedFileContents, _);
+  log(5, fileText);
+  assert.strictEqual(fileText, stringToSave);
 
-    log(7, 'pass!');
-  };
+  const parsedFileContents = JSON.parse(fileText);
+  log(6, parsedFileContents);
+  assert.deepStrictEqual(parsedFileContents, _);
+
+  log(7, 'pass!');
 };
 
 // async

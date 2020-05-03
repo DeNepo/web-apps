@@ -19,10 +19,11 @@ log(1, 'first write is finished');
 
 const fsWriteCallback = (err) => {
   if (err) {
-    console.error(err);
-  } else {
-    log(3, 'second write is finished');
-  };
+    log(3, err);
+    return;
+  }
+
+  log(3, 'second write is finished');
 };
 
 fs.writeFile(FILE_PATH, '222222222222', fsWriteCallback);
@@ -33,10 +34,11 @@ log(2, firstRead);
 
 const fsReadCallback = (err, secondRead) => {
   if (err) {
-    console.error(err);
-  } else {
-    log(4, secondRead);
+    log(4, err);
+    return;
   }
+
+  log(4, secondRead);
 };
 
 fs.readFile(FILE_PATH, 'utf-8', fsReadCallback);

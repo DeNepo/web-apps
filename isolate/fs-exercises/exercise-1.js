@@ -30,17 +30,18 @@ fs._(_, _);
 
 const readFileCallback = (err, fileText) => {
   if (err) {
-    console.error(err);
-  } else {
-    log(5, fileText);
-    assert.strictEqual(fileText, stringToSave);
+    log(5, err);
+    return;
+  }
 
-    const parsedFileContents = _._(fileText);
-    log(6, parsedFileContents);
-    assert.deepStrictEqual(parsedFileContents, objectToSave);
+  log(5, fileText);
+  assert.strictEqual(fileText, stringToSave);
 
-    log(7, 'pass!');
-  };
+  const parsedFileContents = _._(fileText);
+  log(6, parsedFileContents);
+  assert.deepStrictEqual(parsedFileContents, objectToSave);
+
+  log(7, 'pass!');
 };
 
 // async

@@ -20,20 +20,22 @@ log(1, newFileContents);
 
 const writeFileCallback = (err) => {
   if (err) {
-    console.error(err);
-  } else {
-    const readFileCallback = (err, fileContent) => {
-      if (err) {
-        console.error(err);
-      } else {
-        assert.strictEqual(fileContent, newFileContents);
-        log(4, 'pass!');
-      };
-    };
+    log(3, err);
+    return;
+  }
 
-    fs._(_, _, _);
-    log(3, 'reading file ...');
+  const readFileCallback = (err, fileContent) => {
+    if (err) {
+      log(4, err);
+      return;
+    }
+
+    assert.strictEqual(fileContent, newFileContents);
+    log(4, 'pass!');
   };
+
+  fs._(_, _, _);
+  log(3, 'reading file ...');
 };
 
 fs._(_, _, _);

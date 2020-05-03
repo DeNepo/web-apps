@@ -19,10 +19,11 @@ log(2, targetFile);
 
 const ifErrorCallback = (err) => {
   if (err) {
-    console.error(err);
-  } else {
-    log(4, 'done!');
-  };
+    log(4, err);
+    return;
+  }
+
+  log(4, 'done!');
 };
 
 fs.copyFile(sourceFile, targetFile, 0, ifErrorCallback);

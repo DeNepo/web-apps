@@ -229,13 +229,15 @@ process.argv[2] === "firstArg"
         <section>
           <pre>
             <code class="hljs js javascript active" data-trim >
+const assert = require('assert');
+
 const name = "hyf";
 
 assert(name === "hyf");
-
 assert(name === "imnothyf");
-
 assert(name === "imnothyf", "name should be hyf!");
+
+console.log('all good');
             </code>
           </pre>
         </section>

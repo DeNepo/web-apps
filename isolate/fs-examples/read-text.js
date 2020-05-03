@@ -19,10 +19,11 @@ log(1, filePath);
 
 const callBack = (err, content) => {
   if (err) {
-    throw err;
-  } else {
-    log(3, content);
-  };
+    log(3, err);
+    return;
+  }
+
+  log(3, content);
 };
 
 fs.readFile(filePath, 'utf-8', callBack);

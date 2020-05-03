@@ -43,9 +43,9 @@ const fileName = _;
 if (_) {
   log('1.a', 'a command is required, exiting');
   process.exit(0);
-} else {
-  log('1.b', 'command: ' + command);
-};
+}
+log('1.b', 'command: ' + command);
+
 
 if (command === _) {
   log('3', 'reading filenames ...');
@@ -57,9 +57,9 @@ if (command === _) {
 if (_) {
   log('2.a', 'a file name is required, exiting');
   process.exit(0);
-} else {
-  log('2.b', 'fileName: ' + fileName);
-};
+}
+log('2.b', 'fileName: ' + fileName);
+
 
 
 if (_) {

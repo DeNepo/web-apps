@@ -29,17 +29,19 @@ log(3, newAsyncFileContents);
 
 fs.writeFile(FILE_PATH, newAsyncFileContents, (err) => {
   if (err) {
-    console.error(err);
-  } else {
-    fs.readFile(FILE_PATH, 'utf-8', (err, asyncFileContents) => {
-      if (err) {
-        console.log(err);
-      } else {
-        log(6, asyncFileContents);
-      };
-    });
-    log(5, 'reading file ...');
+    log(5, err);
+    return;
   }
+
+  fs.readFile(FILE_PATH, 'utf-8', (err, asyncFileContents) => {
+    if (err) {
+      log(6, err);
+      return;
+    }
+
+    log(6, asyncFileContents);
+  });
+  log(5, 'reading file ...');
 });
 
 log(4, 'writing file ...');

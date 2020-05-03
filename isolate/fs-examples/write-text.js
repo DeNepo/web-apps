@@ -18,10 +18,11 @@ log(2, newContent);
 
 const callBack = (err) => {
   if (err) {
-    console.error(err);
-  } else {
     log(4, err);
-  };
+    return;
+  }
+
+  log(4, err);
 };
 
 fs.writeFile(filePath, newContent, callBack);

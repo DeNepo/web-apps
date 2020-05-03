@@ -19,12 +19,13 @@ log(1, filePath);
 
 const callBack = (err, content) => {
   if (err) {
-    throw err;
-  } else {
-    log(3, content);
-    const parsedContent = JSON.parse(content);
-    log(4, parsedContent);
+    log(3, err);
+    return;
   };
+
+  log(3, content);
+  const parsedContent = JSON.parse(content);
+  log(4, parsedContent);
 };
 
 fs.readFile(filePath, 'utf-8', callBack);

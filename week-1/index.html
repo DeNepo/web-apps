@@ -32,7 +32,7 @@
     <div class='footer'>
       <ul id='footer-links' style='visibility: hidden;'>
         <li>
-          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/asynchronous-programming" target="_blank">
+          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/web-apps" target="_blank">
             <code>module repository</code>
           </a>
         </li>
@@ -111,17 +111,10 @@
         <section>
           <h1>What You'll Build</h1>
           <br>
-          <p>CLI Todo App</p>
+          <p>CLI Entries Manager</p>
         </section>
         <section>
-          <img src='https://www.omgubuntu.co.uk/wp-content/uploads/2018/08/taskbook-cli-app.jpg'>
-          </img>
-          <aside>
-            This slide should show an image (or gif) of a cli todo app in action doing basic todo things.
-            The link will be to a uglified sample app that students can play around with.
-
-            Jump into the terminal and show app in action?
-          </aside>
+          <script id="asciicast-l7mygXXJGdBkEYTLwqi90Ds8b" src="https://asciinema.org/a/l7mygXXJGdBkEYTLwqi90Ds8b.js" data-speed="1" data-size="medium" data-rows="40" async></script>
         </section>
       </section>
 
@@ -199,8 +192,21 @@ process.argv[2] === "firstArg"
           <br>
           <ul>
             <li>
-              <a href='https://example.org/what-is-the-command-line' target='_blank'>
+              <h4>
                 What is the commandline?
+              </h4>
+              <ul>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=MBBWVgE0ewk">windows</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=5XgBd6rjuDQ">mac</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=id3DGvljhT4">linux</a>
+                </li>
+              </ul>
+
               </a>
             </li>
             <li>
@@ -222,13 +228,15 @@ process.argv[2] === "firstArg"
         <section>
           <pre>
             <code class="hljs js javascript active" data-trim >
+const assert = require('assert');
+
 const name = "hyf";
 
 assert(name === "hyf");
-
 assert(name === "imnothyf");
-
 assert(name === "imnothyf", "name should be hyf!");
+
+console.log('all good');
             </code>
           </pre>
         </section>
@@ -331,33 +339,12 @@ fs.writeFile('./my_special_message.txt', 'Hello Node.js', (err) => {
         <code>(~20 min)</code>
       </section>
 
-      <section id='integrate'>
-        <section>
-          <h2>Example Projects</h2>
-          <br>
-          <p>finished code for inspiration</p>
-        </section>
-        <section>
-          <h2>Weather.It</h2>
-          <ul>
-
-            <aside class="notes">Jump to live demo</aside>
-            <li>
-              <a href='https://github.com/hackyourfuturebelgium/Node.js/tree/master/integrate/weather-it '
-                target='_blank'>
-                source code
-              </a>
-            </li>
-          </ul>
-        </section>
-      </section>
-
       <section id='in-class-project'>
         <section id='in-class-cover'>
-          <h2>CLI Todo</h2>
+          <h2>Entries Manager CLI</h2>
           <br>
           <p>
-            <a href='https://github.com/HackYourFutureBelgium/cli-todo' target='_blank'>
+            <a href='https://github.com/HackYourFutureBelgium/entries-manager-cli' target='_blank'>
               Starter Repository
             </a>
           </p>
@@ -374,8 +361,7 @@ fs.writeFile('./my_special_message.txt', 'Hello Node.js', (err) => {
         </section>
         <section>
           <h2>
-            <a href='https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-1'
-              target='_blank'>
+            <a href='https://github.com/hackyourfuturebelgium/web-apps/tree/master/week-1' target='_blank'>
               The Assignments
             </a>
           </h2>

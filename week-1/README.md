@@ -16,8 +16,13 @@
 
 ### Error-First Callbacks
 
+<<<<<<< HEAD
 * [thenodeway](http://thenodeway.io/posts/understanding-error-first-callbacks/) (article)
 * [Sid Harder](JavaScript Error First Callback functions) (video)
+=======
+* [fredkschott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (article)
+* [Sid Harder](https://duckduckgo.com/?q=sid+harder+javascript+error+first&atb=v214-1&iax=videos&ia=videos&iai=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D0h8r2K7ZHZU) (video)
+>>>>>>> master
 * [David Connelly](https://www.youtube.com/watch?v=Pov477mI57A) (video)
 
 ### Node.js 101
@@ -32,7 +37,7 @@ Both of these are long videos, you don't need to finish them before class. But t
 
 ## Lesson Plan
 
-> [Lesson Plan Slides](https://hackyourfuture.be/module-name/week-X)
+> [Lesson Plan Slides](https://hackyourfuture.be/web-apps/week-1)
 
 * Command line arguments: `process.argv`
 * Native Node.js modules: `fs`, `assert`
@@ -46,8 +51,7 @@ Both of these are long videos, you don't need to finish them before class. But t
 
 ### Integrate
 
-* [weather-it](../integrate/weather-it)
-* [json-todo-cli](https://github.com/hackyourfuturebelgium/coming-soon) (starter repo)
+* [entries-manager-cli](https://github.com/hackyourfuturebelgium/entries-manager-cli) (starter repo)
 
 ---
 
@@ -59,10 +63,9 @@ Both of these are long videos, you don't need to finish them before class. But t
 
 #### Isolating JavaScript
 
-* [learn-util-promisify](https://github.com/hackyourfuturebelgium/learn-util-promisify)
-  * Learn how to convert functions with callbacks to promises using [util.promisify](https://nodejs.org/api/util.html#util_util_promisify_original)
 * [node-fetchemon](https://github.com/hackyourfuturebelgium/node-fetchemon)
   * Practice making API calls from Node.js using the [node-fetch](https://www.npmjs.com/package/node-fetch) module
+  * To study a full app with `node-fetch`, head over to [weather-it-promised](../integrate/weather-it-promised) & [weather-it-async-await](../integrate/weather-it-async-await)
 
 #### Integrating JavaScript
 

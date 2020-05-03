@@ -11,6 +11,7 @@ const log = (logId, value) => console.log(
 );
 
 // main script
+debugger;
 
 const contentToAppend = process.argv[2] + '\n';
 log(1, contentToAppend);

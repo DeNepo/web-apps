@@ -11,6 +11,9 @@ const log = (logId, value) => console.log(
   value,
 );
 
+// -- main script --
+debugger;
+
 // synchronous
 
 const newSyncFileContents = '*[]*';

@@ -10,6 +10,9 @@ const log = (logId, value) => console.log(
   value,
 );
 
+// -- main script --
+debugger;
+
 const sourceFile = __dirname + '/' + process.argv[2];
 log(1, sourceFile);
 

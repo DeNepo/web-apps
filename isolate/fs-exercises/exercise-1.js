@@ -1,5 +1,6 @@
 /* helpful examples
   read-json.js
+  write-json.js
   sync-vs-async.js
 */
 

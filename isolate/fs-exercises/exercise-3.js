@@ -4,23 +4,23 @@
 */
 
 // require dependencies
-const fs = require('fs');
-const assert = require('assert');
+const fs = require("fs");
+const assert = require("assert");
 
 // declare constants
 const START = Date.now();
-const FILE_PATH = __dirname + '/file.txt';
+const FILE_PATH = __dirname + "/file.txt";
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value,
-);
-
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value
+  );
 
 // --- main script ---
 
-const newFileContents = '*[]*';
+const newFileContents = "*[]*";
 log(1, newFileContents);
 
 const writeFileCallback = (err) => {
@@ -36,15 +36,12 @@ const writeFileCallback = (err) => {
     }
 
     assert.strictEqual(fileContent, newFileContents);
-    log(4, 'pass!');
+    log(4, "pass!");
   };
 
-  fs._(_, _, _);
-  log(3, 'reading file ...');
+  fs.readFile(FILE_PATH, "utf-8", readFileCallback);
+  log(3, "reading file ...");
 };
 
-fs._(_, _, _);
-log(2, 'writing file ...');
-
-
-
+fs.writeFile(FILE_PATH, newFileContents, writeFileCallback);
+log(2, "writing file ...");

@@ -47,7 +47,7 @@ const readFileCallback = (err, fileText) => {
   log(5, fileText);
   assert.strictEqual(fileText, stringToSave);
 
-  const parsedFileContents = JSON.parse(fileText);
+  const parsedFileContents = Object.assign(objectToSave, stringToSave);
   log(6, parsedFileContents);
   assert.deepStrictEqual(parsedFileContents, objectToSave);
 

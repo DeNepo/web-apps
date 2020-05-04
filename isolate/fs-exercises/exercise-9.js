@@ -67,7 +67,7 @@ if (command === "write") {
       log(contents);
     }
   };
-  fs.writeFile(__dirname + "/" + fileName, "Hello world!", writeCallback);
+  fs.writeFile(__dirname + "/" + fileName, text, writeCallback);
   log("4.a", "write to " + fileName + " ...");
 } else if (command === "append") {
   log("3.b", "declaring append");
@@ -77,7 +77,7 @@ if (command === "write") {
       return;
     }
   };
-  fs.appendFile(__dirname + "/" + fileName, appendCallBack);
+  fs.appendFile(__dirname + "/" + fileName, text, appendCallBack);
   log("4.b", "appending" + fileName + " ...");
 } else {
   log("3.c", "unknown command: " + command);

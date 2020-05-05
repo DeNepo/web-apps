@@ -51,7 +51,7 @@ module.exports = (req, res, next) => {
   console.log(coloredLogMessage);
 
   // we're appending to the log file. what would happen if we used `fs.writeFile` instead?
-  fs.appendFile("request_logs.txt",  + `${plainLogMessage}\n`, err => {
+  fs.appendFile("request_logs.txt",  `${plainLogMessage}\n`, err => {
     if (err) {
       console.log(err);
     }

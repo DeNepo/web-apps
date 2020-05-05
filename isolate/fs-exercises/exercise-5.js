@@ -59,7 +59,7 @@ const readFileCallback = (err, fileText) => {
     { _ }
   );
 
-  log(7, 'pass!');
+  log(7, '\033[32mpass!\x1b[0m');
 };
 
 // async

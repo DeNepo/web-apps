@@ -1,3 +1,14 @@
+/* reverse-engineering
+
+  To understand what this exercise should do,
+  practice using exercise-8-demo in the terminal
+
+  your task is to reverse-engineer the behavior of the demo
+
+  you'll know you've finished when it's impossible to tell
+    if you're using the demo or your exercise
+*/
+
 // require dependencies
 const fs = require('fs');
 

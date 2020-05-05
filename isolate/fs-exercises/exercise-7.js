@@ -41,4 +41,4 @@ const newText = fs._(SOURCE_PATH, _);
 log(4, newText);
 
 assert.strictEqual(newText, ORIGINAL_TEXT + ORIGINAL_TEXT + ORIGINAL_TEXT);
-log(5, 'pass!');
+log(5, '\033[32mpass!\x1b[0m');

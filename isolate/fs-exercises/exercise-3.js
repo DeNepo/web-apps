@@ -36,7 +36,7 @@ const writeFileCallback = (err) => {
     }
 
     assert.strictEqual(fileContent, newFileContents);
-    log(4, 'pass!');
+    log(4, '\033[32mpass!\x1b[0m');
   };
 
   fs._(_, _, _);

@@ -1,5 +1,4 @@
 node_modules
 server-logs
 .env
-week-3
-week-4
+request_log.txt

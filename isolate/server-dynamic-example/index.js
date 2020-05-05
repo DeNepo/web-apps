@@ -1,9 +1,12 @@
 'use strict'
 
 const express = require('express');
+const config = require('./config');
+const logger = require('./middleware/logger');
 
 const app = express();
-const port = 3000;
+
+app.use(logger);
 
 app.get('/say-hello', (req, res) => {
 
@@ -24,8 +27,8 @@ app.get('/say-bye', (req, res) => {
 })
 
 app.listen(
-  port,
+  config.PORT,
   () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`);
   }
 )

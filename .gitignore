@@ -1,4 +1,4 @@
 node_modules
 server-logs
 .env
-request_log.txt
+request_los.txt

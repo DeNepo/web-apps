@@ -14,6 +14,11 @@
 
 ## Prep Work
 
+### Prep Slides & Video
+
+* slides: [live](https://hackyourfuture.be/web-apps/week-2/prep.html), [source](./prep.html)
+* [Video]()
+
 ### About Servers
 
 * Middleware: [tutorialspoint](https://www.tutorialspoint.com/expressjs/expressjs_middleware.htm), [express.js guide](https://expressjs.com/en/guide/using-middleware.html), [writing middleware (video)](https://www.youtube.com/watch?v=msw1D8oSw5M)
@@ -22,7 +27,6 @@
 ### Best Practices
 
 * `config` file: [how to](https://goenning.net/2016/05/13/how-i-manage-application-configuration-with-nodejs/)
-
 
 ---
 

@@ -1,45 +1,44 @@
 // https://github.com/Dunebook/ExpressjsMiddlewarelogging
-//  with chalk dependency refactored out
 
 const fs = require("fs");
 
-const getActualRequestDurationInMilliseconds = start => {
-  const NS_PER_SEC = 1e9; // constant to convert to nanoseconds
-  const NS_TO_MS = 1e6; // constant to convert to milliseconds
-  const diff = process.hrtime(start);
-
-  return (diff[0] * NS_PER_SEC + diff[1]) / NS_TO_MS;
-};
+let cycles = 0;
 
 module.exports = (req, res, next) => {
-  let current_datetime = new Date();
-  let formatted_date =
-    current_datetime.getFullYear() +
-    "-" +
-    (current_datetime.getMonth() + 1) +
-    "-" +
-    current_datetime.getDate() +
-    " " +
-    current_datetime.getHours() +
-    ":" +
-    current_datetime.getMinutes() +
-    ":" +
-    current_datetime.getSeconds();
-  let method = req.method;
-  let url = req.url;
-  let status = res.statusCode;
+  const _cycle = ++cycles;
 
-  const start = process.hrtime();
-  const durInMs = getActualRequestDurationInMilliseconds(start);
+  const reqDateTime = (new Date()).toLocaleString();
 
-  let msgGenerator = (timeColor, msColor) =>
-    `[${timeColor + formatted_date + (timeColor ? '\x1b[0m' : '')}] ${method}:`
-    + `${url} ${status} ${msColor + durInMs.toLocaleString() + "ms" + (msColor ? '\x1b[0m' : '')}`;
-  console.log(msgGenerator('\x1b[34m', '\x1b[31m'));
-  fs.appendFile("request_logs.txt", msgGenerator('', '') + "\n", err => {
-    if (err) {
-      console.log(err);
-    }
-  });
+
+  const method = req.method;
+  const url = req.url;
+
+  const reqColoredLogMessage = `request ${_cycle}: [\x1b[34m${reqDateTime}\x1b[0m] \x1b[31m${method}\x1b[0m ${url}`;
+  const reqPlainLogMessage = `request ${_cycle}: [${reqDateTime}] ${method} ${url}`;
+
+  console.log(reqColoredLogMessage);
+
+
+  // sync to 100% guarentee it writes before the response. I think this is necessary?
+  fs.appendFileSync("request_logs.txt", `${reqPlainLogMessage}\n`);
+
+
+  const nativeEnd = res.end;
+
+
+  res.end = function () {
+
+    const resDateTime = (new Date()).toLocaleString();
+
+    const resColoredLogMessage = `response ${_cycle}: [\x1b[34m${resDateTime}\x1b[0m] ${res.status()}`;
+    const resPlainLogMessage = `response ${_cycle}: [${resDateTime}] ${res.status()}`;
+
+    console.log(resColoredLogMessage);
+    fs.appendFileSync("request_logs.txt", `${resPlainLogMessage}\n`);
+
+    nativeEnd.apply(res, arguments);
+  };
+
+
   next();
 };

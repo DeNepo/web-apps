@@ -1,6 +1,3 @@
-// https://github.com/Dunebook/ExpressjsMiddlewarelogging
-//  with chalk dependency refactored out
-
 const fs = require("fs");
 
 const getActualRequestDurationInMilliseconds = start => {
@@ -12,19 +9,7 @@ const getActualRequestDurationInMilliseconds = start => {
 };
 
 module.exports = (req, res, next) => {
-  let current_datetime = new Date();
-  let formatted_date =
-    current_datetime.getFullYear() +
-    "-" +
-    (current_datetime.getMonth() + 1) +
-    "-" +
-    current_datetime.getDate() +
-    " " +
-    current_datetime.getHours() +
-    ":" +
-    current_datetime.getMinutes() +
-    ":" +
-    current_datetime.getSeconds();
+  let now = (new Date()).toLocaleString();
   let method = req.method;
   let url = req.url;
   let status = res.statusCode;
@@ -32,9 +17,11 @@ module.exports = (req, res, next) => {
   const start = process.hrtime();
   const durInMs = getActualRequestDurationInMilliseconds(start);
 
-  let msgGenerator = (timeColor, msColor) =>
-    `[${timeColor + formatted_date + (timeColor ? '\x1b[0m' : '')}] ${method}:`
-    + `${url} ${status} ${msColor + durInMs.toLocaleString() + "ms" + (msColor ? '\x1b[0m' : '')}`;
+  let msgGenerator = (timeColor, msColor) => {
+    `[${timeColor + now + (timeColor ? '\x1b[0m' : '')}] ${method}:`
+      + `${url} ${status} ${msColor + durInMs.toLocaleString() + "ms" + (msColor ? '\x1b[0m' : '')}`;
+  }
+
   console.log(msgGenerator('\x1b[34m', '\x1b[31m'));
   fs.appendFile("request_logs.txt", msgGenerator('', '') + "\n", err => {
     if (err) {

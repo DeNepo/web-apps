@@ -39,8 +39,8 @@ module.exports = (req, res, next) => {
 
   // the terminal can understand color, but a text file can't, so we'll form
   // two messages, one for the terminal and one for the file
-  // https://blog.bitsrc.io/coloring-your-terminal-using-nodejs-eb647d4af2a2
-  const coloredLogMessage = `[\x1b[34m${reqDateTime}\x1b[0m] \x1b[31m${method}\x1b[0m ${url}`;
+  // https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color
+  const coloredLogMessage = `[\x1b[34m${formattedDatetime}\x1b[0m] \x1b[31m${method}\x1b[0m ${url}`;
   const plainLogMessage = `[${formattedDatetime}] ${method} ${url}`
 
   console.log(coloredLogMessage);

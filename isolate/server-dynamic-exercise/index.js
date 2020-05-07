@@ -1,34 +1,37 @@
-'use strict'
+'use strict';
 
 const express = require('express');
+const bodyParser = require('body-parser');
 const config = require('./config');
 const logger = require('./middleware/logger');
 
-const app = express();
+// create the express app
+_;
 
-app.use(logger);
+// log all requests
+_;
+// parse the HTTP body
+_;
 
-app.get('/say-hello', (req, res) => {
+app.get('/', (req, res) => {
+  const reply = `Welcome to the greeter!`;
 
-  const name = req.query.name
-  const reply = `Hello ${name}!`
+  res.status(200).send(reply);
+});
 
-  res.status(200)
-    .send(reply)
-})
+// GET: '/greeter/hi'
+// response: status:200, "hello (query name), happy (query day)!"
 
-app.get('/say-bye', (req, res) => {
+// GET: '/greeter/bye'
+// response: status:200, "good bye (query name), happy (query day)!"
 
-  const name = req.query.name
-  const reply = `Bye ${name}!`
+// POST: '/greeter/hi'
+// behavior: log "hello (body name), happy (body day)!"
+// response: status:200
 
-  res.status(200)
-    .send(reply)
-})
+// POST: '/greeter/bye'
+// behavior: log "good bye (body name), happy (body day)!"
+// response: status:200
 
-app.listen(
-  config.PORT,
-  () => {
-    console.log(`Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`);
-  }
-)
+// start the server
+_;

@@ -1,35 +1,40 @@
-'use strict'
+'use strict';
 
 const express = require('express');
 const bodyParser = require('body-parser');
-
 const config = require('./config');
 const logger = require('./middleware/logger');
 
-const app = express();
+// initialize the app
+_;
 
-app.use(logger);
-app.use(bodyParser.json());
+// log requests
+_;
 
-app.use(express.static('public'));
+// parse body
+_;
+// parse queries
+_;
+
+// statically serve the frontend
+_;
 
 app.post('/api/:value', (req, res) => {
   const paramValue = req.params.value;
+  const queryValue = req.query.value;
   const bodyValue = req.body.value;
 
   console.log(`param value: ${paramValue}`);
+  console.log(`query value: ${queryValue}`);
   console.log(`body value: ${bodyValue}`);
 
   const responseData = {
     paramValue,
-    bodyValue
+    queryValue,
+    bodyValue,
   };
-  res.json(responseData)
+  res.json(responseData);
 });
 
-app.listen(
-  config.PORT,
-  () => {
-    console.log(`Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`);
-  }
-)
+// start the app
+_;

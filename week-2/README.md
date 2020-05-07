@@ -42,7 +42,7 @@
 
 ### Integrate
 
-- [textidor](https://github.com/hackyourfuturebelgium/textidor) (starter repo)
+- [textidor](https://github.com/hackyourfuturebelgium/textidor) (starter repo). A basic fullstack text editor app.
 
 ---
 

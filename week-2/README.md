@@ -17,7 +17,7 @@
 ### Prep Slides & Recordings
 
 - Slides: [live](https://hackyourfuture.be/web-apps/week-2/prep.html), [source](./prep.html)
-- Recordings: [Part 1](https://vimeo.com/415924788), [Part 2](https://vimeo.com/415919630)
+- Recordings: [Part 1](https://vimeo.com/415924788), [Part 2](https://vimeo.com/415919630), [Part 3](https://vimeo.com/416350569)
 
 ### About Servers
 

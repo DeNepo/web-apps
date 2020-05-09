@@ -80,44 +80,44 @@ Don't worry if you don't understand everything in this project.  The tutorial co
 Just copying his code is not all! After finishing with the tutorial you will need to refactor the code so that It reads and writes from a file called `courses.json` instead of using a local variable. ie:
 
 1. ```js
-  app.post('/api/courses', (req, res)=>{
-      const { error } = validateCourse(req.body);
-      if(error) return res.status(400).send(error.details[0].message);
-      const course = {
-          id: courses.length + 1,
-          name: req.body.name
-      };
-      courses.push(course);
-      res.send(course);
-  });
-  ```
+    app.post('/api/courses', (req, res)=>{
+        const { error } = validateCourse(req.body);
+        if(error) return res.status(400).send(error.details[0].message);
+        const course = {
+            id: courses.length + 1,
+            name: req.body.name
+        };
+        courses.push(course);
+        res.send(course);
+    });
+    ```
 1. ```js
-  app.post('/api/courses', (req, res) => {
-    const { error } = validateCourse(req.body);
-    if (error) {
-      return res.status(400).send(error.details[0].message);
-    }
-    fs.readFile(COURSES_PATH, 'utf-8', (err, content) => {
-      if (err) {
-        res.status(500).send(err.message);
-        return;
+    app.post('/api/courses', (req, res) => {
+      const { error } = validateCourse(req.body);
+      if (error) {
+        return res.status(400).send(error.details[0].message);
       }
-      const parsedCourses = JSON.parse(content);
-      parsedCourses.push({
-        id: courses.length + 1,
-        name: req.body.name
-      });
-      const stringifiedCourses = JSON.stringify(parsedCourses, null, '  ');
-      fs.writeFile(COURSES_PATH, stringifiedCourses, (err) => {
+      fs.readFile(COURSES_PATH, 'utf-8', (err, content) => {
         if (err) {
           res.status(500).send(err.message);
           return;
         }
-        res.send(course);
-      })
+        const parsedCourses = JSON.parse(content);
+        parsedCourses.push({
+          id: courses.length + 1,
+          name: req.body.name
+        });
+        const stringifiedCourses = JSON.stringify(parsedCourses, null, '  ');
+        fs.writeFile(COURSES_PATH, stringifiedCourses, (err) => {
+          if (err) {
+            res.status(500).send(err.message);
+            return;
+          }
+          res.send(course);
+        })
+      });
     });
-  });
-  ```
+    ```
 
 You will be expected to turn in your code from his tutorial on a new repository called `restful-courses`. you will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.  Your repo must include:
 

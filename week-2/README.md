@@ -52,16 +52,6 @@
 
 ### Exercises
 
-#### Isolating JavaScript
-
-- [learn-util-promisify]()
-
-#### Integrating JavaScript
-
-- `poke-it`
-  - Write a CLI app that reads from the [PokeApi](https://pokeapi.co/) and renders to the console
-  - Base your code off of these examples: [weather-it-promised](../integrate/weather-it-promised) & [weather-it-async-await](../integrate/weather-it-async-await)
-
 #### Suggested Study
 
 - How To Build a Job Search App (Node, APIs, Vanilla JS): [video](https://www.youtube.com/watch?v=v7cprTuAnlA), [code](https://github.com/codebubb/job-search-app/)
@@ -70,6 +60,16 @@
   - [VSCode Channel Intro](https://www.youtube.com/watch?v=2oFKNL7vYV8)
   - [James Q Quick](https://www.youtube.com/watch?v=yFtU6_UaOtA)
   - [CodeSpace, 2 Ways](https://www.youtube.com/watch?v=N8O-Yf3hc-A)
+
+#### Isolate
+
+- [promisifying-fs](https://github.com/hackyourfuturebelgium/promisifying-fs)
+
+#### Integrate
+
+- `poke-it`
+  - Write a CLI app that reads from the [PokeApi](https://pokeapi.co/) and renders to the console
+  - Base your code off of these examples: [weather-it-promised](../integrate/weather-it-promised) & [weather-it-async-await](../integrate/weather-it-async-await)
 
 ### Project
 

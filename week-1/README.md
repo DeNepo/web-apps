@@ -92,29 +92,31 @@ Just copying his code is not all! After finishing with the tutorial you will nee
     });
     ```
 1. ```js
+    // there are some mistakes in this, we can't give it all away ;)
     app.post('/api/courses', (req, res) => {
       const { error } = validateCourse(req.body);
       if (error) {
         return res.status(400).send(error.details[0].message);
       }
-      fs.readFile(COURSES_PATH, 'utf-8', (err, content) => {
+      fs.writeFileSync(COURSES_PATH, (err, content) => {
         if (err) {
           res.status(500).send(err.message);
           return;
         }
-        const parsedCourses = JSON.parse(content);
-        parsedCourses.push({
+        const parsedCourses = JSON.stringify(content);
+        const course = {
           id: courses.length + 1,
           name: req.body.name
-        });
-        const stringifiedCourses = JSON.stringify(parsedCourses, null, '  ');
-        fs.writeFile(COURSES_PATH, stringifiedCourses, (err) => {
+        };
+        parsedCourses.push(course);
+        const stringifiedCourses = JSON.parse(parsedCourses, null, '  ');
+        fs.readFileSync(COURSES_PATH, parsedCourses, (err) => {
           if (err) {
             res.status(500).send(err.message);
             return;
           }
           res.send(course);
-        })
+        });
       });
     });
     ```

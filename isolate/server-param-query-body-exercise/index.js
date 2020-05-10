@@ -19,22 +19,12 @@ _;
 // statically serve the frontend
 _;
 
-app.post('/api/:value', (req, res) => {
-  const paramValue = req.params.value;
-  const queryValue = req.query.value;
-  const bodyValue = req.body.value;
+// declare the routes
+_;
 
-  console.log(`param value: ${paramValue}`);
-  console.log(`query value: ${queryValue}`);
-  console.log(`body value: ${bodyValue}`);
+_;
 
-  const responseData = {
-    paramValue,
-    queryValue,
-    bodyValue,
-  };
-  res.json(responseData);
-});
+_;
 
 // start the app
 _;

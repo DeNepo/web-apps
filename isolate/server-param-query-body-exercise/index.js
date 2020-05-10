@@ -20,11 +20,41 @@ _;
 _;
 
 // declare the routes
-_;
+app.post('/param/:value', (req, res) => {
+  // read value from the param
+  _;
 
-_;
+  console.log(`param value: ${paramValue}`);
 
-_;
+  const responseData = {
+    paramValue,
+  };
+  res.json(responseData);
+});
+
+app.post('/query', (req, res) => {
+  // read value from the query
+  _;
+
+  console.log(`query value: ${queryValue}`);
+
+  const responseData = {
+    queryValue,
+  };
+  res.json(responseData);
+});
+
+app.post('/body', (req, res) => {
+  // read value from the body
+  _;
+
+  console.log(`body value: ${bodyValue}`);
+
+  const responseData = {
+    bodyValue,
+  };
+  res.json(responseData);
+});
 
 // start the app
 _;

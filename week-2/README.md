@@ -27,7 +27,7 @@
 - Error Handling Middleware: 
   - [Handling Errors in Express](https://zellwk.com/blog/express-errors/)
   - [REST API Tutorial (Node, Express & Mongo) #10 - Error Handling](https://www.youtube.com/watch?v=w1V2SdzdQBs)
-- CORS: [Cross Origin Resource Sharing](https://www.youtube.com/watch?v=Ka8vG5miErk)
+- CORS: [Cross Origin Resource Sharing](https://www.youtube.com/watch?v=x_Z6iYY5ibc)
 
 ### Best Practices
 

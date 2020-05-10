@@ -28,6 +28,7 @@
   - [Handling Errors in Express](https://zellwk.com/blog/express-errors/)
   - [REST API Tutorial (Node, Express & Mongo) #10 - Error Handling](https://www.youtube.com/watch?v=w1V2SdzdQBs)
 - CORS: [Cross Origin Resource Sharing](https://www.youtube.com/watch?v=x_Z6iYY5ibc)
+- VS Code Debugger: [Getting started with Node.js debugging in VS Code](https://www.youtube.com/watch?v=2oFKNL7vYV8)
 
 ### Best Practices
 

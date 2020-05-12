@@ -49,4 +49,4 @@ const copiedContent = fs.readFile(targetFilePath, "utf-8", callBack);
 log(4, copiedContent);
 
 assert.strictEqual(copiedContent, SOURCE_TEXT);
-log(5, "pass!");
+log(5, '\033[32mpass!\x1b[0m');

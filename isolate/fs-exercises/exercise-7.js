@@ -40,22 +40,5 @@ log(0.2, ORIGINAL_TEXT);
 // const newText = fs.readFileSync(SOURCE_PATH, "utf-8");
 // log(4, newText);
 
-// 2. refactor to asynchronous
-log(1, "appending to file ...");
-fs.appendFile(SOURCE_PATH, ORIGINAL_TEXT, function (err) {
-  if (err) throw err;
-  log(2, "appending to file ...");
-  fs.appendFile(SOURCE_PATH, ORIGINAL_TEXT, function (err) {
-    if (err) throw err;
-    log(3, "reading file ...");
-    fs.readFile(SOURCE_PATH, "utf-8", function (err, contents) {
-      if (err) throw err;
-      log(4, contents);
-      assert.strictEqual(
-        contents,
-        ORIGINAL_TEXT + ORIGINAL_TEXT + ORIGINAL_TEXT
-      );
-      log(5, "pass!");
-    });
-  });
-});
+assert.strictEqual(newText, ORIGINAL_TEXT + ORIGINAL_TEXT + ORIGINAL_TEXT);
+log(5, '\033[32mpass!\x1b[0m');

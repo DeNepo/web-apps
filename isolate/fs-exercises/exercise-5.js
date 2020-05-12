@@ -1,6 +1,11 @@
 /* helpful examples
   read-json.js
   sync-vs-async.js
+
+  PS. This exercise is tricky in a different way than the others
+  * you need to really understand JSON.stringify
+  * you'll need to think about how the data changes as it is saved and re-parsed
+  * and you'll have to use assert with a value that doesn't already exist in the starter code
 */
 
 // require dependencies
@@ -49,9 +54,12 @@ const readFileCallback = (err, fileText) => {
 
   const parsedFileContents = Object.assign(objectToSave, stringToSave);
   log(6, parsedFileContents);
-  assert.deepStrictEqual(parsedFileContents, objectToSave);
+  assert.deepStrictEqual(
+    parsedFileContents,
+    { _ }
+  );
 
-  log(7, "pass!");
+  log(7, '\033[32mpass!\x1b[0m');
 };
 
 // async

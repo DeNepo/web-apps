@@ -1,6 +1,8 @@
-# Week 1
+# Web Apps
 
-## Module Name
+[Main Page](../README.md) | [Week 2 >>](../week-2/README.md)
+
+## Week 1
 
 * [Prep Work](#prep-work)
 * [Lesson Plan](#lesson-plan)

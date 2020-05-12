@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Web Apps: Week 2</title>
+
+  <link rel="stylesheet" href="../reveal.js/css/reset.css">
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/night.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/monokai.css">
+
+  <style>
+    /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
+    .reveal .footer {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      font-size: 0.5em;
+      /* z-index: 1000; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class='footer'>
+      <ul id='footer-links' style='visibility: hidden;'>
+        <li>
+          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/web-apps" target="_blank">
+            <code>module repository</code>
+          </a>
+        </li>
+        <li>
+          </a><a id='to-sketchpad' href="https://hackyourfuture.be/sketchpad" target="_blank">
+            <code>live sketchpad</code>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <code id="footer-text">ESC to overview</code>
+    </div>
+
+
+    <div class="slides">
+
+      <section id='cover-slide'>
+        <section>
+          <h2>Web Apps</h2>
+          <br>
+          <h3>Week 2 - Prep</h3>
+          <br>
+          <code>"s"</code> for speaker notes
+          <br>
+          <br>
+          <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-2" target='_blank'>
+            -- back to repo --
+          </a>
+        </section>
+
+      </section>
+
+      <section id='learning-objectives'>
+        <section>
+          <h1>Learning Objectives</h1>
+          <br>
+          <br>
+          <p>
+            What can you expect to cover in class today?
+          </p>
+        </section>
+        <section>
+          <h3>Isolate</h3>
+          <br>
+          <ul>
+            <li>static and dynamic data</li>
+            <li>routing</li>
+            <li>middlewares</li>
+            <li>Postman</li>
+          </ul>
+        </section>
+      </section>
+
+      <section>
+        <section id='new-material'>
+          <h1>New Material</h1>
+          <br>
+          <p>Serving Data</p>
+        </section>
+
+        <section>
+          <h2>Quick Refresher - Server // Client Architecture</h2>
+
+          <img class="fragment fade-in-then-out" src="https://www.researchgate.net/profile/Eustace_Dogo/publication/319553394/figure/fig5/AS:668324555915276@1536352399663/The-conventional-layout-of-client-server-architecture-of-Internet-content-delivery.png"
+               alt="">
+        </section>
+
+        <section>
+          <h2>Restaurant Metaphor</h2>
+
+          <img class="fragment fade-in-then-out" src="https://cdn.touchbistro.com/wp-content/uploads/2019/07/28-01-empty-dining-room.jpg" alt="">
+        </section>
+
+        <section>
+          <h2>What Is Static Data - How Do We Serve It and Why?</h2>
+
+          <p class="fragment fade-in-then-out">
+            Static data is the simplest thing to serve via a server.
+            In the early days of the Internet, this was all that was widely available.
+            <aside class="notes">
+              Talk about how perhaps they remember websites before things like Facebook when pages were mostly static and interaction included simple navigation between pages.
+            </aside>
+          </p>
+        </section>
+
+        <section>
+          <h2>Dynamic Data - Now it Gets Interesting!</h2>
+
+          <p class="fragment fade-in-then-out">
+            Submitting forms, uploading pictures, viewing pictures uploaded by other users. All forms of Dynamic Data being and the things we can do with them.
+          </p>
+
+          <p class="fragment fade-in-then-out">
+            This is what gives true power and interactivity to the Internet.
+          </p>
+        </section>
+
+        <section>
+          <h2>Routing</h2>
+
+          <p>
+            Addresses for the internet.
+          </p>
+
+          <img src="https://miro.medium.com/max/538/0*3471y7f9R2q0CMGI"
+               alt="">
+        </section>
+
+        <section>
+          <h2>Metaphor - Postal Addresses</h2>
+
+          <img width="30%" class="fragment" src="https://documentation.alphasoftware.com/documentation/pages/HowTo/Map/images/map_autocomplete2.png" alt="">
+
+          <img width="40%" class="fragment" src="https://lh4.googleusercontent.com/-Lx69aIsa078/TXuNzpIGRbI/AAAAAAAAACw/95JWAs_yYsw/s1600/URL.png"
+               alt="">
+        </section>
+      </section>
+
+      <section id='examples'>
+        <section>
+          <h2>Examples</h2>
+        </section>
+      </section>
+
+      <section id="postman">
+        <section>
+          <h2>Postman</h2>
+
+          <img width="20%" class="fragment fade-in-then-out" src="https://media.gettyimages.com/photos/postman-of-bpost-is-seen-during-the-strike-in-brussels-belgium-on-07-picture-id1058590354"
+               alt="">
+
+          <p class="fragment fade-in-then-out">No, not that one.</p>
+        </section>
+
+        <section>
+          <img src="https://www.codemotion.com/magazine/wp-content/uploads/2020/04/postman-896x504.jpg" alt="">
+        </section>
+      </section>
+
+      <section id="middleware">
+        <section>
+          <h1>Middlewares!</h1>
+
+          <p>DRY code for routes!</p>
+        </section>
+      </section>
+
+      <section id='finale-slide'>
+        <h2>Web Apps</h2>
+        <br>
+        <h3>Week 2 - Prep</h3>
+        <br>
+        <code>"s"</code> for speaker notes
+        <br>
+        <br>
+        <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1" target='_blank'>
+          -- back to repo --
+        </a>
+      </section>
+
+    </div>
+  </div>
+
+
+  <script src="../reveal.js/js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      controlsTutorial: true,
+      slideNumber: 'h/t',
+      hash: true,
+      help: true,
+      width: '100%',
+      height: '100%',
+      dependencies: [
+        { src: '../reveal.js/plugin/notes/notes.js', async: true },
+        { src: '../reveal.js/plugin/highlight/highlight.js', async: true }
+      ],
+    })
+
+    Reveal.addEventListener('overviewshown', function (event) {
+      document.getElementById('footer-text').innerHTML = 'ESC into slide'
+      document.getElementById('footer-links').style.visibility = 'visible'
+    })
+    Reveal.addEventListener('overviewhidden', function (event) {
+      document.getElementById('footer-text').innerHTML = 'ESC to overview'
+      document.getElementById('footer-links').style.visibility = 'hidden'
+    })
+
+
+  </script>
+</body>
+
+</html>

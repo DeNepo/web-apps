@@ -1,0 +1,14 @@
+[2020-05-12 09:40:37.458 a.m.] GET /
+[2020-05-12 09:40:38.104 a.m.] GET /favicon.ico
+[2020-05-12 09:40:52.475 a.m.] GET /hi/greeter
+[2020-05-12 09:41:10.989 a.m.] GET /greeter/hi
+[2020-05-12 09:41:33.399 a.m.] GET /?=greeter/hi
+[2020-05-12 09:59:51.621 a.m.] GET /?=greeter/hi
+[2020-05-12 09:59:58.925 a.m.] GET /?=greeter/hi
+[2020-05-12 10:00:05.349 a.m.] GET /greeter/hi
+[2020-05-12 10:00:30.722 a.m.] GET /greeter/hi?name=ayse
+[2020-05-12 10:00:38.221 a.m.] GET /?=greeter/hi
+[2020-05-12 10:00:38.245 a.m.] GET /favicon.ico
+[2020-05-12 10:01:00.432 a.m.] GET /greeter/hi?name=ayse&day=friday
+[2020-05-12 10:01:30.245 a.m.] GET /greeter/bye?name=ayse&day=friday
+[2020-05-12 10:02:05.046 a.m.] GET /greeter/bye

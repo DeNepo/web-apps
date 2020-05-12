@@ -1,0 +1,7 @@
+[2020-05-12 10:21:08.209 a.m.] GET /
+[2020-05-12 10:21:08.407 a.m.] GET /send-data.js
+[2020-05-12 10:21:22.607 a.m.] POST /api/ad?value=soyad
+[2020-05-12 10:21:25.082 a.m.] POST /api/ad?value=soyad
+[2020-05-12 11:28:55.020 a.m.] GET /
+[2020-05-12 11:28:55.068 a.m.] GET /send-data.js
+[2020-05-12 11:29:28.958 a.m.] POST /api/ayse?value=akyol

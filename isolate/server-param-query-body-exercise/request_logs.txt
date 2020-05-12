@@ -1,0 +1,7 @@
+[2020-05-12 11:32:08.691 a.m.] GET /
+[2020-05-12 11:32:08.938 a.m.] GET /send-param-data.js
+[2020-05-12 11:32:08.941 a.m.] GET /send-body-data.js
+[2020-05-12 11:32:08.945 a.m.] GET /send-query-data.js
+[2020-05-12 11:32:23.396 a.m.] POST /param/ayse
+[2020-05-12 11:32:25.463 a.m.] POST /query?value=akyol
+[2020-05-12 11:32:27.854 a.m.] POST /body/

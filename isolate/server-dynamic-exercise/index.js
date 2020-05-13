@@ -60,7 +60,7 @@ app.post("/greeter/bye", (req, res) => {
   //res.json(body);
 });
 
-// start the server
+// start the server port
 app.listen(config.PORT, () => {
   console.log(
     `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`

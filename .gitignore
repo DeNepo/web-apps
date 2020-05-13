@@ -1,4 +1,5 @@
 node_modules
-server-logs
+server-logs.txt
 .env
 request_logs.txt
+access.log

@@ -62,6 +62,7 @@
 
 #### Suggested Study
 
+- [Express.js Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE)
 - How To Build a Job Search App (Node, APIs, Vanilla JS): [video](https://www.youtube.com/watch?v=v7cprTuAnlA), [code](https://github.com/codebubb/job-search-app/)
 - Debugging Node/Express with VSCode
   - [Burke Holland](https://www.youtube.com/watch?v=NW2HG9C_mZc)

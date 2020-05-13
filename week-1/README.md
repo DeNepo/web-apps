@@ -30,6 +30,11 @@ Both of these are long videos, you don't need to finish them before class. But t
 * [Traversy: Node for Absolute Beginners](https://www.youtube.com/watch?v=U8XF6AFGqlc)
 * [Traversy: Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
 
+### `fs`
+
+* [study.hyf.be](https://study.hackyourfuture.be/node-js/native-modules#fs)
+* [About the in-class exercises](https://vimeo.com/414475261)
+
 ---
 
 ## Lesson Plan

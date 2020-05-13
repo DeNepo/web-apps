@@ -69,7 +69,7 @@ Practice refactoring small Express apps from single-file servers into multiple f
 
 ### Suggested Study
 
-- [\_](_)
+- [Traversy Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE)
 
 ### Exercises
 

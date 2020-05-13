@@ -27,6 +27,9 @@
 
 ## Prep Work
 
+### Prep slides & recordings
+Recordings: [Part 1](https://vimeo.com/417960548)
+
 ### HTTP Statuses
 
 - [In 60 Seconds](https://www.youtube.com/watch?v=GrNrcmD6HLA)

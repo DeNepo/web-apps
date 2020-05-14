@@ -1,12 +1,9 @@
-const sendDataHandler = event => {
+const sendBodyDataHandler = event => {
   // debugger;
 
-  const paramVal = event.target.form.paramData.value;
-  const queryValRaw = event.target.form.queryData.value;
-  const queryVal = encodeURIComponent(queryValRaw);
   const bodyVal = event.target.form.bodyData.value;
 
-  fetch(`/api/${paramVal}?value=${queryVal}`, {
+  fetch(`/api/body/`, {
     method: 'POST',
     body: JSON.stringify({ value: bodyVal }),
     headers: {
@@ -26,5 +23,5 @@ const sendDataHandler = event => {
 };
 
 document
-  .getElementById('send-button')
-  .addEventListener('click', sendDataHandler);
+  .getElementById('send-body-button')
+  .addEventListener('click', sendBodyDataHandler);

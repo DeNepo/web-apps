@@ -1,7 +1,8 @@
 const handlers = require('./handlers.js');
 const express = require('express');
 
-const router = express.Router();
+// create the router
+_;
 
 router.use((req, res, next) => {
   console.log('routes!');
@@ -12,6 +13,8 @@ router.get('/', (req, res) => {
   res.send('routes!');
 });
 
-router.post('/:value', handlers.readValues);
+// write the routes!
+
+
 
 module.exports = router;

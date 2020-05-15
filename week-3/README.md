@@ -92,6 +92,8 @@ Revisit the text editor app you studied last week, this time refactoring the ser
 
 #### `courses-web-app`
 
+- [the `courses-web-app` template repo](https://github.com/HackYourFutureBelgium/courses-web-app)
+
 Again with the refactors?! This week's project is refactor the API from [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) into a full web app. To help you get started, you can use [the `courses-web-app` template repo](https://github.com/HackYourFutureBelgium/courses-web-app).
 
 Besides refactoring the backend into multiple files, you are also expected to develope a frontend for your API in the `/client` directory.  You can design the frontend however you like, and organize the code in a way that makes sense to you.  The main objective this week is to understand how the frontend & backend are related.

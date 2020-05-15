@@ -54,7 +54,7 @@ Recordings: [Part 1](https://vimeo.com/417960548), [Part 2](https://vimeo.com/41
 
 ## Lesson Plan
 
-<!-- > [Lesson Plan Slides](https://hackyourfuture.be/module-name/week-3) -->
+> [Lesson Plan Slides](https://hackyourfuture.be/module-name/week-3)
 
 Practice refactoring small Express apps from single-file servers into multiple files using `express.Router()`.
 

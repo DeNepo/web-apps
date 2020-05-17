@@ -1,6 +1,8 @@
-# Week 1
+# Web Apps
 
-## Module Name
+[Main Page](../README.md) | [Week 2 >>](../week-2/README.md)
+
+## Week 1
 
 * [Prep Work](#prep-work)
 * [Lesson Plan](#lesson-plan)
@@ -32,6 +34,11 @@ Both of these are long videos, you don't need to finish them before class. But t
 * [Mosh: Node.js in 1 hour](https://www.youtube.com/watch?v=uVwtVBpw7RQ&list=PLTjRvDozrdlydy3uUBWZlLUTNpJSGGCEm&index=1)
 * [Traversy: Node for Absolute Beginners](https://www.youtube.com/watch?v=U8XF6AFGqlc)
 * [Traversy: Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
+
+### `fs`
+
+* [study.hyf.be](https://study.hackyourfuture.be/node-js/native-modules#fs)
+* [About the in-class exercises](https://vimeo.com/414475261)
 
 ---
 

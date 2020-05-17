@@ -60,7 +60,7 @@ Practice refactoring small Express apps from single-file servers into multiple f
 
 ### Isolate
 
-These exercises have a server running from a single file (`index.js`), your task is to refactor them to match the file structure in the examples.
+These exercises have a server running from a single file (`index.js`), your task is to refactor them to match the file structure in the examples. Bonust points: convert all callback and promise code that you see into async/await.
 
 - Exercises
   - [param/query/body](../isolate/refactored-exercise-param-query-body)

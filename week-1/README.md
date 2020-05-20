@@ -1,6 +1,8 @@
-# Week 1
+# Web Apps
 
-## Module Name
+[Main Page](../README.md) | [Week 2 >>](../week-2/README.md)
+
+## Week 1
 
 * [Prep Work](#prep-work)
 * [Lesson Plan](#lesson-plan)
@@ -32,6 +34,11 @@ Both of these are long videos, you don't need to finish them before class. But t
 * [Mosh: Node.js in 1 hour](https://www.youtube.com/watch?v=uVwtVBpw7RQ&list=PLTjRvDozrdlydy3uUBWZlLUTNpJSGGCEm&index=1)
 * [Traversy: Node for Absolute Beginners](https://www.youtube.com/watch?v=U8XF6AFGqlc)
 * [Traversy: Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
+
+### `fs`
+
+* [study.hyf.be](https://study.hackyourfuture.be/node-js/native-modules#fs)
+* [About the in-class exercises](https://vimeo.com/414475261)
 
 ---
 
@@ -82,9 +89,49 @@ This week's project is to follow the  [Build RESTful APIs with Node and Express]
 
 Don't worry if you don't understand everything in this project.  The tutorial covers a lot of material very quickly, we'll spend the next weeks going deeper into the topics Mosh covers here.  Think of this week's project as a sneak preview of the coming 3 weeks.
 
-Just copying his code is not all! After finishing with the tutorial you will need to refactor the code so that:
+Just copying his code is not all! After finishing with the tutorial you will need to refactor the code so that It reads and writes from a file called `courses.json` instead of using a local variable. ie:
 
-* It reads and writes from a file called `courses.json` instead of using a local variable.
+1. ```js
+    app.post('/api/courses', (req, res)=>{
+        const { error } = validateCourse(req.body);
+        if(error) return res.status(400).send(error.details[0].message);
+        const course = {
+            id: courses.length + 1,
+            name: req.body.name
+        };
+        courses.push(course);
+        res.send(course);
+    });
+    ```
+1. ```js
+    // there are some mistakes in this, we can't give it all away ;)
+    app.post('/api/courses', (req, res) => {
+      const { error } = validateCourse(req.body);
+      if (error) {
+        return res.status(400).send(error.details[0].message);
+      }
+      fs.writeFileSync(COURSES_PATH, (err, content) => {
+        if (err) {
+          res.status(500).send(err.message);
+          return;
+        }
+        const parsedCourses = JSON.stringify(content);
+        const course = {
+          id: courses.length + 1,
+          name: req.body.name
+        };
+        parsedCourses.push(course);
+        const stringifiedCourses = JSON.parse(parsedCourses, null, '  ');
+        fs.readFileSync(COURSES_PATH, parsedCourses, (err) => {
+          if (err) {
+            res.status(500).send(err.message);
+            return;
+          }
+          res.send(course);
+        });
+      });
+    });
+    ```
 
 You will be expected to turn in your code from his tutorial on a new repository called `restful-courses`. you will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.  Your repo must include:
 

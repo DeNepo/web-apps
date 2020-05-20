@@ -6,8 +6,6 @@
   </a>
 </div>
 
->  quote
-
 ### Overview
 
 * [Module Summary](#module-summary)
@@ -25,6 +23,8 @@
 ---
 
 ## Module Summary
+
+fullstack! client/server!
 
 [TOP](#overview)
 

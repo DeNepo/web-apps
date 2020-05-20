@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Web Apps: Week 4</title>
+
+  <link rel="stylesheet" href="../reveal.js/css/reset.css">
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/night.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/monokai.css">
+
+  <style>
+    /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
+    .reveal .footer {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      font-size: 0.5em;
+      /* z-index: 1000; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class='footer'>
+      <ul id='footer-links' style='visibility: hidden;'>
+        <li>
+          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/web-apps" target="_blank">
+            <code>module repository</code>
+          </a>
+        </li>
+        <li>
+          </a><a id='to-sketchpad' href="https://hackyourfuture.be/sketchpad" target="_blank">
+            <code>live sketchpad</code>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <code id="footer-text">ESC to overview</code>
+    </div>
+
+
+    <div class="slides">
+
+      <section id='cover-slide'>
+        <section>
+          <h2>Web Apps</h2>
+          <br>
+          <h3>Week 4 - Lecture</h3>
+          <br>
+          <code>"s"</code> for speaker notes
+          <br>
+          <br>
+          <a href="https://github.com/hackyourfuturebelgium/web-apps/tree/master/week-4" target='_blank'>
+            -- back to repo --
+          </a>
+        </section>
+
+      </section>
+
+      <section id='review'>
+        <section>
+          <h1>Review</h1>
+          <br>
+          <br>
+          <p>Any <code>sunday-review</code> issues?</p>
+          <p>Any other Questions?</p>
+          <br>
+          <code>(~30 min)</code>
+        </section>
+      </section>
+
+      <section id='practice'>
+        <section>
+          <h2>Work Those Mental Muscles</h2>
+          <br>
+          <h3>
+            <a href="https://github.com/HackYourFutureBelgium/web-apps/tree/master/isolate"><code>refactored-*</code>
+              excercises!</a>
+          </h3>
+
+          </p>
+        </section>
+      </section>
+
+      <section id='what-you-will-build'>
+        <section>
+          <h2>What You'll Build</h2>
+          <br>
+          <h3></h3>
+
+          <a href="https://github.com/hackyourfuturebelgium/coming-soon">Source</a>
+
+          <p>
+          <h4>Functionality</h4>
+          <ul>
+            <li></li>
+          </ul>
+          </p>
+        </section>
+      </section>
+
+      <section id='finale-slide'>
+        <h2>Web Apps</h2>
+        <br>
+        <h3>Week 4 - Lecture</h3>
+        <br>
+        <code>"s"</code> for speaker notes
+        <br>
+        <br>
+        <a href="https://github.com/hackyourfuturebelgium/web-apps/tree/master/week-4" target='_blank'>
+          -- back to repo --
+        </a>
+      </section>
+
+    </div>
+  </div>
+
+
+  <script src="../reveal.js/js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      controlsTutorial: true,
+      slideNumber: 'h/t',
+      hash: true,
+      help: true,
+      width: '100%',
+      height: '100%',
+      dependencies: [
+        { src: '../reveal.js/plugin/notes/notes.js', async: true },
+        { src: '../reveal.js/plugin/highlight/highlight.js', async: true }
+      ],
+    })
+
+    Reveal.addEventListener('overviewshown', function (event) {
+      document.getElementById('footer-text').innerHTML = 'ESC into slide'
+      document.getElementById('footer-links').style.visibility = 'visible'
+    })
+    Reveal.addEventListener('overviewhidden', function (event) {
+      document.getElementById('footer-text').innerHTML = 'ESC to overview'
+      document.getElementById('footer-links').style.visibility = 'hidden'
+    })
+
+
+  </script>
+</body>
+
+</html>

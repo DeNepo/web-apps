@@ -28,7 +28,9 @@
 ## Prep Work
 
 ### Prep slides & recordings
-Recordings: [Part 1](https://vimeo.com/417960548), [Part 2](https://vimeo.com/418360319), [Part 3](https://vimeo.com/418359614)
+
+- [slides](https://hackyourfuture.be/web-apps/week-3/prep.html)
+- Recordings: [Part 1](https://vimeo.com/417960548), [Part 2](https://vimeo.com/418360319), [Part 3](https://vimeo.com/418359614)
 
 ### HTTP Statuses
 

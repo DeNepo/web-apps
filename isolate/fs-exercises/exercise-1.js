@@ -27,11 +27,11 @@ const objectToSave = {
 };
 log(1, objectToSave);
 
-const stringToSave = JSON.stringify(objectToSave, null, '  ');
+const stringToSave = JSON.stringify(objectToSave, null, "  ");
 log(2, stringToSave);
 
 // sync
-log(3, 'writing file ...');
+log(3, "writing file ...");
 fs.writeFileSync(FILE_PATH, stringToSave);
 
 const readFileCallback = (err, fileText) => {
@@ -47,9 +47,9 @@ const readFileCallback = (err, fileText) => {
   log(6, parsedFileContents);
   assert.deepStrictEqual(parsedFileContents, objectToSave);
 
-  log(7, '\033[32mpass!\x1b[0m');
+  log(7, "pass!");
 };
 
 // async
-fs.readFile(FILE_PATH, 'utf-8', readFileCallback);
-log(4, 'reading file ...');
+fs.readFile(FILE_PATH, "utf-8", readFileCallback);
+log(4, "reading file ...");

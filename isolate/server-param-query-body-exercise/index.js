@@ -1,28 +1,29 @@
-'use strict';
+"use strict";
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const config = require('./config');
-const logger = require('./middleware/logger');
+const express = require("express");
+const bodyParser = require("body-parser");
+const config = require("./config");
+const logger = require("./middleware/logger");
+const path = require("path");
 
 // initialize the app
-_;
+const app = express();
 
 // log requests
-_;
+app.use(logger);
 
 // parse body
-_;
-// parse queries
-_;
+app.use(bodyParser.json());
 
+// parse queries
+app.use(bodyParser.raw({ type: "text/plain" }));
 // statically serve the frontend
-_;
+app.use("/", express.static(path.join(__dirname, "public")));
 
 // declare the routes
-app.post('/param/:value', (req, res) => {
+app.post("/param/:value", (req, res) => {
   // read value from the param
-  _;
+  const paramValue = req.params.value;
 
   console.log(`param value: ${paramValue}`);
 
@@ -32,9 +33,9 @@ app.post('/param/:value', (req, res) => {
   res.json(responseData);
 });
 
-app.post('/query', (req, res) => {
+app.post("/query", (req, res) => {
   // read value from the query
-  _;
+  const queryValue = req.query.value;
 
   console.log(`query value: ${queryValue}`);
 
@@ -44,9 +45,9 @@ app.post('/query', (req, res) => {
   res.json(responseData);
 });
 
-app.post('/body', (req, res) => {
+app.post("/body", (req, res) => {
   // read value from the body
-  _;
+  const bodyValue = req.body.value;
 
   console.log(`body value: ${bodyValue}`);
 
@@ -57,4 +58,8 @@ app.post('/body', (req, res) => {
 });
 
 // start the app
-_;
+app.listen(config.PORT, () => {
+  console.log(
+    `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`
+  );
+});

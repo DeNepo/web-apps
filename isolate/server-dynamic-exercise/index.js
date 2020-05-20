@@ -56,11 +56,20 @@ app.post("/greeter/bye", (req, res) => {
 
   //const reply = `hi ${req.query.name}, happy ${res.query.day}`;
 
+
   res.status(200).send(body);
   //res.json(body);
 });
 
 // start the server
+
+
+  res.status(200).send(body);
+  //res.json(body);
+});
+
+// start the server port
+
 app.listen(config.PORT, () => {
   console.log(
     `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`

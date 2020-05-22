@@ -1,11 +1,14 @@
 'use strict'
 
 const express = require('express')
-const  bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
+const tv4 = require('tv4')
 
 const app = express()
 
 app.use(bodyParser.json())
+
+const inputSchema = require('./input-schema.json')
 
 /**
  * Input looks like:
@@ -22,7 +25,7 @@ app.use(bodyParser.json())
  *
  * First three properties are mandatory, the rest are not.
  */
-app.post('/users', (req, res) => {
+app.post('/users-painful', (req, res) => {
 
   // checks is `id` is provided and is also a number
   if (typeof req.body.id !== 'number') {
@@ -41,6 +44,30 @@ app.post('/users', (req, res) => {
 
   console.log(req.body)
   res.json(req.body)
+})
+
+app.post('/users-with-schema', (req, res) => {
+
+  const data = req.body
+
+  const isValid = tv4.validate(data, inputSchema)
+
+  if (!isValid) {
+
+    const error = tv4.error
+    console.error(error)
+
+    res.status(400).json({
+      error: {
+        message: error.message,
+        dataPath: error.dataPath
+      }
+    })
+    return
+  }
+
+  console.log(data)
+  res.json(data)
 })
 
 app.listen(3300, (err) => {

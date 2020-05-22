@@ -48,18 +48,31 @@
 
 > [Lesson Plan Slides](https://hackyourfuture.be/web-apps/week-4)
 
+Practice using JSON Schemas & `tv4` to protect data saved in a .json file.
+
 ### Isolate
+
+- Exercises
+  - [Write the Data](../isolate/input-validation-exercise-data)
+  - [Write the Schema](../isolate/input-validation-exercise-schema)
+  - [Write the Handlers](../isolate/input-validation-exercise-handlers)
+- Examples
+  - [example from the prep videos](../isolate/input-valiation-example-from-video)
+  - [completed example](../isolate/input-valiation-example-complete)
 
 ### Integrate
 
+Build a simple _virtual file system_ using a .json data file and schema.  This API is very similar to the one you studied the last two weeks, but instead of reading and writing actual files it stores file names and text contents as entries in a single .json file.
+
+- [textidor-validated](https://github.com/hackyourfuturebelgium/textidor-validated) (starter repo)
 
 ---
 
 ## Assignments
 
-### Suggested Study
-
 ### Exercises
+
+- [pokedex-api](https://github.com/hackyourfuturebelgium/pokedex-api)
 
 ### Project
 

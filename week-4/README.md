@@ -30,6 +30,7 @@
 
 - [slides](https://hackyourfuture.be/web-apps/week-4/prep.html)
 - videos: [Part 1](https://vimeo.com/420678014)
+- [input validation example](https://github.com/HackYourFutureBelgium/web-apps/tree/master/isolate/input-validation-example)
 
 ### JSON Schemas?
 

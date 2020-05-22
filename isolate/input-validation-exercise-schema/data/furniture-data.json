@@ -1,0 +1,33 @@
+[
+  {
+    "id": 2,
+    "materials": [
+      "stone"
+    ],
+    "type": "sofa",
+    "second_hand": false
+  },
+  {
+    "id": 3,
+    "materials": [],
+    "type": "table",
+    "second_hand": false
+  },
+  {
+    "id": 5,
+    "materials": [
+      "metal",
+      "plastic"
+    ],
+    "type": "chair"
+  },
+  {
+    "id": 6,
+    "materials": [
+      "wood",
+      "metal"
+    ],
+    "type": "desk",
+    "second_hand": true
+  }
+]

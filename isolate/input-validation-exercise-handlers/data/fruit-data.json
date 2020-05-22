@@ -1,0 +1,26 @@
+[
+  {
+    "id": 2,
+    "name": "apple",
+    "climate": "temperate",
+    "harvest_season": "autumn"
+  },
+  {
+    "id": 3,
+    "name": "apple",
+    "climate": "temperate",
+    "harvest_season": "autumn"
+  },
+  {
+    "id": 5,
+    "name": "apple",
+    "climate": "temperate",
+    "harvest_season": "autumn"
+  },
+  {
+    "id": 6,
+    "name": "apple",
+    "climate": "temperate",
+    "harvest_season": "autumn"
+  }
+]

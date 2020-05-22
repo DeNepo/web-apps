@@ -1,0 +1,25 @@
+{
+  "title": "A Fruit",
+  "description": "Definition of a valid fruit entry",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "climate": {
+      "type": "string"
+    },
+    "harvest_season": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "climate",
+    "harvest_season"
+  ]
+}

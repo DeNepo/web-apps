@@ -76,7 +76,19 @@ Build a simple _virtual file system_ using a .json data file and schema.  This A
 
 ### Project
 
-#### Challenge: Deployment
+#### impress yourself!
+
+This week's project is open-ended.  Starting with the [tv4-validation-fs-template](https://github.com/HackYourFutureBelgium/tv4-validation-fs-template), build a project to impress yourself.
+
+- A `development-strategy.md` file to explain how you built the app in small pieces
+- One branch per step in your `development-strategy.md`
+- A complete README.md
+- A working frontend in the `/client` directory
+- A working API in the `/api` directory
+- A schema and valid data in the `/data` directory
+- A deployed demo using Heroku
+
+#### Required: Deployment
 
 Deploying you project is not required, but is suggested.  This is a nice first project to try out fullstack deployment.
 

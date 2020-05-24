@@ -78,7 +78,15 @@ Build a simple _virtual file system_ using a .json data file and schema.  This A
 
 #### impress yourself!
 
-This week's project is open-ended.  Starting with the [tv4-validation-fs-template](https://github.com/HackYourFutureBelgium/tv4-validation-fs-template), build a project to impress yourself.
+This week's project is open-ended.  Starting with the [tv4-validation-fs-template](https://github.com/HackYourFutureBelgium/tv4-validation-fs-template), build a project to impress yourself.  You've been at HYF for a few months now and every week your projects have been given to you. You've hopefully learned about planning the steps of your projects, organizing your code, and writing clean code.  It's time to put yourself to the test.
+
+Here are some tips to help you find your way:
+
+1. _start with your user_ Begin by identifying the type of person who will want ot use your app, and why they would want to use it. Who is this project for? What does the app do for them? Why is this helpful?
+1. _define your data_ Before you start coding, understand the data your application will be using. This includes writing the schema and creating some starter data by hand.
+1. _write your backend first_ After defining your data, write an API that allows users to create, read, update, and delete entries in your data file.
+
+Your finished repository should include:
 
 - A `development-strategy.md` file to explain how you built the app in small pieces
 - One branch per step in your `development-strategy.md`

@@ -21,4 +21,11 @@ Screen recordings of class. Coaches, when sending your PR's with links please ma
    - Part 2: [review](https://vimeo.com/416889277) - [Shaun](https://github.com/badgerbadgerbadgerbadger)
    - Wrap-up: [review](https://vimeo.com/416906829) - [Shaun](https://github.com/badgerbadgerbadgerbadger)
 1. week 3:
-   
+   - Part 1: [review](https://vimeo.com/417960548) - [Shaun](https://github.com/badgerbadgerbadgerbadger)
+             [review](https://vimeo.com/419545487) - [Shaun](https://github.com/badgerbadgerbadgerbadger)
+   - Part 2: [review](https://vimeo.com/418360319) - [Shaun](https://github.com/badgerbadgerbadgerbadger)
+   - Part 3: [review](https://vimeo.com/418359614) - [Shaun](https://github.com/badgerbadgerbadgerbadger)
+1. week 4:
+   - Part 1: [review](https://vimeo.com/422120045) - [Shaun](https://github.com/badgerbadgerbadgerbadger)
+   - Part 2: [review](https://vimeo.com/422148011) - [Shaun](https://github.com/badgerbadgerbadgerbadger)
+   - Part 3: [review](https://vimeo.com/422149853) - [Shaun](https://github.com/badgerbadgerbadgerbadger)

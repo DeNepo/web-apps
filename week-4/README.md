@@ -29,7 +29,7 @@
 ### Prep slides & recordings
 
 - [slides](https://hackyourfuture.be/web-apps/week-4/prep.html)
-- videos: [Part 1](https://vimeo.com/420678014)
+- videos: [Part 1](https://vimeo.com/420678014), [Part 2](https://vimeo.com/422487341)
 - [input validation example](https://github.com/HackYourFutureBelgium/web-apps/tree/master/isolate/input-validation-example-from-video)
 
 ### JSON Schemas?

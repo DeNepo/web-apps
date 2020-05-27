@@ -53,7 +53,7 @@ const handlers = {
         return;
       }
 
-      next(err);
+
     }
 
   },
@@ -72,7 +72,7 @@ const handlers = {
         return;
       }
 
-      next(err);
+
     }
   },
   readOne: async (req, res) => {
@@ -95,7 +95,7 @@ const handlers = {
         return;
       }
 
-      next(err);
+
     }
   },
   update: async (req, res) => {
@@ -148,7 +148,7 @@ const handlers = {
         return;
       }
 
-      next(err);
+
     }
   },
   delete: async (req, res) => {
@@ -184,7 +184,7 @@ const handlers = {
         return;
       }
 
-      next(err);
+
     }
   },
 };

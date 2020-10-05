@@ -27,7 +27,7 @@ log(0.2, ORIGINAL_TEXT);
 // --- main script ---
 
 // there are two steps to this exercise
-// 1. fill in the blanks (and pass!)
+// 1. fill in the blanks to pass (sync)
 // 2. refactor to asynchronous
 
 log(1, 'appending to file ...');

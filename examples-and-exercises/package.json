@@ -1,0 +1,11 @@
+{
+  "name": "examples-and-exercises",
+  "version": "1.0.0",
+  "description": "examples and exercises to find your way around Node.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}

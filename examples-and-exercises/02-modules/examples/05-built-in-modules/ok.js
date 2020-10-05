@@ -49,7 +49,7 @@ assert.ok(1, '1 is truthy')
 console.assert(1, '1 is truthy')
 assert.ok(1, '1 is truthy')
 
-// 'if the first argument is falsey, console.ok() throws an error ...'
+// 'if the first argument is falsey, assert.ok() throws an error ...'
 try {
   assert.ok(0, '0 is falsey')
 } catch (err) {

@@ -1,0 +1,5 @@
+write the index.js
+
+write the code to pass the tests
+
+pass the arguments to pass the tests

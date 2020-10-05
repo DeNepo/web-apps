@@ -558,7 +558,8 @@ Your finished repository should include:
   - Give your name
   - and a helpful description
 
----
+<details>
+<summary>expand/collapse</summary>
 
 ### Class 7 & 8
 
@@ -580,3 +581,5 @@ Your finished repository should include:
    - [Part 1](https://vimeo.com/422120045)
    - [Part 2](https://vimeo.com/422148011)
    - [Part 3](https://vimeo.com/422149853)
+
+</details>

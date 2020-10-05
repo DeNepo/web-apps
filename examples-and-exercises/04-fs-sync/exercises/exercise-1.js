@@ -34,23 +34,13 @@ log(3, 'writing file ...');
 fs.writeFileSync(FILE_PATH, stringToSave);
 
 
-const readFileCallback = (err, fileText) => {
-  if (err) {
-    log(5, err);
-    return;
-  }
+const fileContents = fs.readFileSync(FILE_PATH, 'utf-8');
 
-  log(5, fileText);
-  assert.strictEqual(fileText, stringToSave);
+log(5, fileText);
+assert.strictEqual(_, stringToSave);
 
-  const parsedFileContents = JSON.parse(fileText);
-  log(6, parsedFileContents);
-  assert.deepStrictEqual(parsedFileContents, objectToSave);
+const parsedFileContents = JSON.parse(_);
+log(6, parsedFileContents);
+assert.deepStrictEqual(parsedFileContents, objectToSave);
 
-  log(7, '\033[32mpass!\x1b[0m');
-};
-
-// async
-fs.readFile(FILE_PATH, 'utf-8', readFileCallback);
-log(4, 'reading file ...');
-
+log(7, '\033[32mpass!\x1b[0m');

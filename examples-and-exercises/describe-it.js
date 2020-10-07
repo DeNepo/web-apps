@@ -11,12 +11,12 @@ const describe = (message = '', testCallback = () => { }) => {
 };
 
 const it = (message = '', testCallback = () => { }) => {
-  console.log(chalk.bold(`--- ${message} ---`));
+  console.log(chalk.bold.underline(`${message}`));
   try {
     testCallback();
-    console.log(chalk.bold.green('pass'));
+    console.log(chalk.bold.green('- pass'));
   } catch (err) {
-    console.log(chalk.bold.red('fail:'));
+    console.log(chalk.bold.red('- fail:\n'));
     console.error(err);
   }
   console.log('');

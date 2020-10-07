@@ -32,6 +32,7 @@ console.log(userProvidedArgs)
 // now let's try to make our program say "Hello!" to someone.
 
 const name = userProvidedArgs[0]
+console.assert(typeof name === 'string', 'command line arguments are always strings!');
 
 // but wait! what if the user didn't provide any arguments?
 // That could be an error and we should check for it.

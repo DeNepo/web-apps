@@ -1,0 +1,20 @@
+{
+  "title": "A File Entry",
+  "description": "Definition of a valid file entry",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ]
+}

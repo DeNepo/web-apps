@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Web Apps: Week 1</title>
+
+  <link rel="stylesheet" href="./reveal.js/css/reset.css">
+  <link rel="stylesheet" href="./reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="./reveal.js/css/theme/night.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="./reveal.js/lib/css/monokai.css">
+
+  <style>
+    /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
+    .reveal .footer {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      font-size: 0.5em;
+      /* z-index: 1000; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class='footer'>
+      <ul id='footer-links' style='visibility: hidden;'>
+        <li>
+          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/web-apps" target="_blank">
+            <code>module repository</code>
+          </a>
+        </li>
+        <li>
+          </a><a id='to-sketchpad' href="https://hackyourfuture.be/sketchpad" target="_blank">
+            <code>live sketchpad</code>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <code id="footer-text">ESC to overview</code>
+    </div>
+
+
+    <div class="slides">
+
+      <section id='cover-slide'>
+        <aside class="notes">
+          Cover slide with basement slides, all go into the motivation for learning NodeJS.
+        </aside>
+        <section>
+          <h2>NodeJS</h2>
+          <br>
+          <h3>Week 1</h3>
+          <br>
+          <code>"s"</code> for speaker notes
+          <br>
+          <br>
+          <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1" target='_blank'>
+            -- back to repo --
+          </a>
+        </section>
+
+      </section>
+
+      <section id='review'>
+        <section>
+          <h1>Review</h1>
+          <br>
+          <br>
+          <p>Any <code>sunday-review</code> issues?</p>
+          <p>Any other Questions?</p>
+          <br>
+          <code>(~30 min)</code>
+        </section>
+      </section>
+
+      <section id="learning-objectives">
+        <section>
+          <h1>Learning Objectives</h1>
+          <br>
+          <br>
+          <p>
+            What can you expect to cover in class today?
+          </p>
+        </section>
+        <section>
+          <h3>Isolate</h3>
+          <br>
+          <ul>
+            <li>process.argv</li>
+            <li><code>assert</code></li>
+            <li><code>fs</code></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Integrate</h3>
+          <br>
+          <ul>
+            <li>CLI Todo App</li>
+          </ul>
+        </section>
+      </section>
+
+      <section id='what-you-will-build'>
+        <section>
+          <h1>What You'll Build</h1>
+          <br>
+          <p>CLI Entries Manager</p>
+        </section>
+        <section>
+          <script id="asciicast-l7mygXXJGdBkEYTLwqi90Ds8b" src="https://asciinema.org/a/l7mygXXJGdBkEYTLwqi90Ds8b.js"
+            data-speed="1" data-size="medium" data-rows="40" async></script>
+        </section>
+      </section>
+
+      <section>
+        <section id='new-material'>
+          <h1>New Material</h1>
+          <br>
+          <p>Node.js? Backend? huh?</p>
+        </section>
+        <section>
+          <h1>What and Why?</h1>
+
+          <p class="fragment fade-in-then-out">
+            NodeJS is Javascript on the server (also known as the "backend").
+            Many clients, such as your mobile phones, talk to a central server, such as Google or Facebook.
+          </p>
+
+          <p class="fragment fade-in-then-out">
+            When you upload pictures to the cloud, servers are what processes and stores them.
+          </p>
+
+          <p class="fragment fade-in-then-out">
+            If front-end applications (like the ones you build in your browser) are the restaurant floor, servers are
+            the
+            back kitchen.
+          </p>
+        </section>
+
+        <section>
+          <h1>Why a Node Server?</h1>
+
+          <p class="fragment fade-in-then-out">
+            We already know Javascript!
+          </p>
+
+          <p class="fragment fade-in-then-out">
+            Node is fast, and built for the web.
+          </p>
+
+          <div class="fragment fade-in-then-out">
+            Has some of the best support for libraries.
+
+            <p>
+              You want to resize and image? There is a library.
+            </p>
+            <p>
+              You want to encode video? There is a library.
+            </p>
+            <p>
+              You want to make a cow say ridiculous things? There. Is. A. Library.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <section id='cli-arguments'>
+        <section>
+          <h2>Accepting Command Line Input</h2>
+          <br>
+          <code>(pair programming)</code>
+        </section>
+        <section>
+          <pre>
+            <code class="hljs js javascript active" data-trim >
+process.argv[0] === "node"
+
+process.argv[1] === "file-name.js"
+
+process.argv[2] === "firstArg"
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Helpful Links</h3>
+          <br>
+          <ul>
+            <li>
+              <h4>
+                What is the commandline?
+              </h4>
+              <ul>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=MBBWVgE0ewk">windows</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=5XgBd6rjuDQ">mac</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=id3DGvljhT4">linux</a>
+                </li>
+              </ul>
+
+              </a>
+            </li>
+            <li>
+              <a href='https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/'
+                target='_blank'>
+                NodeJS: argsv
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section id='assert'>
+        <section>
+          <h2>Assert!</h2>
+          <br>
+          <code>(pair programming)</code>
+        </section>
+        <section>
+          <pre>
+            <code class="hljs js javascript active" data-trim >
+const assert = require('assert');
+
+const name = "hyf";
+
+assert(name === "hyf");
+assert(name === "imnothyf");
+assert(name === "imnothyf", "name should be hyf!");
+
+console.log('all good');
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>
+            Why Assert?
+          </h3>
+
+          <p>
+            Testing! Assertions help you test if what you thought to be true is actually true!
+          </p>
+        </section>
+
+        <section>
+          <h3>Helpful Links</h3>
+          <br>
+          <ul>
+            <li>
+              <a href='https://www.w3schools.com/nodejs/ref_assert.asp' target='_blank'>
+                w3schools
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section id='fs'>
+        <section>
+          <h2>fs - working with the (f)ile (s)ystem</h2>
+          <br>
+          <code>(pair programming)</code>
+        </section>
+        <section>
+          <pre>
+            <code class="hljs js javascript active" data-trim >
+const fs = require('fs')
+
+fs.readFile('./my_special_text.txt', (err, data) => {
+  if (err) {
+    console.log(err)
+    return
+  }
+  console.log(data)
+})
+
+fs.writeFile('./my_special_message.txt', 'Hello Node.js', (err) => {
+  if (err) {
+    console.log(err)
+    return
+  }
+  console.log('The file has been saved!');
+});
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>
+            Motivation for fs
+          </h3>
+
+          <p class="fragment fade-in-then-out">
+            Files let you store data long-term. We know this. But learning to work with files and manipulate file
+            contents in code gives you the ability to write real life applications.
+          </p>
+
+
+          <ul class="fragment fade-in-then-out">
+            <li>
+              Generate reports.
+            </li>
+            <li>
+              Process a document to remove bad words.
+            </li>
+
+            <li>
+              So much more!
+            </li>
+
+          </ul>
+        </section>
+
+        <section>
+          <h3>Helpful Links</h3>
+          <br>
+          <ul>
+            <li>
+              <a href='https://example.org/file-system' target='_blank'>
+                Node fs
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section id='break'>
+        <h1>Break!</h1>
+        <br>
+        <code>(~20 min)</code>
+      </section>
+
+      <section id='in-class-project'>
+        <section id='in-class-cover'>
+          <h2>Entries Manager CLI</h2>
+          <br>
+          <p>
+            <a href='https://github.com/HackYourFutureBelgium/entries-manager-cli' target='_blank'>
+              Starter Repository
+            </a>
+          </p>
+          <br>
+          <code>(pair programming)</code>
+        </section>
+      </section>
+
+      <section id='homework-launch'>
+        <section>
+          <h2>Homework Launch</h2>
+          <br>
+          <p>It's only just beginning :)</p>
+        </section>
+        <section>
+          <h2>
+            <a href='https://github.com/hackyourfuturebelgium/web-apps/tree/master/week-1' target='_blank'>
+              The Assignments
+            </a>
+          </h2>
+        </section>
+        <section>
+          <h2><a href='https://github.com/HackYourFutureBelgium/homework-submission#homework-issues' target='_blank'>
+              Weekly Issues</a></h2>
+          <p>if you haven't already, please create an issue and:</p>
+          <br>
+          <ol>
+            <li>Name it something helpful</li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users'
+                target='_blank'>
+                Assign</a>, it to yourself
+            </li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/applying-labels-to-issues-and-pull-requests'
+                target='_blank'>
+                Label</a>, it <code>week-N</code> and <code>homework</code></li>
+            <li><a href='https://help.github.com/en/github/managing-your-work-on-github/about-milestones'
+                target='_blank'>
+                Milestone</a> it <code>module-name</code></li>
+            <li>Fill in the assignments</li>
+            <li>Move it to the project board</li>
+          </ol>
+        </section>
+      </section>
+
+      <section id='finale-slide'>
+        <h2>NodeJS</h2>
+        <br>
+        <h3>Week 1</h3>
+        <br>
+        <code>"s"</code> for speaker notes
+        <br>
+        <br>
+        <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1" target='_blank'>
+          -- back to repo --
+        </a>
+      </section>
+
+    </div>
+  </div>
+
+
+  <script src="./reveal.js/js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      controlsTutorial: true,
+      slideNumber: 'h/t',
+      hash: true,
+      help: true,
+      width: '100%',
+      height: '100%',
+      dependencies: [
+        { src: './reveal.js/plugin/notes/notes.js', async: true },
+        { src: './reveal.js/plugin/highlight/highlight.js', async: true }
+      ],
+    })
+
+    Reveal.addEventListener('overviewshown', function (event) {
+      document.getElementById('footer-text').innerHTML = 'ESC into slide'
+      document.getElementById('footer-links').style.visibility = 'visible'
+    })
+    Reveal.addEventListener('overviewhidden', function (event) {
+      document.getElementById('footer-text').innerHTML = 'ESC to overview'
+      document.getElementById('footer-links').style.visibility = 'hidden'
+    })
+
+
+  </script>
+</body>
+
+</html>

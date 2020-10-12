@@ -1,0 +1,14 @@
+{
+  "name": "06-npm-modules",
+  "version": "1.0.0",
+  "description": "see a module in action",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}

@@ -108,6 +108,7 @@ References and Practice to help you master this module.
   - [Traversy: Node for Absolute Beginners](https://www.youtube.com/watch?v=U8XF6AFGqlc)
   - [Traversy: Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
 - **Built-In Modules**
+  - [About _/examples-and-exercises:_ `fs`](https://vimeo.com/414475261) (first 20 minutes)
   - [promisifying-fs](https://github.com/hackyourfuturebelgium/promisifying-fs)
 - **CLIs**
   - [cowsaydex](https://github.com/hackyourfuturebelgium/cowsaydex)
@@ -192,7 +193,7 @@ __From Terminal__
 
 ## Week 1
 
-**In Class:** File system I/O & Node.js CLI programs
+**In Class:** File system I/O & basic Node.js CLI programs
 
 **At Home:** Express APIs that access the file system
 
@@ -203,17 +204,19 @@ __From Terminal__
 
 > before class
 
+- **Have Node**
+  - Install [NVM (node version manager)](https://github.com/nvm-sh/nvm)
+  - Make sure you have the latest Node.js installed (14.*.*)
 - **VS Code Debugger**
   - [Getting started with Node.js debugging in VS Code](https://www.youtube.com/watch?v=2oFKNL7vYV8)
 - **Error-First Callbacks**
   - [fredkschott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (article)
   - [Sid Harder](https://duckduckgo.com/?q=sid+harder+javascript+error+first&atb=v214-1&iax=videos&ia=videos&iai=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D0h8r2K7ZHZU) (video)
   - [David Connelly](https://www.youtube.com/watch?v=Pov477mI57A) (video)
-- **`fs`**
-  - [study.hyf.be](https://study.hackyourfuture.be/node-js/native-modules#fs)
-  - [About _/isolate/fs_](https://vimeo.com/414475261) (first 20 minutes)
-  - [/isolate/fs](./isolate/fs)
-
+- **`/examples-and-exercises`**
+  - 2. Modules (examples)
+  - 3. `process.argv` (example.js)
+  - 4. `fs` Sync (examples)
 
 ### Lesson Plan
 
@@ -223,17 +226,12 @@ __From Terminal__
 
 #### Before Break
 
-- `process.argv`: [examples](./isolate/process-argv)
-- `assert`: [examples](./isolate/assert)
+- [`process.argv`](./examples-and-exercises/03-process-argv)
 - `fs`: [examples](./isolate/fs/examples)
-- [week 1 exercises](./isolate/week-1-exercises)
 
 #### After break
 
---- - - refactor to in repo -- - -- -
-
-- [entries-manager-cli](https://github.com/hackyourfuturebelgium/entries-manager-cli) (starter repo)
-
+- [entries-manager-cli](./practice-projects/1-entries-manager)
 
 ### Project
 
@@ -242,9 +240,9 @@ __From Terminal__
 
 #### `restful-courses`
 
-> [Code-Along](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
+> Group Project, [Code-Along](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
-This week's project is to follow the  [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh.  Besides just Express and writing RESTful routes you will learn how to use _JSON schemas_, test your API's with _Postman_, use _environmental variables-, and practice continuous development using _nodemon_.
+This week's project is to follow the [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh.  Besides just Express and writing RESTful routes you will learn how to use _JSON schemas_, test your API's with _Postman_, use _environmental variables-, and practice continuous development using _nodemon_.
 
 Don't worry if you don't understand everything in this project.  The tutorial covers a lot of material very quickly, we'll spend the next weeks going deeper into the topics Mosh covers here.  Think of this week's project as a sneak preview of the coming 3 weeks.
 
@@ -269,7 +267,7 @@ Just copying his code is not all! After finishing with the tutorial you will nee
       if (error) {
         return res.status(400).send(error.details[0].message);
       }
-      fs.writeFileSync(COURSES_PATH, (err, content) => {
+      fs.writeFile(COURSES_PATH, (err, content) => {
         if (err) {
           res.status(500).send(err.message);
           return;
@@ -281,7 +279,7 @@ Just copying his code is not all! After finishing with the tutorial you will nee
         };
         parsedCourses.push(course);
         const stringifiedCourses = JSON.parse(parsedCourses, null, '  ');
-        fs.readFileSync(COURSES_PATH, parsedCourses, (err) => {
+        fs.readFile(COURSES_PATH, parsedCourses, (err) => {
           if (err) {
             res.status(500).send(err.message);
             return;
@@ -304,10 +302,8 @@ You will be expected to turn in your code from his tutorial on a new repository 
   - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
   - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] at least one `class`
-  - [ ] at least one `setTimeout` and one `setInterval`
-  - [ ] Logs of each user interaction
+  - [ ] API data is saved in `courses.json`
+  - [ ] Deployed - [deployment url]()
 ```
 
 </details>
@@ -340,25 +336,17 @@ You will be expected to turn in your code from his tutorial on a new repository 
 
 #### Before Break
 
-- Static Serving: [example](../isolate/server-static-example), [exercise](../isolate/server-static-exercise)
-- Dynamic Serving: [example](../isolate/server-dynamic-example)
-- Params, Queries & Body: [example](../isolate/server-param-query-body-example), [exercise](../isolate/server-param-query-body-exercise)
-
 #### After break
 
-- [textidor](https://github.com/hackyourfuturebelgium/textidor) (starter repo). A basic fullstack text editor app.
+- [textidor](./practice-projects/2-textidor)
 
 ### Project
 
 > after class
 
-**DIY Wiki**: [Starer Code](https://home.hackyourfuture.be/students/weekly-assignments#projects)
+**DIY Wiki**: [Starer Code](https://home.hackyourfuture.be/students/weekly-assignments#projects) (Group Project)
 
-This week's project is to complete the code in [the `diy-wiki` repository](https://github.com/hackyourfuturebelgium/diy-wiki). Besides a working `server.js` file, your repo should have:
-
-- A `development-strategy.md` file to explain how you built the app in small pieces (this file doesn't need to match the tutorial!)
-- One branch per step in your `development-strategy.md`
-- A complete README.md
+This week's project is to complete the code in [the `diy-wiki` repository](https://github.com/hackyourfuturebelgium/diy-wiki).
 
 #### Checklist
 
@@ -370,10 +358,7 @@ This week's project is to complete the code in [the `diy-wiki` repository](https
   - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
   - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] at least one `class`
-  - [ ] at least one `setTimeout` and one `setInterval`
-  - [ ] Logs of each user interaction
+  - [ ] Deployed - [deployment url]()
 ```
 
 </details>
@@ -409,36 +394,21 @@ This week's project is to complete the code in [the `diy-wiki` repository](https
 
 Practice refactoring small Express apps from single-file servers into multiple files using `express.Router()`.
 
-- Exercises
-  - [param/query/body](../isolate/refactored-exercise-param-query-body)
-  - [`fs`: error middleware](../isolate/refactored-exercise-fs-error-middleware)
-  - [`fs`: param/query/body](../isolate/refactored-exercise-fs-param-query-body)
-- Examples
-  - [dynamic server](../isolate/refactored-example-dynamic)
-  - [params/query/body](../isolate/refactored-example-param-query-body)
-
 #### After break
 
 Revisit the text editor app you studied last week, this time refactoring the server from a single file to the same folder structure as the exercises. The code in this repo works!  Your job is to make sure it _still_ works after you've refactored it :)
 
-- [textidor-refactor](https://github.com/hackyourfuturebelgium/textidor-refactor) (starter repo)
+- [textidor-refactor](./practice-projects/3-textidor-refactor)
 
 ### Project
 
 > after class
 
-- [the `courses-web-app` template repo](https://github.com/HackYourFutureBelgium/courses-web-app)
+- [the `courses-web-app` template repo](https://github.com/HackYourFutureBelgium/courses-web-app) (Group Project)
 
 Again with the refactors?! This week's project is refactor the API from [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) into a full web app. To help you get started, you can use [the `courses-web-app` template repo](https://github.com/HackYourFutureBelgium/courses-web-app).
 
 Besides refactoring the backend into multiple files, you are also expected to develope a frontend for your API in the `/client` directory.  You can design the frontend however you like, and organize the code in a way that makes sense to you.  The main objective this week is to understand how the frontend & backend are related.
-
-Your repo must include:
-
-- A `development-strategy.md` file to explain how you built the app in small pieces (this file doesn't need to match the tutorial!)
-- One branch per step in your `development-strategy.md`
-- A complete README.md
-- A working frontend in the `/client` directory
 
 #### Checklist
 
@@ -450,10 +420,9 @@ Your repo must include:
   - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
   - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] at least one `class`
-  - [ ] at least one `setTimeout` and one `setInterval`
-  - [ ] Logs of each user interaction
+  - [ ] Config
+  - [ ] Deployed - [deployment url]()
+  - [ ] data in a .json file
 ```
 
 </details>
@@ -489,25 +458,17 @@ Your repo must include:
 
 Practice using JSON Schemas & `tv4` to protect data saved in a .json file.
 
-- Exercises
-  - [Write the Data](../isolate/input-validation-exercise-data)
-  - [Write the Schema](../isolate/input-validation-exercise-schema)
-  - [Write the Handlers](../isolate/input-validation-exercise-handlers)
-- Examples
-  - [example from the prep videos](../isolate/input-valiation-example-from-video)
-  - [completed example](../isolate/input-valiation-example-complete)
-
 #### After break
 
 Build a simple _virtual file system_ using a .json data file and schema.  This API is very similar to the one you studied the last two weeks, but instead of reading and writing actual files it stores file names and text contents as entries in a single .json file.
 
-- [textidor-validated](https://github.com/hackyourfuturebelgium/textidor-validated) (starter repo)
+- [textidor-validated](./practice-projects/4-textidor-validated)
 
 ### Project
 
 > after class
 
-**impress yourselves!**
+**impress yourselves!** (Group Project)
 
 This week's project is open-ended.  Starting with the [tv4-validation-fs-template](https://github.com/HackYourFutureBelgium/tv4-validation-fs-template), build a project to impress yourself.  You've been at HYF for a few months now and every week your projects have been given to you. You've hopefully learned about planning the steps of your projects, organizing your code, and writing clean code.  It's time to put yourself to the test.
 
@@ -515,17 +476,7 @@ Here are some tips to help you find your way:
 
 1. _start with your user_ Begin by identifying the type of person who will want ot use your app, and why they would want to use it. Who is this project for? What does the app do for them? Why is this helpful?
 2. _define your data_ Before you start coding, understand the data your application will be using. This includes writing the schema and creating some starter data by hand.
-3. _write your backend first_ After defining your data, write an API that allows users to create, read, update, and delete entries in your data file.
-
-Your finished repository should include:
-
-- A `development-strategy.md` file to explain how you built the app in small pieces
-- One branch per step in your `development-strategy.md`
-- A complete README.md
-- A working frontend in the `/client` directory
-- A working API in the `/api` directory
-- A schema and valid data in the `/data` directory
-- A deployed demo using Heroku
+3. _write your backend first_ After defining your data, write an API that allows users to create, read, update, and delete entries in your data file(s).
 
 #### Checklist
 
@@ -537,10 +488,10 @@ Your finished repository should include:
   - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
   - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] at least one `class`
-  - [ ] at least one `setTimeout` and one `setInterval`
-  - [ ] Logs of each user interaction
+  - [ ] Deployed - [deployment link]()
+  - [ ] A working frontend in the `/client` directory
+  - [ ] A working API in the `/api` directory
+  - [ ] A schema and valid data in the `/data` directory
 ```
 
 </details>

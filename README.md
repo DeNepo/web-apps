@@ -515,7 +515,7 @@ Here are some tips to help you find your way:
   - Give your name
   - and a helpful description
 
-<details>
+<details open>
 <summary>expand/collapse</summary>
 
 ### Class 7 & 8

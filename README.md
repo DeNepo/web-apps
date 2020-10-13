@@ -319,6 +319,7 @@ You will be expected to turn in your code from his tutorial on a new repository 
 
 ## Week 2
 
+APIs & Client/Server web apps
 
 <details>
 <summary>expand/collapse</summary>

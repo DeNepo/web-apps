@@ -204,6 +204,11 @@ __From Terminal__
 
 > before class
 
+- [Week 1 Prep Video](https://vimeo.com/467644885)
+  - Running .js files in Node
+  - `process.argv`
+  - `assert`
+  - `fs`
 - **Have Node**
   - Install [NVM (node version manager)](https://github.com/nvm-sh/nvm)
   - Make sure you have the latest Node.js installed (14.*.*)

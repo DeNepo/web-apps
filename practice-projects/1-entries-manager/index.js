@@ -131,7 +131,8 @@ const entriesManager = (entries, command, key, value) => {
 const readFileCb = (err, entriesString) => {
   // step 4: handle file system error, or execute main app function
   if (_) {
-    _
+    _;
+    _;
   }
 
   const parsedEntries = _;

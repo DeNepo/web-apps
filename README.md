@@ -67,6 +67,7 @@
 - [Postman](https://www.postman.com/) - Test your APIs without a frontend
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -86,6 +87,7 @@ References and Practice to help you master this module.
 
 <details>
 <summary>expand/collapse</summary>
+<br>
 
 > https://study.hackyourfuture.be/node-js
 
@@ -112,7 +114,7 @@ References and Practice to help you master this module.
   - [promisifying-fs](https://github.com/hackyourfuturebelgium/promisifying-fs)
 - **CLIs**
   - [cowsaydex](https://github.com/hackyourfuturebelgium/cowsaydex)
-  - Practice integrating NPM Packages into your projects, starting with [cowsay](https://github.com/piuccio/cowsay)
+    - Practice using NPM Packages into your projects, starting with [cowsay](https://github.com/piuccio/cowsay)
   - [node-practice-replace](https://github.com/HackYourFutureBelgium/node-practice-replace)
 - **API Calls**
   - [node-fetch](https://www.npmjs.com/package/node-fetch): a module for using `fetch` syntax in Node.js
@@ -186,6 +188,7 @@ __From Terminal__
   - take a search through Oliver's repositories, worth it
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -312,6 +315,7 @@ You will be expected to turn in your code from his tutorial on a new repository 
 ```
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -368,6 +372,7 @@ This week's project is to complete the code in [the `diy-wiki` repository](https
 ```
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -432,6 +437,7 @@ Besides refactoring the backend into multiple files, you are also expected to de
 ```
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -501,6 +507,7 @@ Here are some tips to help you find your way:
 ```
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -516,9 +523,7 @@ Here are some tips to help you find your way:
   - and a helpful description
 
 <details>
-<summary>expand/collapse</summary>
-
-### Class 7 & 8
+<summary><strong>Class 7-8</strong></summary>
 
 > [Shaun](https://github.com/badgerbadgerbadgerbadger), [Evan](https://github.com/colevanderswands/)
 
@@ -540,3 +545,19 @@ Here are some tips to help you find your way:
    - [Part 3](https://vimeo.com/422149853)
 
 </details>
+
+---
+
+
+<details>
+<summary><strong>Class 9-10</strong></summary>
+
+> [Shaun](https://github.com/badgerbadgerbadgerbadger)
+
+1. Week 1
+   1. [Node.js 101 & Client/Server](https://vimeo.com/469893530)
+   2. [CLI Input with `process.argv`](https://vimeo.com/469895085)
+   3. [`assert` & `fs` part 1](https://vimeo.com/469895326)
+   4. [`fs` part 2](https://vimeo.com/469895748)
+   5. [Entries Manager part 1](https://vimeo.com/469896412)
+   6. [Entries Manager part 2 & Project Intro](https://vimeo.com/469897191)

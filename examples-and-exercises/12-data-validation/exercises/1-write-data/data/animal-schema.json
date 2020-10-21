@@ -1,0 +1,45 @@
+{
+  "title": "An Animal",
+  "description": "Definition of a valid animal entry",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "habitat": {
+      "type": "string"
+    },
+    "average_mass": {
+      "type": "number"
+    },
+    "traits": {
+      "type": "object",
+      "properties": {
+        "beak": {
+          "type": "boolean"
+        },
+        "feathers": {
+          "type": "boolean"
+        },
+        "fur": {
+          "type": "boolean"
+        },
+        "feet": {
+          "type": "boolean"
+        },
+        "flippers": {
+          "type": "boolean"
+        }
+      }
+    },
+    "is_extinct": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "habitat",
+    "average_mass",
+    "is_extinct"
+  ]
+}

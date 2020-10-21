@@ -1,0 +1,40 @@
+{
+  "title": "User Profile Input",
+  "description": "Definition of input to create user profile",
+
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "birth": {
+      "type": "object",
+      "required": [
+        "date",
+        "place"
+      ],
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "place": {
+          "type": "string"
+        }
+      }
+    },
+    "accepting_friend_requests": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "first_name",
+    "last_name"
+  ]
+}

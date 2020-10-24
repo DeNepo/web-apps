@@ -298,6 +298,24 @@ Just copying his code is not all! After finishing with the tutorial you will nee
     });
     ```
 
+And here's a suggestion for how to organize your `courses.json` file:
+
+```json
+{
+  "nextId": 3,
+  "courses": [
+    {
+      "id": 0,
+      "name": "x-ray"
+    },
+    {
+      "id": 2,
+      "name": "gamma-ray"
+    }
+  ]
+}
+```
+
 You will be expected to turn in your code from his tutorial on a new repository called `restful-courses`. you will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.  Your repo must include:
 
 #### Checklist

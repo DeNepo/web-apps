@@ -376,7 +376,7 @@ APIs & Client/Server web apps
 
 > after class
 
-**DIY Wiki**: [Starer Code](https://home.hackyourfuture.be/students/weekly-assignments#projects) (Group Project)
+**DIY Wiki**: [Starer Code](https://home.hackyourfuture.be/students/weekly-assignments#projects) (Individual Project)
 
 This week's project is to complete the code in [the `diy-wiki` repository](https://github.com/hackyourfuturebelgium/diy-wiki).
 

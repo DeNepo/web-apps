@@ -354,7 +354,11 @@ APIs & Client/Server web apps
 - Recordings: [Part 1](https://vimeo.com/415924788), [Part 2](https://vimeo.com/415919630), [Part 3](https://vimeo.com/416350569)
 - [About Servers](#about-servers)
 - `config` file: [how to](https://goenning.net/2016/05/13/how-i-manage-application-configuration-with-nodejs/)
-
+- HTTP Statuses
+  - [In 60 Seconds](https://www.youtube.com/watch?v=GrNrcmD6HLA)
+  - [httpstatuses.com](https://httpstatuses.com/)
+  - [wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+  - [http.cat](https://http.cat/)
 
 ### Lesson Plan
 
@@ -416,13 +420,6 @@ This week's project is to complete the code in [the `diy-wiki` repository](https
 
 - [slides](./slides/3-prep.html)
 - videos: [Part 1](https://vimeo.com/417960548), [Part 2](https://vimeo.com/418360319), [Part 3](https://vimeo.com/418359614)
-
-### HTTP Statuses
-
-- [In 60 Seconds](https://www.youtube.com/watch?v=GrNrcmD6HLA)
-- [httpstatuses.com](https://httpstatuses.com/)
-- [wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-- [http.cat](https://http.cat/)
 
 ### Express Router
 
@@ -621,3 +618,9 @@ Here are some tips to help you find your way:
    4. [`fs` part 2](https://vimeo.com/469895748)
    5. [Entries Manager part 1](https://vimeo.com/469896412)
    6. [Entries Manager part 2 & Project Intro](https://vimeo.com/469897191)
+2. Week 2
+   1. [Static & Dynamic Data](https://vimeo.com/472210283)
+   2. [Express: Params, Body, Queries ...](https://vimeo.com/472211229)
+   3. [... Params, Body, Queries](https://vimeo.com/472211640)
+   4. [Texidor](https://vimeo.com/472212077)
+   5. [Texidor Recap & DIY Wiki](https://vimeo.com/472212418)

@@ -624,3 +624,5 @@ Here are some tips to help you find your way:
    3. [... Params, Body, Queries](https://vimeo.com/472211640)
    4. [Texidor](https://vimeo.com/472212077)
    5. [Texidor Recap & DIY Wiki](https://vimeo.com/472212418)
+3. Week 3
+   - [Middleware & Refactoring Servers](https://meet.openknowledge.be/playback/presentation/2.0/playback.html?meetingId=05594ce10542676cd7f00b5d118cb2f367054196-1604228078483)

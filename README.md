@@ -577,7 +577,7 @@ Here are some tips to help you find your way:
   - Give your name
   - and a helpful description
 
-<details>
+<details open>
 <summary><strong>Class 7-8</strong></summary>
 <br>
 
@@ -605,7 +605,7 @@ Here are some tips to help you find your way:
 ---
 
 
-<details>
+<details open>
 <summary><strong>Class 9-10</strong></summary>
 <br>
 
@@ -626,3 +626,5 @@ Here are some tips to help you find your way:
    5. [Texidor Recap & DIY Wiki](https://vimeo.com/472212418)
 3. Week 3
    - [Middleware & Refactoring Servers](https://meet.openknowledge.be/playback/presentation/2.0/playback.html?meetingId=05594ce10542676cd7f00b5d118cb2f367054196-1604228078483)
+4. Week 4:
+  - [JSON Schemas & Data Validation](https://meet.openknowledge.be/playback/presentation/2.0/playback.html?meetingId=05594ce10542676cd7f00b5d118cb2f367054196-1604832954065)

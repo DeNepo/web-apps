@@ -90,6 +90,8 @@ References and Practice to help you master this module.
 <br>
 
 > https://study.hackyourfuture.be/node-js
+>
+> [Class Recordings](#class-recordings)
 
 ### Debugging Node in VSCode
 

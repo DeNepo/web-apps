@@ -111,6 +111,7 @@ References and Practice to help you master this module.
   - [Mosh: Node.js in 1 hour](https://www.youtube.com/watch?v=uVwtVBpw7RQ&list=PLTjRvDozrdlydy3uUBWZlLUTNpJSGGCEm&index=1)
   - [Traversy: Node for Absolute Beginners](https://www.youtube.com/watch?v=U8XF6AFGqlc)
   - [Traversy: Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
+  - [NetNinja: Node Js Crash Course](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
 - **Built-In Modules**
   - [About _/examples-and-exercises:_ `fs`](https://vimeo.com/414475261) (first 20 minutes)
   - [promisifying-fs](https://github.com/hackyourfuturebelgium/promisifying-fs)

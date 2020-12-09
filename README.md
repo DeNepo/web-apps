@@ -626,5 +626,4 @@ Here are some tips to help you find your way:
 3. Week 3
    - [Middleware & Refactoring Servers](https://vimeo.com/488986376)
 4. Week 4:
-
-- [JSON Schemas & Data Validation](https://vimeo.com/488987165)
+   - [JSON Schemas & Data Validation](https://vimeo.com/488987165)

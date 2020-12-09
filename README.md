@@ -167,12 +167,12 @@ References and Practice to help you master this module.
 
 ### Deployment
 
-__Directly from GitHub__
+**Directly from GitHub**
 
 - [FCC Article](https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/)
 - [Heroku CI](https://www.heroku.com/continuous-integration)
 
-__From Terminal__
+**From Terminal**
 
 - [Heroku Getting Started](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
 - [Scotch Tutorial](https://scotch.io/tutorials/how-to-deploy-a-node-js-app-to-heroku)
@@ -182,7 +182,7 @@ __From Terminal__
 
 ### From Founders and Coders
 
-[Founders and Coders](https://founders-and-coders.gitbook.io/coursebook/) is another open-source course in web development.  They have some great resources for learning Node, Express and Web Apps
+[Founders and Coders](https://founders-and-coders.gitbook.io/coursebook/) is another open-source course in web development. They have some great resources for learning Node, Express and Web Apps
 
 - [Node.js](https://founders-and-coders.gitbook.io/coursebook/curriculum/node/schedule)
 - [REST APIs](https://founders-and-coders.gitbook.io/coursebook/curriculum/rest-apis/schedule)
@@ -216,7 +216,7 @@ __From Terminal__
   - `fs`
 - **Have Node**
   - Install [NVM (node version manager)](https://github.com/nvm-sh/nvm)
-  - Make sure you have the latest Node.js installed (14.*.*)
+  - Make sure you have the latest Node.js installed (14._._)
 - **VS Code Debugger**
   - [Getting started with Node.js debugging in VS Code](https://www.youtube.com/watch?v=2oFKNL7vYV8)
 - **Error-First Callbacks**
@@ -247,58 +247,57 @@ __From Terminal__
 
 > after class
 
-
 #### `restful-courses`
 
 > Group Project, [Code-Along](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
-This week's project is to follow the [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh.  Besides just Express and writing RESTful routes you will learn how to use _JSON schemas_, test your API's with _Postman_, use _environmental variables-, and practice continuous development using _nodemon_.
+This week's project is to follow the [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh. Besides just Express and writing RESTful routes you will learn how to use _JSON schemas_, test your API's with _Postman_, use _environmental variables-, and practice continuous development using \_nodemon_.
 
-Don't worry if you don't understand everything in this project.  The tutorial covers a lot of material very quickly, we'll spend the next weeks going deeper into the topics Mosh covers here.  Think of this week's project as a sneak preview of the coming 3 weeks.
+Don't worry if you don't understand everything in this project. The tutorial covers a lot of material very quickly, we'll spend the next weeks going deeper into the topics Mosh covers here. Think of this week's project as a sneak preview of the coming 3 weeks.
 
 Just copying his code is not all! After finishing with the tutorial you will need to refactor the code so that It reads and writes from a file called `courses.json` instead of using a local variable. ie:
 
 1. ```js
-    app.post('/api/courses', (req, res)=>{
-        const { error } = validateCourse(req.body);
-        if(error) return res.status(400).send(error.details[0].message);
-        const course = {
-            id: courses.length + 1,
-            name: req.body.name
-        };
-        courses.push(course);
-        res.send(course);
-    });
-    ```
+   app.post('/api/courses', (req, res) => {
+     const { error } = validateCourse(req.body);
+     if (error) return res.status(400).send(error.details[0].message);
+     const course = {
+       id: courses.length + 1,
+       name: req.body.name,
+     };
+     courses.push(course);
+     res.send(course);
+   });
+   ```
 1. ```js
-    // there are some mistakes in this, we can't give it all away ;)
-    app.post('/api/courses', (req, res) => {
-      const { error } = validateCourse(req.body);
-      if (error) {
-        return res.status(400).send(error.details[0].message);
-      }
-      fs.writeFile(COURSES_PATH, (err, content) => {
-        if (err) {
-          res.status(500).send(err.message);
-          return;
-        }
-        const parsedCourses = JSON.stringify(content);
-        const course = {
-          id: courses.length + 1,
-          name: req.body.name
-        };
-        parsedCourses.push(course);
-        const stringifiedCourses = JSON.parse(parsedCourses, null, '  ');
-        fs.readFile(COURSES_PATH, parsedCourses, (err) => {
-          if (err) {
-            res.status(500).send(err.message);
-            return;
-          }
-          res.send(course);
-        });
-      });
-    });
-    ```
+   // there are some mistakes in this, we can't give it all away ;)
+   app.post('/api/courses', (req, res) => {
+     const { error } = validateCourse(req.body);
+     if (error) {
+       return res.status(400).send(error.details[0].message);
+     }
+     fs.writeFile(COURSES_PATH, (err, content) => {
+       if (err) {
+         res.status(500).send(err.message);
+         return;
+       }
+       const parsedCourses = JSON.stringify(content);
+       const course = {
+         id: courses.length + 1,
+         name: req.body.name,
+       };
+       parsedCourses.push(course);
+       const stringifiedCourses = JSON.parse(parsedCourses, null, '  ');
+       fs.readFile(COURSES_PATH, parsedCourses, err => {
+         if (err) {
+           res.status(500).send(err.message);
+           return;
+         }
+         res.send(course);
+       });
+     });
+   });
+   ```
 
 And here's a suggestion for how to organize your `courses.json` file:
 
@@ -318,7 +317,7 @@ And here's a suggestion for how to organize your `courses.json` file:
 }
 ```
 
-You will be expected to turn in your code from his tutorial on a new repository called `restful-courses`. you will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.  Your repo must include:
+You will be expected to turn in your code from his tutorial on a new repository called `restful-courses`. you will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README. Your repo must include:
 
 #### Checklist
 
@@ -451,7 +450,7 @@ Practice refactoring small Express apps from single-file servers into multiple f
 
 #### After break
 
-Revisit the text editor app you studied last week, this time refactoring the server from a single file to the same folder structure as the exercises. The code in this repo works!  Your job is to make sure it _still_ works after you've refactored it :)
+Revisit the text editor app you studied last week, this time refactoring the server from a single file to the same folder structure as the exercises. The code in this repo works! Your job is to make sure it _still_ works after you've refactored it :)
 
 - [textidor-refactor](./practice-projects/3-textidor-refactor)
 
@@ -463,7 +462,7 @@ Revisit the text editor app you studied last week, this time refactoring the ser
 
 Again with the refactors?! This week's project is refactor the API from [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) into a full web app. To help you get started, you can use [the `courses-web-app` template repo](https://github.com/HackYourFutureBelgium/courses-web-app).
 
-Besides refactoring the backend into multiple files, you are also expected to develope a frontend for your API in the `/client` directory.  You can design the frontend however you like, and organize the code in a way that makes sense to you.  The main objective this week is to understand how the frontend & backend are related.
+Besides refactoring the backend into multiple files, you are also expected to develope a frontend for your API in the `/client` directory. You can design the frontend however you like, and organize the code in a way that makes sense to you. The main objective this week is to understand how the frontend & backend are related.
 
 #### Checklist
 
@@ -514,7 +513,6 @@ Besides refactoring the backend into multiple files, you are also expected to de
 - [jsonschemavalidator.net](https://www.jsonschemavalidator.net/) (used in the prep videos)
 - [tv4 validation library](https://github.com/geraintluff/tv4) (prep video and your projects)
 
-
 ### Lesson Plan
 
 > during class
@@ -529,7 +527,7 @@ Practice using JSON Schemas & `tv4` to protect data saved in a .json file.
 
 #### After break
 
-Build a simple _virtual file system_ using a .json data file and schema.  This API is very similar to the one you studied the last two weeks, but instead of reading and writing actual files it stores file names and text contents as entries in a single .json file.
+Build a simple _virtual file system_ using a .json data file and schema. This API is very similar to the one you studied the last two weeks, but instead of reading and writing actual files it stores file names and text contents as entries in a single .json file.
 
 - [textidor-validated](./practice-projects/4-textidor-validated)
 
@@ -539,7 +537,7 @@ Build a simple _virtual file system_ using a .json data file and schema.  This A
 
 **impress yourselves!** (Group Project)
 
-This week's project is open-ended.  Starting with the [tv4-validation-fs-template](https://github.com/HackYourFutureBelgium/tv4-validation-fs-template), build a project to impress yourself.  You've been at HYF for a few months now and every week your projects have been given to you. You've hopefully learned about planning the steps of your projects, organizing your code, and writing clean code.  It's time to put yourself to the test.
+This week's project is open-ended. Starting with the [tv4-validation-fs-template](https://github.com/HackYourFutureBelgium/tv4-validation-fs-template), build a project to impress yourself. You've been at HYF for a few months now and every week your projects have been given to you. You've hopefully learned about planning the steps of your projects, organizing your code, and writing clean code. It's time to put yourself to the test.
 
 Here are some tips to help you find your way:
 
@@ -572,7 +570,7 @@ Here are some tips to help you find your way:
 
 ## Class Recordings
 
-- **Students**: Here you can find recordings of this module from past classes.  Enjoy!
+- **Students**: Here you can find recordings of this module from past classes. Enjoy!
 - **Coaches**: When sending your PR's with links please ...
   - Indicate which class you were teaching
   - Which week it was (if the module is more than 1 week)
@@ -606,7 +604,6 @@ Here are some tips to help you find your way:
 
 ---
 
-
 <details open>
 <summary><strong>Class 9-10</strong></summary>
 <br>
@@ -627,6 +624,7 @@ Here are some tips to help you find your way:
    4. [Texidor](https://vimeo.com/472212077)
    5. [Texidor Recap & DIY Wiki](https://vimeo.com/472212418)
 3. Week 3
-   - [Middleware & Refactoring Servers](https://meet.openknowledge.be/playback/presentation/2.0/playback.html?meetingId=05594ce10542676cd7f00b5d118cb2f367054196-1604228078483)
+   - [Middleware & Refactoring Servers](https://vimeo.com/488986376)
 4. Week 4:
-  - [JSON Schemas & Data Validation](https://meet.openknowledge.be/playback/presentation/2.0/playback.html?meetingId=05594ce10542676cd7f00b5d118cb2f367054196-1604832954065)
+
+- [JSON Schemas & Data Validation](https://vimeo.com/488987165)

@@ -69,7 +69,7 @@
 </details>
 <br>
 
-[TOP](#asynchronous-programming)
+[TOP](#web-apps)
 
 ---
 
@@ -77,7 +77,7 @@
 
 Projects in this module will build on what you learned in the last module by adding in _network calls_ to APIS and scheduled tasks on the event loop.
 
-[TOP](#asynchronous-programming)
+[TOP](#web-apps)
 
 ---
 
@@ -193,7 +193,7 @@ References and Practice to help you master this module.
 </details>
 <br>
 
-[TOP](#asynchronous-programming)
+[TOP](#web-apps)
 
 ---
 
@@ -206,9 +206,7 @@ References and Practice to help you master this module.
 <details>
 <summary>expand/collapse</summary>
 
-### Prep Work
-
-> before class
+### Before Class
 
 - [Week 1 Prep Video](https://vimeo.com/467644885)
   - Running .js files in Node
@@ -233,22 +231,26 @@ References and Practice to help you master this module.
 
 > during class
 
-[Class Slides](./slides/1-class.html)
-
 #### Before Break
 
-- [`process.argv`](./examples-and-exercises/03-process-argv)
-- `fs`: [examples](./isolate/fs/examples)
+- all together: [Class Slides](./slides/1-class.html)
+- in groups: [04-fs-sync](./examples-and-exercises/04-fs-sync)
 
-#### After break
+#### After Break
+
+- [05-fs-async](./examples-and-exercises/05-fs-async)
+  - examples: all together
+  - exercises: in groups
+
+### After Class
+
+#### Practice Project
+
+Not required, but it will help.
 
 - [entries-manager-cli](./practice-projects/1-entries-manager)
 
-### Project
-
-> after class
-
-#### `restful-courses`
+#### `restful-courses` (project)
 
 > Group Project, [Code-Along](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
@@ -337,7 +339,7 @@ You will be expected to turn in your code from his tutorial on a new repository 
 </details>
 <br>
 
-[TOP](#asynchronous-programming)
+[TOP](#web-apps)
 
 ---
 
@@ -348,11 +350,10 @@ APIs & Client/Server web apps
 <details>
 <summary>expand/collapse</summary>
 
-### Prep Work
-
-> before class
+### Before Class
 
 - Slides: [live](./slides/2-prep.html)
+- Examples & Exercises: [07-express-static-serving](./examples-and-exercises/07-express-static-serving)
 - Recordings: [Part 1](https://vimeo.com/415924788), [Part 2](https://vimeo.com/415919630), [Part 3](https://vimeo.com/416350569)
 - [About Servers](#about-servers)
 - `config` file: [how to](https://goenning.net/2016/05/13/how-i-manage-application-configuration-with-nodejs/)
@@ -362,25 +363,28 @@ APIs & Client/Server web apps
   - [wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
   - [http.cat](https://http.cat/)
 
-### Lesson Plan
-
-> during class
-
-[Class Slides](./slides/2-class.html)
+### During Class
 
 #### Before Break
 
-- [Express Static Serving](./examples-and-exercises/07-express-static-serving)
-- [Express Dynamic Serving](./examples-and-exercises/08-express-dynamice-serving)
-- [Params, Queries, Body](./examples-and-exercises/09-params-queries-body)
+- all together: [Class Slides](./slides/2-class.html)
+- in groups: [08-express-dynamic-serving](./examples-and-exercises/08-express-dynamice-serving)
 
-#### After break
+#### After Break
+
+- [09-params-queries-body](./examples-and-exercises/09-params-queries-body)
+  - examples: all together
+  - exercises: in groups
+
+### After Class
+
+#### Practice Project
+
+It's not required, but it will help.
 
 - [textidor](./practice-projects/2-textidor)
 
-### Project
-
-> after class
+#### Project
 
 **DIY Wiki**: [Starer Code](https://home.hackyourfuture.be/students/weekly-assignments#projects) (Individual Project)
 
@@ -402,7 +406,7 @@ This week's project is to complete the code in [the `diy-wiki` repository](https
 </details>
 <br>
 
-[TOP](#asynchronous-programming)
+[TOP](#web-apps)
 
 ---
 
@@ -416,48 +420,45 @@ This week's project is to complete the code in [the `diy-wiki` repository](https
 <details>
 <summary>expand/collapse</summary>
 
-### Prep Work
-
-> before class
+### Before Class
 
 - [slides](./slides/3-prep.html)
 - videos: [Part 1](https://vimeo.com/417960548), [Part 2](https://vimeo.com/418360319), [Part 3](https://vimeo.com/418359614)
+- Examples: [10-refactoring-apis](./examples-and-exercises/10-refactoring-apis)
+- Express Router
+  - [Scotch.io](https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4)
+  - [Hungry Turtle](https://www.youtube.com/watch?v=paNikhYqdz0)
+  - [Rithm School](https://www.youtube.com/watch?v=Lxp7147emnM)
+  - [The Docs](https://expressjs.com/en/guide/routing.html)
+- Express Error Handling
+  - [The Net Ninja](https://www.youtube.com/watch?v=w1V2SdzdQBs)
+  - [Andrew Mead](https://www.youtube.com/watch?v=R4uiu3fR38I)
+  - [Devnami](https://www.youtube.com/watch?v=pYj48mDXHBU)
 
-### Express Router
-
-- [Scotch.io](https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4)
-- [Hungry Turtle](https://www.youtube.com/watch?v=paNikhYqdz0)
-- [Rithm School](https://www.youtube.com/watch?v=Lxp7147emnM)
-- [The Docs](https://expressjs.com/en/guide/routing.html)
-
-### Express Error Handling
-
-- [The Net Ninja](https://www.youtube.com/watch?v=w1V2SdzdQBs)
-- [Andrew Mead](https://www.youtube.com/watch?v=R4uiu3fR38I)
-- [Devnami](https://www.youtube.com/watch?v=pYj48mDXHBU)
-
-### Lesson Plan
-
-> during class
-
-[Class Slides](./slides/3-class.html)
+### During Class
 
 #### Before Break
 
 Practice refactoring small Express apps from single-file servers into multiple files using `express.Router()`.
 
-- [10-refactoring-apis](./examples-and-exercises/10-refactoring-apis)
+- all together: [Class Slides](./slides/3-class.html)
+- in groups: [10-refactoring-apis](./examples-and-exercises/10-refactoring-apis)
+
+#### After Break
+
 - [11-middleware-and-error-handling](./examples-and-exercises/11-middleware-and-error-handling)
+  - examples: all together
+  - exercises: in groups
 
-#### After break
+### After Class
 
-Revisit the text editor app you studied last week, this time refactoring the server from a single file to the same folder structure as the exercises. The code in this repo works! Your job is to make sure it _still_ works after you've refactored it :)
+#### Practice Project
+
+It's not required, but it will help. Revisit the text editor app you studied last week, this time refactoring the server from a single file to the same folder structure as the exercises. The code in this repo works! Your job is to make sure it _still_ works after you've refactored it :)
 
 - [textidor-refactor](./practice-projects/3-textidor-refactor)
 
-### Project
-
-> after class
+#### Project
 
 - [the `courses-web-app` template repo](https://github.com/HackYourFutureBelgium/courses-web-app) (Group Project)
 
@@ -483,7 +484,7 @@ Besides refactoring the backend into multiple files, you are also expected to de
 </details>
 <br>
 
-[TOP](#asynchronous-programming)
+[TOP](#web-apps)
 
 ---
 
@@ -496,45 +497,40 @@ Besides refactoring the backend into multiple files, you are also expected to de
 <details>
 <summary>expand/collapse</summary>
 
-### Prep Work
-
-> before class
+### Before Class
 
 - [slides](./slides/4-prep.html)
 - videos: [Part 1](https://vimeo.com/420678014), [Part 2](https://vimeo.com/422487341)
-- [input validation example](./isolate/input-validation-example-from-video)
+- Examples: [12-data-validation](./examples-and-exercises/12-data-validation)
+- JSON Schemas
+  - [The Docs](https://json-schema.org/learn/getting-started-step-by-step.html)
+  - [a video](https://www.youtube.com/watch?v=tp4IzG6oDA0)
+- JSON Schema Validation
+  - [jsonschemavalidator.net](https://www.jsonschemavalidator.net/) (used in the prep videos)
+  - [tv4 validation library](https://github.com/geraintluff/tv4) (prep video and your projects)
 
-### JSON Schemas?
-
-- [The Docs](https://json-schema.org/learn/getting-started-step-by-step.html)
-- [a video](https://www.youtube.com/watch?v=tp4IzG6oDA0)
-
-### JSON Schema Validation
-
-- [jsonschemavalidator.net](https://www.jsonschemavalidator.net/) (used in the prep videos)
-- [tv4 validation library](https://github.com/geraintluff/tv4) (prep video and your projects)
-
-### Lesson Plan
-
-> during class
-
-[Class Slides](./slides/4-class.html)
+### During Class
 
 #### Before Break
 
 Practice using JSON Schemas & `tv4` to protect data saved in a .json file.
 
-- [12-data-validation](./examples-and-exercises/12-data-validation) []
+- all together: [Class Slides](./slides/4-class.html)
+- in groups: [12-data-validation/exercises/1-write-data](./examples-and-exercises/12-data-validation/exercises/)
 
 #### After break
 
-Build a simple _virtual file system_ using a .json data file and schema. This API is very similar to the one you studied the last two weeks, but instead of reading and writing actual files it stores file names and text contents as entries in a single .json file.
+- in groups: [2-write-data & 3-write-handlers](./examples-and-exercises/12-data-validation/exercises/)
+
+### After Class
+
+#### Practice Project
+
+It's not required, but it will help. Build a simple _virtual file system_ using a .json data file and schema. This API is very similar to the one you studied the last two weeks, but instead of reading and writing actual files it stores file names and text contents as entries in a single .json file.
 
 - [textidor-validated](./practice-projects/4-textidor-validated)
 
-### Project
-
-> after class
+#### Project
 
 **impress yourselves!** (Group Project)
 
@@ -565,7 +561,7 @@ Here are some tips to help you find your way:
 </details>
 <br>
 
-[TOP](#asynchronous-programming)
+[TOP](#web-apps)
 
 ---
 

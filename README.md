@@ -59,7 +59,8 @@
   - [body-parser](https://github.com/expressjs/body-parser) - Parse HTTP request body into JS object
   - [cors](https://github.com/expressjs/cors) - Cross Origin Resource Sharing for Express
   - [morgan](https://github.com/expressjs/morgan) - logging for Express
-  - [joi](https://github.com/hapijs/joi) - JSON schemas & validation
+  - [joi](https://github.com/hapijs/joi), [tv4](https://github.com/geraintluff/tv4) - JSON schemas & validation
+  -
 
 ### Development Tools
 
@@ -624,3 +625,21 @@ Here are some tips to help you find your way:
    - [Middleware & Refactoring Servers](https://vimeo.com/488986376)
 4. Week 4:
    - [JSON Schemas & Data Validation](https://vimeo.com/488987165)
+
+</details>
+
+---
+
+<details open>
+<summary><strong>Class 11-12</strong></summary>
+<br>
+
+> [Shaun](https://github.com/badgerbadgerbadgerbadger), [Andrej](https://github.com/gajduk), [Hazem](https://github.com/HazemBittar)
+
+1. Week 1:
+   - [part 1](https://vimeo.com/515253111)
+   - [part 2](https://vimeo.com/515253217)
+   - [part 3](https://vimeo.com/515252844)
+   - [part 4](https://vimeo.com/515253024)
+
+</details>

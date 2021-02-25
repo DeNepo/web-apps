@@ -90,7 +90,7 @@ References and Practice to help you master this module.
 <summary>expand/collapse</summary>
 <br>
 
-> https://study.hackyourfuture.be/node-js
+> https://hackyourfuture.github.io/study/#/node-js/
 >
 > [Class Recordings](#class-recordings)
 

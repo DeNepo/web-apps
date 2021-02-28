@@ -369,7 +369,7 @@ APIs & Client/Server web apps
 #### Before Break
 
 - all together: [Class Slides](./slides/2-class.html)
-- in groups: [08-express-dynamic-serving](./examples-and-exercises/08-express-dynamice-serving)
+- in groups: [08-express-dynamic-serving](./examples-and-exercises/08-express-dynamic-serving/exercise)
 
 #### After Break
 

@@ -636,10 +636,7 @@ Here are some tips to help you find your way:
 
 > [Shaun](https://github.com/badgerbadgerbadgerbadger), [Andrej](https://github.com/gajduk), [Hazem](https://github.com/HazemBittar)
 
-1. Week 1:
-   - [part 1](https://vimeo.com/515253111)
-   - [part 2](https://vimeo.com/515253217)
-   - [part 3](https://vimeo.com/515252844)
-   - [part 4](https://vimeo.com/515253024)
+1. Week 1: [part 1](https://vimeo.com/515253111), [part 2](https://vimeo.com/515253217), [part 3](https://vimeo.com/515252844), [part 4](https://vimeo.com/515253024)
+2. Week 2: [part 1](https://vimeo.com/518077272), [part 2](https://vimeo.com/518093815), [part 3](https://vimeo.com/518093931), [part 4](https://vimeo.com/518094041), [part 5](https://vimeo.com/518094087)
 
 </details>

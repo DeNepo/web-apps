@@ -17,10 +17,6 @@ it('listified input should be correct', () => {
   const expected = `- white cow
 - red cape
 - yellow hair
-- gold slipper
-`;
+- gold slipper`;
   assert.strictEqual(listifiedInput, expected);
 });
-
-
-

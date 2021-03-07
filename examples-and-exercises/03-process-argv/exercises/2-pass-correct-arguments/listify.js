@@ -16,9 +16,12 @@ const listify = (arrOfStrings = []) => {
   let lines = [];
   for (const string of arrOfStrings) {
     lines.push(`- ${string}`);
-  };
+  }
   const list = lines.join('\n');
   return list;
+
+  // or ...
+  // return arrOfStrings.map(string => `- ${string}`).join('\n');
 };
 
 module.exports = listify;

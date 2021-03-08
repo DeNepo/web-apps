@@ -639,6 +639,6 @@ Here are some tips to help you find your way:
 
 1. Week 1: [part 1](https://vimeo.com/515253111), [part 2](https://vimeo.com/515253217), [part 3](https://vimeo.com/515252844), [part 4](https://vimeo.com/515253024)
 2. Week 2: [part 1](https://vimeo.com/518077272), [part 2](https://vimeo.com/518093815), [part 3](https://vimeo.com/518093931), [part 4](https://vimeo.com/518094041), [part 5](https://vimeo.com/518094087)
-3. Week 3: [Refactoring pt. 1](https://vimeo.com/520916421), [Refactoring pt. 2](https://vimeo.com/520916669), [middleware & error handling](https://vimeo.com/520916816)
+3. Week 3: [Refactoring pt. 1](https://vimeo.com/520916421), [Refactoring pt. 2](https://vimeo.com/520916669), [middleware & error handling](https://vimeo.com/520916816), [homework](https://www.youtube.com/watch?v=Xeb3xWYJUG8)
 
 </details>

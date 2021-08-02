@@ -1,45 +1,42 @@
-'use strict'
+'use strict';
 
-const fs = require('fs')
+const fs = require('fs');
 
 // Reading a file
-fs.readFile('./sample-file.txt', 'utf8', function (err, data) {
+fs.readFile('./sample-file.txt', 'utf8', function(err, data) {
+  if (err) {
+    throw err;
+  }
 
+  console.log(data);
+
+  // appending to a file
+  fs.appendFile('./sample-file.txt', 'Class 5 is awesome!\n', function(err) {
     if (err) {
-        throw err
+      throw err;
     }
 
-    console.log(data)
+    // Reading back some file to confirm changes
+    fs.readFile('./sample-file.txt', 'utf8', function(err, data) {
+      if (err) {
+        throw err;
+      }
 
-    // appending to a file
-    fs.appendFile('./sample-file.txt', 'Class 5 is awesome!\n', function (err) {
+      console.log(data);
+
+      fs.writeFile('./sample-file.txt', 'Good job, class 5!', function(err) {
         if (err) {
-            throw err
+          throw err;
         }
 
-        // Reading back some file to confirm changes
-        fs.readFile('./sample-file.txt', 'utf8', function (err, data) {
+        fs.readFile('./sample-file.txt', 'utf8', function(err, data) {
+          if (err) {
+            throw err;
+          }
 
-            if (err) {
-                throw err
-            }
-
-            console.log(data)
-
-            fs.writeFile('./sample-file.txt', 'Good job, class 5!', function (err) {
-                if (err) {
-                    throw err
-                }
-
-                fs.readFile('./sample-file.txt', 'utf8', function (err, data) {
-
-                    if (err) {
-                        throw err
-                    }
-
-                    console.log(data)
-                })
-            })
-        })
-    })
-})
+          console.log(data);
+        });
+      });
+    });
+  });
+});

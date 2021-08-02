@@ -1,64 +1,57 @@
-'use strict'
+'use strict';
 
 const args = process.argv;
 
-const fs = require('fs')
+const fs = require('fs');
 
 const usableArgs = args.slice(2);
 
 console.log(usableArgs);
 
 if (usableArgs.length < 1) {
-	throw new Error('Please enter at least one argument.');
+  throw new Error('Please enter at least one argument.');
 }
 
 const command = usableArgs[0];
 
 switch (command) {
-	case 'get':
+  case 'get':
+    fs.readFile('./store.json', 'utf8', function(err, data) {
+      if (err) {
+        throw err;
+      }
 
-		fs.readFile('./store.json', 'utf8', function (err, data) {
+      const output = data;
+      console.log(output);
+    });
+    break;
+  case 'add':
+    fs.readFile('./store.json', 'utf8', function(err, data) {
+      if (err) {
+        throw err;
+      }
 
-			if (err) {
-				throw err;
-			}
+      const parsed = JSON.parse(data);
+      parsed.state++;
 
-			const output = data;
-			console.log(output);
-		});
-		break;
-	case 'add':
-		fs.readFile('./store.json', 'utf8', function (err, data) {
+      const asString = JSON.stringify(parsed);
 
-			if (err) {
-				throw err;
-			}
+      fs.writeFile('./store.json', asString, function(err) {
+        if (err) {
+          throw err;
+        }
 
+        console.log(asString);
+      });
+    });
 
-			const parsed = JSON.parse(data);
-			parsed.state++;
-
-			const asString = JSON.stringify(parsed);
-
-			fs.writeFile('./store.json', asString, function (err) {
-
-				if (err) {
-					throw err;
-				}
-
-				console.log(asString);
-			});
-		});
-
-		
-		break;
-	case 'subtract':
-		
-		break;
-	case 'reset':
-		break;
-	default:
-		throw new Error('Command not supported');
+    break;
+  case 'subtract':
+    break;
+  case 'reset':
+    break;
+  default:
+    throw new Error('Command not supported');
 }
 
 // perform operation

@@ -2,9 +2,8 @@
   "name": "web-apps",
   "version": "2.0.0",
   "description": "the web-apps module for HYF Belgium",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "node ./lib/test.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +14,10 @@
   "bugs": {
     "url": "https://github.com/HackYourFutureBelgium/web-apps/issues"
   },
-  "homepage": "https://github.com/HackYourFutureBelgium/web-apps"
+  "homepage": "https://github.com/HackYourFutureBelgium/web-apps",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cowsay": "^1.4.0",
+    "node-fetch": "^2.6.0"
+  }
 }

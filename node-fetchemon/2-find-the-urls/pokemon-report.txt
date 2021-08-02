@@ -1,0 +1,10 @@
+3 ms: 4/30/2020, 10:35:54 PM
+9 ms: fetching https://pokeapi.co/api/v2/_ ...
+136 ms: ...
+226 ms: testing response ...
+228 ms: AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+false !== true
+
+    at  [ ... ] /pokemon.js:59:12
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)

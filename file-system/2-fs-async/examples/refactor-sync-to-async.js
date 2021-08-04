@@ -6,10 +6,11 @@ const START = Date.now();
 const FILE_PATH = __dirname + '/file.txt';
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value,
-);
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value,
+  );
 
 // -- main script --
 debugger;
@@ -23,7 +24,6 @@ fs.writeFileSync(FILE_PATH, newSyncFileContents);
 
 const currentFileContents = fs.readFileSync(FILE_PATH, 'utf-8');
 log(2, currentFileContents);
-
 
 // asynchronous
 
@@ -48,4 +48,3 @@ fs.writeFile(FILE_PATH, newAsyncFileContents, (err) => {
 });
 
 log(4, 'writing file ...');
-

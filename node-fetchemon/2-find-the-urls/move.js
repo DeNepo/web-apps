@@ -21,7 +21,7 @@ process.on('SIGINT', function onSIGINT() {
 });
 
 // log uncaught errors
-const handleError = err => {
+const handleError = (err) => {
   log(err);
   process.exit(1);
 };

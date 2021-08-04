@@ -16,10 +16,5 @@
       "type": "string"
     }
   },
-  "required": [
-    "id",
-    "name",
-    "climate",
-    "harvest_season"
-  ]
+  "required": ["id", "name", "climate", "harvest_season"]
 }

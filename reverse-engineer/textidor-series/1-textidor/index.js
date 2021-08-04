@@ -22,7 +22,7 @@ _;
 // https://github.com/expressjs/morgan#write-logs-to-a-file
 const accessLogStream = fs.createWriteStream(
   path.join(__dirname, 'access.log'),
-  { flags: 'a' }
+  { flags: 'a' },
 );
 app.use(morgan('combined', { stream: accessLogStream }));
 // and log to the console
@@ -84,7 +84,7 @@ app._('_', (req, res, next) => {
 app._('_', (req, res, next) => {
   const fileName = _; // read from params
   const fileText = _; // read from body
-  fs._(`${FILES_DIR}/${fileName}`, _, err => {
+  fs._(`${FILES_DIR}/${fileName}`, _, (err) => {
     if (_) {
       _;
       _;
@@ -99,7 +99,7 @@ app._('_', (req, res, next) => {
 //  called by action: deleteFile
 app._('_', (req, res, next) => {
   const fileName = _; // read from params
-  fs._(`${FILES_DIR}/${fileName}`, err => {
+  fs._(`${FILES_DIR}/${fileName}`, (err) => {
     if (_) {
       _;
       _;
@@ -112,7 +112,6 @@ app._('_', (req, res, next) => {
     res.redirect(303, '/files');
   });
 });
-
 
 // - handle errors in the routes and middleware -
 //  this works, nothing to change!

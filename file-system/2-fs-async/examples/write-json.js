@@ -5,10 +5,11 @@ const fs = require('fs');
 const START = Date.now();
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value,
-);
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value,
+  );
 
 // -- main script --
 debugger;
@@ -19,11 +20,7 @@ log(1, filePath);
 // change this value and see what happens
 const toStringify = {
   e: 3,
-  moreThings: [
-    { wolf: "cola" },
-    'monkey?',
-    true
-  ]
+  moreThings: [{ wolf: 'cola' }, 'monkey?', true],
 };
 log(2, toStringify);
 

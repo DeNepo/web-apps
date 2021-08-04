@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
 
-const config = dotenv.config()
+const config = dotenv.config();
 
-module.exports = config.parsed
+module.exports = config.parsed;

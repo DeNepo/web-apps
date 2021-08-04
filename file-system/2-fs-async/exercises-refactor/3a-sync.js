@@ -8,11 +8,8 @@ const EXERCISE_NAME = path.basename(__filename);
 const START = Date.now();
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId} (${Date.now() - START} ms):\n`,
-  value,
-);
-
+const log = (logId, value) =>
+  console.log(`\nlog ${logId} (${Date.now() - START} ms):\n`, value);
 
 // --- main script ---
 console.log(`\n--- ${EXERCISE_NAME} ---`);
@@ -32,7 +29,7 @@ const oldContents = fs.readFileSync(filePath, 'utf-8');
 for (let i = 1; i <= numberOfTimes; i++) {
   log(4 + i, `appending ...`);
   fs.appendFileSync(filePath, toAppend);
-};
+}
 
 log(numberOfTimes + 5, 'reading new contents ...');
 const newContents = fs.readFileSync(filePath, 'utf-8');
@@ -42,5 +39,4 @@ const expectedContents = oldContents + toAppend.repeat(numberOfTimes);
 assert.strictEqual(newContents, expectedContents);
 
 log(numberOfTimes + 7, '\033[32mpass!\x1b[0m');
-fs.appendFileSync(__filename, `\n// pass: ${(new Date()).toLocaleString()}`);
-
+fs.appendFileSync(__filename, `\n// pass: ${new Date().toLocaleString()}`);

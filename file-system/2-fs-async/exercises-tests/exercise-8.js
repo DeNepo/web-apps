@@ -33,11 +33,8 @@ FLAGS:
 `;
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms. \n`,
-  value
-);
-
+const log = (logId, value) =>
+  console.log(`\nlog ${logId}, ${Date.now() - START} ms. \n`, value);
 
 // --- main script ---
 
@@ -46,7 +43,7 @@ const log = (logId, value) => console.log(
 if (process.argv.includes('-h')) {
   log(0, DOC_STRING);
   process.exit(0);
-};
+}
 
 const command = _;
 const fileName = _;
@@ -57,21 +54,18 @@ if (_) {
 }
 log('1.b', 'command: ' + command);
 
-
 if (command === _) {
   log('3', 'reading filenames ...');
   const fileNames = fs.readdirSync(_);
   log('4', fileNames);
-  process.exit(0)
-};
+  process.exit(0);
+}
 
 if (_) {
   log('2.a', 'a file name is required, exiting');
   process.exit(0);
 }
 log('2.b', 'fileName: ' + fileName);
-
-
 
 if (_) {
   log('3.a', 'declaring _');
@@ -80,7 +74,6 @@ if (_) {
   };
   fs._(__dirname + '/' + fileName, 'utf-8', _);
   log('4.a', '_ from ' + fileName + ' ...');
-
 } else if (_) {
   log('3.b', 'declaring _');
   const _ = (err) => {
@@ -88,7 +81,6 @@ if (_) {
   };
   fs._(__dirname + '/' + fileName, _);
   log('4.b', '_ ' + fileName + ' ...');
-
 } else {
   log('3.c', 'unknown command: ' + command);
 }

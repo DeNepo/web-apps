@@ -8,7 +8,7 @@ const START = Date.now();
 const log = (logId, value) =>
   console.log(
     `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-    value
+    value,
   );
 
 // -- main script --

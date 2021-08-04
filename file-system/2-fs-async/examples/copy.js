@@ -8,7 +8,7 @@ const START = Date.now();
 const log = (logId, value) =>
   console.log(
     `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-    value
+    value,
   );
 
 // -- main script --
@@ -20,7 +20,7 @@ log(1, sourceFile);
 const targetFile = __dirname + '/' + process.argv[3];
 log(2, targetFile);
 
-const ifErrorCallback = err => {
+const ifErrorCallback = (err) => {
   if (err) {
     log(4, err);
     return;

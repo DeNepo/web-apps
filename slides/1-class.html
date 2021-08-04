@@ -1,255 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Web Apps: Week 1</title>
 
-  <title>Web Apps: Week 1</title>
+    <link rel="stylesheet" href="./reveal.js/css/reset.css" />
+    <link rel="stylesheet" href="./reveal.js/css/reveal.css" />
+    <link rel="stylesheet" href="./reveal.js/css/theme/night.css" />
 
-  <link rel="stylesheet" href="./reveal.js/css/reset.css">
-  <link rel="stylesheet" href="./reveal.js/css/reveal.css">
-  <link rel="stylesheet" href="./reveal.js/css/theme/night.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="./reveal.js/lib/css/monokai.css" />
 
-  <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="./reveal.js/lib/css/monokai.css">
+    <style>
+      /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
+      .reveal .footer {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        font-size: 0.5em;
+        /* z-index: 1000; */
+      }
+    </style>
+  </head>
 
-  <style>
-    /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
-    .reveal .footer {
-      position: absolute;
-      bottom: 1em;
-      left: 1em;
-      font-size: 0.5em;
-      /* z-index: 1000; */
-    }
-  </style>
-</head>
+  <body>
+    <div class="reveal">
+      <div class="footer">
+        <ul id="footer-links" style="visibility: hidden">
+          <li>
+            <a
+              id="to-repo"
+              href="https://github.com/hackyourfuturebelgium/web-apps"
+              target="_blank"
+            >
+              <code>module repository</code>
+            </a>
+          </li>
+        </ul>
+        <br />
+        <code id="footer-text">ESC to overview</code>
+      </div>
 
-<body>
-
-  <div class="reveal">
-    <div class='footer'>
-      <ul id='footer-links' style='visibility: hidden;'>
-        <li>
-          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/web-apps" target="_blank">
-            <code>module repository</code>
-          </a>
-        </li>
-      </ul>
-      <br>
-      <code id="footer-text">ESC to overview</code>
-    </div>
-
-
-    <div class="slides">
-
-      <section id='cover-slide'>
-        <aside class="notes">
-          Cover slide with basement slides, all go into the motivation for learning NodeJS.
-        </aside>
-        <section>
-          <h2>NodeJS</h2>
-          <br>
-          <h3>Week 1</h3>
-          <br>
-          <code>"s"</code> for speaker notes
-          <br>
-          <br>
+      <div class="slides">
+        <section id="cover-slide">
+          <aside class="notes">
+            Cover slide with basement slides, all go into the motivation for
+            learning NodeJS.
+          </aside>
+          <section>
+            <h2>NodeJS</h2>
+            <br />
+            <h3>Week 1</h3>
+            <br />
+            <code>"s"</code> for speaker notes
+            <br />
+            <br />
+          </section>
         </section>
 
-      </section>
-
-      <section id="learning-objectives">
-        <section>
-          <h1>Learning Objectives</h1>
-          <br>
-          <br>
-          <p>
-            What can you expect to cover in class today?
-          </p>
-        </section>
-        <section>
-          <ul>
-            <li>Developing an Express API with RESTful routes</li>
-            <li>Persist API data to the file system using a .json file</li>
-          </ul>
-        </section>
-      </section>
-
-      <section>
-        <section id='new-material'>
-          <h1>New Material</h1>
-          <br>
-          <p>Node.js? Backend? huh?</p>
-        </section>
-        <section>
-          <h1>What and Why?</h1>
-
-          <p class="fragment fade-in-then-out">
-            NodeJS is Javascript on the server (also known as the "backend").
-            Many clients, such as your mobile phones, talk to a central server, such as Google or Facebook.
-          </p>
-
-          <p class="fragment fade-in-then-out">
-            When you upload pictures to the cloud, servers are what processes and stores them.
-          </p>
-
-          <p class="fragment fade-in-then-out">
-            If front-end applications (like the ones you build in your browser) are the restaurant floor, servers are
-            the
-            back kitchen.
-          </p>
+        <section id="learning-objectives">
+          <section>
+            <h1>Learning Objectives</h1>
+            <br />
+            <br />
+            <p>What can you expect to cover in class today?</p>
+          </section>
+          <section>
+            <ul>
+              <li>Developing an Express API with RESTful routes</li>
+              <li>Persist API data to the file system using a .json file</li>
+            </ul>
+          </section>
         </section>
 
         <section>
-          <h1>Why a Node Server?</h1>
+          <section id="new-material">
+            <h1>New Material</h1>
+            <br />
+            <p>Node.js? Backend? huh?</p>
+          </section>
+          <section>
+            <h2>What and Why?</h2>
 
-          <p class="fragment fade-in-then-out">
-            We already know Javascript!
-          </p>
-
-          <p class="fragment fade-in-then-out">
-            Node is fast, and built for the web.
-          </p>
-
-          <div class="fragment fade-in-then-out">
-            Has some of the best support for libraries.
-
-            <p>
-              You want to resize and image? There is a library.
+            <p class="fragment fade-in-then-out">
+              NodeJS is Javascript on the server (also known as the "backend").
+              Many clients, such as your mobile phones, talk to a central
+              server, such as Google or Facebook.
             </p>
-            <p>
-              You want to encode video? There is a library.
-            </p>
-            <p>
-              You want to make a cow say ridiculous things? There. Is. A. Library.
-            </p>
-          </div>
-        </section>
-      </section>
 
-      <section>
+            <p class="fragment fade-in-then-out">
+              When you upload pictures to the cloud, servers are what processes
+              and stores them.
+            </p>
+
+            <p class="fragment fade-in-then-out">
+              If front-end applications (like the ones you build in your
+              browser) are the restaurant floor, servers are the back kitchen.
+            </p>
+          </section>
+
+          <section>
+            <h2>Why a Node Server?</h2>
+
+            <p class="fragment fade-in-then-out">We already know Javascript!</p>
+
+            <p class="fragment fade-in-then-out">
+              Node is fast, and built for the web.
+            </p>
+
+            <div class="fragment fade-in-then-out">
+              Has some of the best support for libraries.
+
+              <p>You want to resize and image? There is a library.</p>
+              <p>You want to encode video? There is a library.</p>
+              <p>
+                You want to make a cow say ridiculous things? There. Is. A.
+                Library.
+              </p>
+            </div>
+          </section>
+        </section>
 
         <section>
-          <h1>NPM And Running Code</h1>
+          <section>
+            <h1>NPM And Running Code</h1>
 
-          <div>
-            A dependency management tool that helps us install libraries and manage the lifecycle of our projects.
+            <div>
+              A dependency management tool that helps us install libraries and
+              manage the lifecycle of our projects.
+
+              <ul>
+                <li>Running code via the `node` command</li>
+                <li>Running code via the npm `start` script</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h1>Imports</h1>
 
             <ul>
-              <li>Running code via the `node` command</li>
-              <li>Running code via the npm `start` script</li>
+              <li>Library imports from npm registry</li>
+              <li>Module imports from local code</li>
             </ul>
-          </div>
+          </section>
         </section>
 
         <section>
-          <h1>Imports</h1>
+          <section>
+            <h1>What is Express?</h1>
 
-          <ul>
-            <li>Library imports from npm registry</li>
-            <li>Module imports from local code</li>
-          </ul>
+            <div>It's a library!</div>
+
+            <br />
+
+            <ul class="fragment fade-in">
+              <li>to help us easily create routes</li>
+              <li>to managed incoming requests and outgoing responses</li>
+              <li>to extend functionality with middlewares</li>
+            </ul>
+          </section>
         </section>
-      </section>
-
-      <section>
 
         <section>
-          <h1>What is Express?</h1>
-
-          <div>It's a library!</div>
-
-          <br/>
-
-          <ul class="fragment fade-in">
-
-            <li>to help us easily create routes</li>
-            <li>to managed incoming requests and outgoing responses</li>
-            <li>to extend functionality with middlewares</li>
-          </ul>
+          <section>
+            <h1>Kinds of Data</h1>
+            <br />
+            <ul>
+              <li>static and dynamic data</li>
+              <li>routing</li>
+              <li>Postman</li>
+            </ul>
+          </section>
         </section>
-      </section>
 
-      <section>
-        <section>
-          <h1>Kinds of Data</h1>
-          <br>
-          <ul>
-            <li>static and dynamic data</li>
-            <li>routing</li>
-            <li>Postman</li>
-          </ul>
+        <section id="break">
+          <h1>Break!</h1>
+          <br />
+          <code>(~20 min)</code>
         </section>
-      </section>
 
-      <section id='break'>
-        <h1>Break!</h1>
-        <br>
-        <code>(~20 min)</code>
-      </section>
-
-      <section id='in-class-project'>
-        <section id='in-class-cover'>
-          <h1>Personal Data</h1>
-          <br>
-          <p>
-            <a href='https://github.com/HackYourFutureBelgium/web-apps/tree/examples-and-exercises/writing-routes' target='_blank'>
-              Starter
-            </a>
-          </p>
-          <br>
+        <section id="in-class-project">
+          <section id="in-class-cover">
+            <h1>Personal Data</h1>
+            <br />
+            <p>
+              <a
+                href="https://github.com/HackYourFutureBelgium/web-apps/tree/examples-and-exercises/writing-routes"
+                target="_blank"
+              >
+                Starter
+              </a>
+            </p>
+            <br />
+          </section>
         </section>
-      </section>
 
-      <section id='finale-slide'>
-        <h2>NodeJS</h2>
-        <br>
-        <h3>Week 1</h3>
-        <br>
-        <code>"s"</code> for speaker notes
-        <br>
-        <br>
-        <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1" target='_blank'>
-          -- back to repo --
-        </a>
-      </section>
-
+        <section id="finale-slide">
+          <h2>NodeJS</h2>
+          <br />
+          <h3>Week 1</h3>
+          <br />
+          <code>"s"</code> for speaker notes
+          <br />
+          <br />
+          <a
+            href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1"
+            target="_blank"
+          >
+            -- back to repo --
+          </a>
+        </section>
+      </div>
     </div>
-  </div>
 
+    <script src="./reveal.js/js/reveal.js"></script>
 
-  <script src="./reveal.js/js/reveal.js"></script>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        controlsTutorial: true,
+        slideNumber: 'h/t',
+        hash: true,
+        help: true,
+        width: '100%',
+        height: '100%',
+        dependencies: [
+          { src: './reveal.js/plugin/notes/notes.js', async: true },
+          { src: './reveal.js/plugin/highlight/highlight.js', async: true },
+        ],
+      });
 
-  <script>
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
-    Reveal.initialize({
-      controlsTutorial: true,
-      slideNumber: 'h/t',
-      hash: true,
-      help: true,
-      width: '100%',
-      height: '100%',
-      dependencies: [
-        { src: './reveal.js/plugin/notes/notes.js', async: true },
-        { src: './reveal.js/plugin/highlight/highlight.js', async: true }
-      ],
-    })
-
-    Reveal.addEventListener('overviewshown', function (event) {
-      document.getElementById('footer-text').innerHTML = 'ESC into slide'
-      document.getElementById('footer-links').style.visibility = 'visible'
-    })
-    Reveal.addEventListener('overviewhidden', function (event) {
-      document.getElementById('footer-text').innerHTML = 'ESC to overview'
-      document.getElementById('footer-links').style.visibility = 'hidden'
-    })
-
-
-  </script>
-</body>
-
+      Reveal.addEventListener('overviewshown', function (event) {
+        document.getElementById('footer-text').innerHTML = 'ESC into slide';
+        document.getElementById('footer-links').style.visibility = 'visible';
+      });
+      Reveal.addEventListener('overviewhidden', function (event) {
+        document.getElementById('footer-text').innerHTML = 'ESC to overview';
+        document.getElementById('footer-links').style.visibility = 'hidden';
+      });
+    </script>
+  </body>
 </html>

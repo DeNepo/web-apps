@@ -1,8 +1,9 @@
 'use strict';
 
 function readTodos(todo, request, response) {
-  todo.read()
-    .then(todos => {
+  todo
+    .read()
+    .then((todos) => {
       response.json({ todos });
       response.end();
     })
@@ -10,6 +11,6 @@ function readTodos(todo, request, response) {
       response.status(500);
       response.json({ error: message });
     });
-};
+}
 
 module.exports = readTodos;

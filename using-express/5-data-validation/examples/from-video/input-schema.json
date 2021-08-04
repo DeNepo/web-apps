@@ -15,10 +15,7 @@
     },
     "birth": {
       "type": "object",
-      "required": [
-        "date",
-        "place"
-      ],
+      "required": ["date", "place"],
       "properties": {
         "date": {
           "type": "string"
@@ -32,9 +29,5 @@
       "type": "boolean"
     }
   },
-  "required": [
-    "id",
-    "first_name",
-    "last_name"
-  ]
+  "required": ["id", "first_name", "last_name"]
 }

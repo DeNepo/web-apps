@@ -13,16 +13,17 @@ const START = Date.now();
 const FILE_PATH = __dirname + '/file.json';
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value
-);
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value,
+  );
 
 // --- main script ---
 
 const objectToSave = {
-  todoText: "1234",
-  completed: true
+  todoText: '1234',
+  completed: true,
 };
 log(1, objectToSave);
 
@@ -32,7 +33,6 @@ log(2, stringToSave);
 // sync
 log(3, 'writing file ...');
 fs.writeFileSync(FILE_PATH, stringToSave);
-
 
 const fileContents = fs.readFileSync(FILE_PATH, 'utf-8');
 

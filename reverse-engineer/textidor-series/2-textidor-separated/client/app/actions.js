@@ -1,15 +1,15 @@
 // all of this code works!
 
-const fetchAndLoadFile = fileName =>
+const fetchAndLoadFile = (fileName) =>
   fetch('/api/files/' + encodeURIComponent(fileName))
-    .then(res => {
+    .then((res) => {
       if (!res.ok) {
         throw res;
       }
       return res.json();
     })
-    .then(fileData => loadFileToEditor(fileData.name, fileData.text))
-    .catch(err => console.error(err));
+    .then((fileData) => loadFileToEditor(fileData.name, fileData.text))
+    .catch((err) => console.error(err));
 
 const saveFile = (fileName, fileText) => {
   fetch('/api/files/' + encodeURIComponent(fileName), {
@@ -19,37 +19,37 @@ const saveFile = (fileName, fileText) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-    .then(res => {
+    .then((res) => {
       if (!res.ok) {
         throw res;
       }
       return res.json();
     })
-    .then(filesList => {
+    .then((filesList) => {
       renderFilesList(filesList);
       alert('your changes are saved');
     })
-    .catch(err => {
+    .catch((err) => {
       alert('unable to save your changes');
       console.error(err);
     });
 };
 
-const deleteFile = fileName => {
+const deleteFile = (fileName) => {
   fetch('/api/files/' + encodeURIComponent(fileName), {
     method: 'DELETE',
   })
-    .then(res => {
+    .then((res) => {
       if (!res.ok) {
         throw res;
       }
       return res.json();
     })
-    .then(filesList => {
+    .then((filesList) => {
       renderFilesList(filesList);
       alert('file is deleted');
     })
-    .catch(err => {
+    .catch((err) => {
       alert('unable to delete file');
       console.error(err);
     });

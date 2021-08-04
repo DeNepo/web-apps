@@ -15,10 +15,11 @@ const SOURCE_PATH = __dirname + '/file.json';
 const SOURCE_TEXT = fs.readFileSync(SOURCE_PATH, 'utf-8');
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value
-);
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value,
+  );
 
 // log initial values
 log(0.1, SOURCE_PATH);
@@ -26,9 +27,8 @@ log(0.2, SOURCE_TEXT);
 
 // --- main script ---
 
-
 const targetFilePath = __dirname + '/' + process.argv[2];
-log(1, targetFilePath)
+log(1, targetFilePath);
 
 // refactor the code below to be asynchronous
 

@@ -15,10 +15,11 @@ const SOURCE_PATH = __dirname + '/file.txt';
 const ORIGINAL_TEXT = fs.readFileSync(SOURCE_PATH, 'utf-8');
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value
-);
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value,
+  );
 
 // log initial values
 log(0.1, SOURCE_PATH);

@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const util = require('util');
 
 const readAsync = util.promisify(fs.readFile);
@@ -11,13 +12,14 @@ const deleteAsync = util.promisify(fs.unlink);
  * @param {String} ownerName
  * @return {String}
  */
-const constructFilePath = ownerName => `${__dirname}/data/${ownerName}.json`;
+const constructFilePath = (ownerName) =>
+  path.join(__dirname, '..', 'data', `${ownerName}.json`);
 
 /**
  * @param {String} ownerName
  * @return {Promise<{exists: Boolean, [data]: Object}>}
  */
-const readData = async ownerName => {
+const readData = async (ownerName) => {
   try {
     const data = await readAsync(constructFilePath(ownerName), 'utf-8');
 
@@ -45,11 +47,11 @@ const writeData = async (ownerName, data) => {
   await writeAsync(
     constructFilePath(ownerName),
     JSON.stringify(data, null, 2),
-    'utf-8'
+    'utf-8',
   );
 };
 
-const deleteData = async ownerName => {
+const deleteData = async (ownerName) => {
   try {
     await deleteAsync(constructFilePath(ownerName));
   } catch (e) {

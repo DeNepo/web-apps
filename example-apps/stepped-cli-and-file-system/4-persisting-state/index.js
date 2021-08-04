@@ -16,7 +16,7 @@ const command = usableArgs[0];
 
 switch (command) {
   case 'get':
-    fs.readFile('./store.json', 'utf8', function(err, data) {
+    fs.readFile('./store.json', 'utf8', function (err, data) {
       if (err) {
         throw err;
       }
@@ -26,7 +26,7 @@ switch (command) {
     });
     break;
   case 'add':
-    fs.readFile('./store.json', 'utf8', function(err, data) {
+    fs.readFile('./store.json', 'utf8', function (err, data) {
       if (err) {
         throw err;
       }
@@ -36,7 +36,7 @@ switch (command) {
 
       const asString = JSON.stringify(parsed);
 
-      fs.writeFile('./store.json', asString, function(err) {
+      fs.writeFile('./store.json', asString, function (err) {
         if (err) {
           throw err;
         }

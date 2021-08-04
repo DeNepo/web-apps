@@ -39,7 +39,7 @@ app.post('/create', (req, res, next) => {
 
   const content = req.body.fileContent;
 
-  fs.writeFile(`${FILE_DIR}/${name}`, content, err => {
+  fs.writeFile(`${FILE_DIR}/${name}`, content, (err) => {
     if (err) {
       next(err);
       return;
@@ -56,6 +56,6 @@ app.use((err, req, res, next) => {
 
 app.listen(config.PORT, () => {
   console.log(
-    `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`
+    `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`,
   );
 });

@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 
   const formattedDatetime = datefns.format(
     currentDatetime,
-    'yyyy-MM-dd hh:mm:ss.SSS aaaa'
+    'yyyy-MM-dd hh:mm:ss.SSS aaaa',
   );
 
   const method = req.method;
@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 
   console.log(coloredLogMessage);
 
-  fs.appendFile('request_logs.txt', `${plainLogMessage}\n`, err => {
+  fs.appendFile('request_logs.txt', `${plainLogMessage}\n`, (err) => {
     if (err) {
       console.log(err);
     }
@@ -63,7 +63,7 @@ app.post('/api/create', (req, res, next) => {
 
   const content = req.body.fileContent;
 
-  fs.writeFile(`${FILE_DIR}/${name}`, content, err => {
+  fs.writeFile(`${FILE_DIR}/${name}`, content, (err) => {
     if (err) {
       next(err);
       return;
@@ -80,6 +80,6 @@ app.use((err, req, res, next) => {
 
 app.listen(config.PORT, () => {
   console.log(
-    `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`
+    `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`,
   );
 });

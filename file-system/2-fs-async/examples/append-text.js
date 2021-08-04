@@ -8,7 +8,7 @@ const START = Date.now();
 const log = (logId, value) =>
   console.log(
     `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-    value
+    value,
   );
 
 // main script
@@ -17,7 +17,7 @@ debugger;
 const contentToAppend = process.argv[2] + '\n';
 log(1, contentToAppend);
 
-const ifErrorCallback = err => {
+const ifErrorCallback = (err) => {
   if (err) {
     log(3, err);
     return;

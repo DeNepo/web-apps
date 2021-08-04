@@ -15,6 +15,4 @@ router.get('/', (req, res) => {
 
 // write the routes!
 
-
-
 module.exports = router;

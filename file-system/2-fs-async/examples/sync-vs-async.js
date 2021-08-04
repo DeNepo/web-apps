@@ -6,10 +6,11 @@ const START = Date.now();
 const FILE_PATH = __dirname + '/file.txt';
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value,
-);
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value,
+  );
 
 // -- main script --
 debugger;
@@ -45,5 +46,3 @@ const fsReadCallback = (err, secondRead) => {
 };
 
 fs.readFile(FILE_PATH, 'utf-8', fsReadCallback);
-
-

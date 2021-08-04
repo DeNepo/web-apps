@@ -36,10 +36,5 @@
       "type": "boolean"
     }
   },
-  "required": [
-    "id",
-    "habitat",
-    "average_mass",
-    "is_extinct"
-  ]
+  "required": ["id", "habitat", "average_mass", "is_extinct"]
 }

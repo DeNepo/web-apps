@@ -12,11 +12,11 @@ const START = Date.now();
 const FILE_PATH = __dirname + '/file.txt';
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value,
-);
-
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value,
+  );
 
 // --- main script ---
 
@@ -45,6 +45,3 @@ const writeFileCallback = (err) => {
 
 fs._(_, _, _);
 log(2, 'writing file ...');
-
-
-

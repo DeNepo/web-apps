@@ -22,7 +22,7 @@ app.use(
     stream: fs.createWriteStream(path.join(__dirname, 'access.log'), {
       flags: 'a',
     }),
-  })
+  }),
 );
 // log to console
 app.use(morgan('dev'));
@@ -32,13 +32,13 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 // --- the magic line of code ---
 app.use('/api', api);
 
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   console.error(err.stack);
   res.status(500).end();
 });
 
 app.listen(config.PORT, () => {
   console.log(
-    `listening at http://localhost:${config.PORT} (${config.MODE} mode)`
+    `listening at http://localhost:${config.PORT} (${config.MODE} mode)`,
   );
 });

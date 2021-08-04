@@ -9,11 +9,8 @@ const FILE_PATH = path.join(__dirname, '../file-1.txt');
 const START = Date.now();
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId} (${Date.now() - START} ms):\n`,
-  value,
-);
-
+const log = (logId, value) =>
+  console.log(`\nlog ${logId} (${Date.now() - START} ms):\n`, value);
 
 // --- main script ---
 console.log(`\n--- ${EXAMPLE_NAME} ---`);
@@ -38,7 +35,7 @@ const writeFileCallback = (err) => {
     assert.strictEqual(fileContent, newFileContents);
     log(5, '\033[32mpass!\x1b[0m');
     // you don't need to refactor this line
-    fs.appendFileSync(__filename, `\n// pass: ${(new Date()).toLocaleString()}`);
+    fs.appendFileSync(__filename, `\n// pass: ${new Date().toLocaleString()}`);
   };
 
   log(3, 'reading file ...');
@@ -47,8 +44,5 @@ const writeFileCallback = (err) => {
 
 log(2, 'writing file ...');
 fs.writeFile(FILE_PATH, newFileContents, writeFileCallback);
-
-
-
 
 // pass: 10/5/2020, 6:07:31 PM

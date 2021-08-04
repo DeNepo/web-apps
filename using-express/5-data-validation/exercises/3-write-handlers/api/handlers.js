@@ -74,7 +74,7 @@ const handlers = {
       const fruitDataString = await readFile(DATA_PATH, 'utf-8');
       const fruitData = JSON.parse(fruitDataString);
       const selectedFruit = fruitData.fruit.find(
-        (profile) => profile.id === idToUpdate
+        (profile) => profile.id === idToUpdate,
       );
 
       res.json(selectedFruit);
@@ -113,7 +113,7 @@ const handlers = {
       const fruitData = JSON.parse(fruitDataString);
 
       const entryToUpdate = fruitData.fruit.find(
-        (profile) => profile.id === idToUpdate
+        (profile) => profile.id === idToUpdate,
       );
 
       if (entryToUpdate) {
@@ -146,12 +146,12 @@ const handlers = {
       const fruitData = JSON.parse(fruitDataString);
 
       const entryToDelete = fruitData.fruit.find(
-        (profile) => profile.id === idToDelete
+        (profile) => profile.id === idToDelete,
       );
 
       if (entryToDelete) {
         fruitData.fruit = fruitData.fruit.filter(
-          (profile) => profile.id !== entryToDelete.id
+          (profile) => profile.id !== entryToDelete.id,
         );
 
         const newFruitDataString = JSON.stringify(fruitData, null, '  ');

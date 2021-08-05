@@ -1,18 +1,3 @@
-<!--
-
-videos to place
-
-- [Week 1 Prep Video](https://vimeo.com/467644885)
-- week 2
-  - Slides: [live](./slides/2-prep.html)
-  - Recordings: [Part 1](https://vimeo.com/415924788), [Part 2](https://vimeo.com/415919630), [Part 3](https://vimeo.com/416350569)
-- week 3
-  - videos prep: [Part 1](https://vimeo.com/417960548), [Part 2](https://vimeo.com/418360319), [Part 3](https://vimeo.com/418359614)
-- week 4 prep
-  - videos: [Part 1](https://vimeo.com/420678014), [Part 2](https://vimeo.com/422487341)
-
--->
-
 # Web Apps
 
 ![client/server diagram](./diagrams/client-server-model.svg)
@@ -45,41 +30,44 @@ videos to place
 <summary>expand/collapse</summary>
 <br>
 
-- 🥚 **Entry Points**: You can identify the entry points for their app: npm scripts, first line of first file to run, configuration, server starting, routing
-- 🥚 **Persistence**: You can explain what persistence is and how it is used in the backend of a web app. You can implement persistence using the backend's file system.
-- 🥚 **VSCode Debugger**: You can use breakpoints to pause and step through a Node.js scripts and APIs using the VSCode debugger.
-- 🥚 **Callbacks**: You can read, trace and complete simple scripts that use callbacks to work with the file system
-- 🥚 **Promisification**: You can convert built-in node modules from consuming callbacks being async functions.
-- 🥚 **Client/Server Architecture**: You can draw a diagram of their project explaining how the front- and back-ends connect, and can generalize this idea to any web app they use.
 - 🥚 **HTTP**: You can explain these basic notions of the HTTP protocol, the main verbs, headers, ...
+- 🥚 **Client/Server Architecture**: You can draw a diagram of your project explaining how the front- and back-ends connect, and can generalize this idea to any web app they use.
+- 🥚 **Persistence**: You can explain what persistence is and how it is used in the backend of a web app. You can implement persistence using the backend's file system.
 - 🥚 **Postman**: You can use Postman to test and inspect HTTP request/response cycles.
-- 🥚 **Function Roles**: You can explain and apply these 4 (maybe more?) function roles in their backend code:
+- 🥚 **VSCode Debugger**: You can use breakpoints to pause and step through a Node.js scripts and APIs using the VSCode debugger.
+- 🥚 **Promisification**: You can convert built-in node modules from consuming callbacks being `async` functions.
+- 🥚 **NPM Modules**: You can find, install, require and use an NPM module in your projects
+- 🥚 **Function Roles**: You can explain and apply these 4 function roles in your backend code:
   - _controllers_: like event handlers, but for HTTP requests. (like event handlers in the frontend)
   - _middleware_: do things with a request before it is handled. (no frontend analogy)
   - _data access_: read/write from your data source and return the prepared data, in this module the data source is the file system. (like api calls in the frontend)
   - _logic_: pure functions that transform data and have unit tests. (same as for the frontend)
-- 🥚 **NPM Modules**: You can find, install, require and use an NPM module in their projects
-- 🥚 **Express.js**: You can
+  - _utils_: functions with side-effects that do one helpful thing. (like procedures in the frontend)
+- 🥚 **Express.js**: You can ...
+  - listen a new server
   - use middleware
   - `.get`, `.post`, `.put`, `.delete`
   - route params
   - request body
   - send response
   - Express Router
-  - listen a new server
   - static serving
-- 🥚 **API Documentation**: You can use JSDoc-style comments to document their API, and a documentation tool to build API documentation
-- 🐣 **File System**: You can read, write and append to .txt files. and can parse, manipulate and re-save data stored in a .json file.
+- 🥚 **Entry Points**: You can identify the entry points for your app:
+  - _Initialization_: npm scripts, first file, configuration points, server listening
+  - _Request/Response Cycle_: first middleware, logging, routes, error handling
+- 🥚 **API Documentation**: You can use JSDoc-style comments to document your API, and a documentation script to build API documentation
+- 🐣 **File System**: You can read, write and append to .txt files. You can can parse, manipulate and re-save data stored in a .json file using the built-in `fs` and `util.promisify` functions.
 - 🐣 **Data Validation**: You can validate data sent in a request to the backend before saving it to a .json file
-- 🐣 **CI Deployment**: You can set up a deployment for their web apps and connect it to their repository using a CI action so `main`/`master` is always deployed.
 - 🐣 **RESTful Routes**: You can implement RESTful routes in Express.js, including using the correct `app._` verbs.
 - 🐣 **Authentication**: You can explain the principles of authentication and can contribute to a group project that has basic authentication
-- 🐣 **Authentication vs. Authorization**: You can explain the difference and how it is implemented in their projects
-- 🐣 **Environmental Variables**: You can explain what an environmental variable is, how they're configured, and what they're used for
-- 🐣 **Backend Configuration**: You can use environmental variables to launch their backend in different modes.
-- 🐥 **Testing Routes**: You can explain how tests for API routes work, and can write routes that pass given tests. You can also write tests for a route that already exists.
+- 🐣 **Authentication vs. Authorization**: You can explain the difference and how it is implemented in your projects
+- 🐣 **Environmental Variables**: You can explain what an environmental variable is, what they're used for, and how they're configured
+- 🐣 **Backend Configuration**: You can use environmental variables to launch your backend in different modes
+- 🐥 **Asynchronous Callbacks**: You can read, trace and complete simple scripts that use callbacks to work with the file system
+- 🐥 **CI Deployment**: You can set up a deployment for your web apps and connect it to your repository using a CI action so `main`/`master` is always deployed.
 - 🐔 **CLI Apps**: You can complete a simple CLI app that takes user input from the command line and accesses the file system
-- 🐔 **`node-fetch`**: You make API requests from the backend, and use the data in their web apps
+- 🐔 **`node-fetch`**: You make API requests from the backend, and use the data in your web apps
+- 🐔 **Testing Routes**: You can explain how tests for API routes work, and can write routes that pass given tests. You can also write tests for a route that already exists.
 
 </details>
 <br>
@@ -242,7 +230,7 @@ References and Practice to help you master this module.
 ## Week 1
 
 - Developing an Express API with RESTful routes
-- Persist API data to the file system using a .json file
+- Persisting API data to the file system using a .json file
 
 <details>
 <summary>expand/collapse</summary>
@@ -252,7 +240,7 @@ References and Practice to help you master this module.
 - **Have Node**
   - Install [NVM (node version manager)](https://github.com/nvm-sh/nvm)
   - Make sure you have the latest Node.js installed (16._._)
-- **[Postman**](https://www.postman.com/)\*\*: install it and make an API request
+- **[Postman](https://www.postman.com/)**: install it and make an API request
 - **Error-First Callbacks**
   - [fredkschott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (article)
   - [Sid Harder](https://duckduckgo.com/?q=sid+harder+javascript+error+first&atb=v214-1&iax=videos&ia=videos&iai=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D0h8r2K7ZHZU) (video)
@@ -262,15 +250,15 @@ References and Practice to help you master this module.
 
 ### Lesson Plan
 
-> during class
-
 #### Before Break
 
 #### After Break
 
 ### After Class
 
-_solo project_: create an API with restful routing conventions using Express.js. the code should be split into multiple files (backend only, from starter code)
+No project! There's enough to study without one ;)
+
+If you want to begin preparing for the _group project in Week 3_ you can begin experimenting with the [Web Apps Starter Repo]()
 
 </details>
 <br>
@@ -283,6 +271,8 @@ _solo project_: create an API with restful routing conventions using Express.js.
 
 - Using middleware
 - Authentication
+- Authorization
+- Authentication vs. Authorization
 
 <details>
 <summary>expand/collapse</summary>
@@ -297,7 +287,7 @@ _solo project_: create an API with restful routing conventions using Express.js.
 
 ### After Class
 
-Add logging, authentication and error handling to your project from last week.
+Again, no project. Just more study and prep for next week.
 
 </details>
 <br>
@@ -308,7 +298,7 @@ Add logging, authentication and error handling to your project from last week.
 
 ## Week 3
 
-- Authorization
+- JWT - JSON Web Tokens (fancy authentication)
 
 <details>
 <summary>expand/collapse</summary>
@@ -325,7 +315,7 @@ Meet in groups and begin planning.
 
 ### After Class
 
-_group project_: begin a 3-week fullstack project, data to be determined.
+_group project_: begin a 3-week fullstack project around [this data]() using [this starter]()
 
 </details>
 <br>

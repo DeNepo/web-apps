@@ -34,13 +34,13 @@ writeFilePromise(FILE_PATH, newFileContents)
     log(3, 'reading file ...');
     return readFilePromise(FILE_PATH, 'utf-8');
   })
-  .then(fileContent => {
+  .then((fileContent) => {
     log(4, 'asserting ...');
     assert.strictEqual(fileContent, newFileContents);
     log(5, '\033[32mpass!\x1b[0m');
     // you don't need to refactor this line
     appendFilePromise(__filename, `\n// pass: ${new Date().toLocaleString()}`);
   })
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));
 
 // pass: 10/5/2020, 6:07:38 PM

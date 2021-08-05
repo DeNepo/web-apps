@@ -1,4 +1,4 @@
-const sendQueryDataHandler = event => {
+const sendQueryDataHandler = (event) => {
   // debugger;
 
   const queryValRaw = event.target.form.queryData.value;
@@ -7,14 +7,14 @@ const sendQueryDataHandler = event => {
   fetch(`/api/query?value=${queryVal}`, {
     method: 'POST',
   })
-    .then(res => {
+    .then((res) => {
       if (!res.ok) {
         throw res;
       }
       return res.json();
     })
-    .then(data => console.log(data))
-    .catch(err => console.error(err));
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
 
   event.preventDefault();
 };

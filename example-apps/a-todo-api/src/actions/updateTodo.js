@@ -8,7 +8,7 @@ function updateTodo(todo, request, response) {
       const id = request.params.id;
       return todo.update(id, description);
     })
-    .then(todo => {
+    .then((todo) => {
       response.status(200);
       response.json({ todo });
     })
@@ -16,6 +16,6 @@ function updateTodo(todo, request, response) {
       response.status(code === 'not-found' ? 404 : 500);
       response.json({ error: message });
     });
-};
+}
 
 module.exports = updateTodo;

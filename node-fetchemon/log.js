@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // define logging function
-const log = (start, filePath) => msg => {
+const log = (start, filePath) => (msg) => {
   const now = `${Date.now() - start} ms: `;
   console.log(now + msg);
   if (typeof msg === 'string') {

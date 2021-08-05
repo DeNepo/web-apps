@@ -7,9 +7,9 @@ This folder contains four files
 
 ---
 
-you will need to write `index.js` and `generateList.js`.  To see how these should behave you can interact with the `demo.js`.  to test `generateList` you can run `test.js`
+you will need to write `index.js` and `generateList.js`. To see how these should behave you can interact with the `demo.js`. to test `generateList` you can run `test.js`
 
-Look out for the `--numbered` flag. if you pass in `--numbered` as any of the CLI arguments it will tell the program to log a numbered list.  `--numbered` should never be a list item! here are some arguments to try out:
+Look out for the `--numbered` flag. if you pass in `--numbered` as any of the CLI arguments it will tell the program to log a numbered list. `--numbered` should never be a list item! here are some arguments to try out:
 
 - `node demo.js a b c`
 - `node demo.js --numbered a b c`

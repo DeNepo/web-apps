@@ -21,7 +21,7 @@ process.on('SIGINT', function onSIGINT() {
 });
 
 // log uncaught errors
-const handleError = err => {
+const handleError = (err) => {
   log(err);
   process.exit(1);
 };
@@ -34,7 +34,7 @@ log(new Date().toLocaleString());
 
 // --- begin main script ---
 
-const main = async URL => {
+const main = async (URL) => {
   try {
     log('fetching ' + URL + ' ...');
     const dotDotDot = setInterval(() => log('...'), 100);

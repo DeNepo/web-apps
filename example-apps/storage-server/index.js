@@ -51,14 +51,14 @@ app.delete('/data/:ownerName', async (req, res) => {
 });
 
 // error-handling middleware
-app.use(function(req, res) {
+app.use(function (req, res) {
   res.status(404).json({
     message: "the route you're looking for does not exist",
   });
 });
 
 // start the server
-app.listen(3000, err => {
+app.listen(3000, (err) => {
   if (err) {
     console.error(err, 'failed to start server');
     return;

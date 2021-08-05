@@ -8,11 +8,8 @@ const EXERCISE_NAME = path.basename(__filename);
 const START = Date.now();
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId} (${Date.now() - START} ms):\n`,
-  value,
-);
-
+const log = (logId, value) =>
+  console.log(`\nlog ${logId} (${Date.now() - START} ms):\n`, value);
 
 // --- main script ---
 console.log(`\n--- ${EXERCISE_NAME} ---`);
@@ -39,7 +36,7 @@ if (fileOneIsLonger) {
 } else {
   log(6, `writing to ${fileName1} ...`);
   fs.writeFileSync(filePath1, fileContents2);
-};
+}
 
 if (fileOneIsLonger) {
   log(7, `reading ${fileName2} ...`);
@@ -51,7 +48,7 @@ if (fileOneIsLonger) {
   const newFileContents1 = fs.readFileSync(filePath1, 'utf-8');
   log(8, 'asserting ...');
   assert.strictEqual(fileContents2, newFileContents1);
-};
+}
 
 log(9, '\033[32mpass!\x1b[0m');
-fs.appendFileSync(__filename, `\n// pass: ${(new Date()).toLocaleString()}`);
+fs.appendFileSync(__filename, `\n// pass: ${new Date().toLocaleString()}`);

@@ -1,4 +1,4 @@
-const sendDataHandler = event => {
+const sendDataHandler = (event) => {
   // debugger;
 
   const paramVal = event.target.form.paramData.value;
@@ -13,14 +13,14 @@ const sendDataHandler = event => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-    .then(res => {
+    .then((res) => {
       if (!res.ok) {
         throw res;
       }
       return res.json();
     })
-    .then(data => console.log(data))
-    .catch(err => console.error(err));
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
 
   event.preventDefault();
 };

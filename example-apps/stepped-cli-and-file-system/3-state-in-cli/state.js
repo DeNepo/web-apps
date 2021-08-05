@@ -1,31 +1,31 @@
-'use strict'
+'use strict';
 
 const DEFAULT_STATE = 10;
 
 let state = DEFAULT_STATE;
 
 function get() {
-	return { state };
+  return { state };
 }
 
 function add() {
-	state++;
-	return { state };
+  state++;
+  return { state };
 }
 
 function subtract() {
-	state--;
-	return { state };	
+  state--;
+  return { state };
 }
 
 function reset() {
-	state = DEFAULT_STATE;
-	return { state };
+  state = DEFAULT_STATE;
+  return { state };
 }
 
 module.exports = {
-	get,
-	add,
-	subtract,
-	reset
-}
+  get,
+  add,
+  subtract,
+  reset,
+};

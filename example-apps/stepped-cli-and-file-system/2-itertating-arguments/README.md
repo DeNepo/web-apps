@@ -9,7 +9,7 @@
 
 ```js
 for (let i = 0; i < process.argv.length; i++) {
-	console.log(`The ${i}th argument is ${process.argv[i]}`)
+  console.log(`The ${i}th argument is ${process.argv[i]}`);
 }
 ```
 

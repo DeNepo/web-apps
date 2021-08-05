@@ -1,6 +1,6 @@
 const renderFilesList = (filesArr) => {
   const filesList = filesArr
-    .map(fileName => {
+    .map((fileName) => {
       const loadButton = document.createElement('button');
       loadButton.innerHTML = fileName;
       loadButton.onclick = () => fetchAndLoadFile(fileName);

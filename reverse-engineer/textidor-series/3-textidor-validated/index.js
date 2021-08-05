@@ -21,12 +21,11 @@ app.use(bodyParser.json());
 // https://github.com/expressjs/morgan#write-logs-to-a-file
 const accessLogStream = fs.createWriteStream(
   path.join(__dirname, 'access.log'),
-  { flags: 'a' }
+  { flags: 'a' },
 );
 app.use(morgan('combined', { stream: accessLogStream }));
 // and log to the console
 app.use(morgan('dev'));
-
 
 app.use('/api', api);
 
@@ -39,7 +38,6 @@ app.use(function (err, req, res, next) {
 // - open server -
 app.listen(config.PORT, () => {
   console.log(
-    `listening at http://localhost:${config.PORT} (${config.MODE} mode)`
+    `listening at http://localhost:${config.PORT} (${config.MODE} mode)`,
   );
 });
-

@@ -21,7 +21,7 @@ const repeater = (text = '', repeats = 0) => {
   const arrayOfTexts = [];
   for (let i = 0; i < repeats; i++) {
     arrayOfTexts.push(text);
-  };
+  }
 
   const repeated = arrayOfTexts.join('\n');
 

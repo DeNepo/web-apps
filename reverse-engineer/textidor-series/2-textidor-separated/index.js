@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 // https://github.com/expressjs/morgan#write-logs-to-a-file
 const accessLogStream = fs.createWriteStream(
   path.join(__dirname, 'access.log'),
-  { flags: 'a' }
+  { flags: 'a' },
 );
 app.use(morgan('combined', { stream: accessLogStream }));
 // and log to the console
@@ -32,7 +32,6 @@ app.use(morgan('dev'));
 app.use('/', express.static(path.join(__dirname, 'client')));
 
 // ------ refactor everything from here .....
-
 
 app.get('/api/files', (req, res, next) => {
   fs.readdir(FILES_DIR, (err, list) => {
@@ -76,7 +75,7 @@ app.get('/api/files/:name', (req, res, next) => {
 app.post('/api/files/:name', (req, res, next) => {
   const fileName = req.params.name;
   const fileText = req.body.text;
-  fs.writeFile(`${FILES_DIR}/${fileName}`, fileText, err => {
+  fs.writeFile(`${FILES_DIR}/${fileName}`, fileText, (err) => {
     if (err && err.code === 'ENOENT') {
       res.status(404).end();
       return;
@@ -96,7 +95,7 @@ app.post('/api/files/:name', (req, res, next) => {
 //  called by action: deleteFile
 app.delete('/api/files/:name', (req, res, next) => {
   const fileName = req.params.name;
-  fs.unlink(`${FILES_DIR}/${fileName}`, err => {
+  fs.unlink(`${FILES_DIR}/${fileName}`, (err) => {
     if (err && err.code === 'ENOENT') {
       res.status(404).end();
       return;
@@ -123,7 +122,6 @@ app.use(function (err, req, res, next) {
 // - open server -
 app.listen(config.PORT, () => {
   console.log(
-    `listening at http://localhost:${config.PORT} (${config.MODE} mode)`
+    `listening at http://localhost:${config.PORT} (${config.MODE} mode)`,
   );
 });
-

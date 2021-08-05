@@ -17,21 +17,22 @@ const START = Date.now();
 const FILE_PATH = __dirname + '/file.json';
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value
-);
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value,
+  );
 
 // --- main script ---
 
 // tricky!  how are functions stringified?
 const objectToSave = {
-  todoText: "1234",
+  todoText: '1234',
   flamingo: undefined,
   completed: true,
   render: function () {
     return this.todoText + ': ' + this.completed;
-  }
+  },
 };
 log(1, objectToSave);
 
@@ -43,21 +44,15 @@ log(2, stringToSave);
 log(3, 'writing file ...');
 fs.writeFileSync(FILE_PATH, stringToSave);
 
-
-
 // async
 const fileText = fs.readFileSync(FILE_PATH, 'utf-8', readFileCallback);
 log(4, 'reading file ...');
-
 
 log(5, fileText);
 assert.strictEqual(fileText, stringToSave);
 
 const parsedFileContents = JSON.parse(fileText);
 log(6, parsedFileContents);
-assert.deepStrictEqual(
-  parsedFileContents,
-  { _ }
-);
+assert.deepStrictEqual(parsedFileContents, { _ });
 
 log(7, '\033[32mpass!\x1b[0m');

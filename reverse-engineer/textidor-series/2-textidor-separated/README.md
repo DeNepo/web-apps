@@ -27,9 +27,9 @@ This is an in-class project from the _web-apps_ module, check out [the module re
 
 ## Your Task
 
-All of the code works!  Your task is to refactor the routes from the main `index.js` file into the `/api` directory following the same refactor pattern you studied in [these examples and exercises](https://github.com/hackyourfuturebelgium/web-apps/tree/master/isolate).
+All of the code works! Your task is to refactor the routes from the main `index.js` file into the `/api` directory following the same refactor pattern you studied in [these examples and exercises](https://github.com/hackyourfuturebelgium/web-apps/tree/master/isolate).
 
-You'll know you're done when nothing has changed ... from the user's perspective :)  This exercise is all about developer experience and maintainable/testable code bases.
+You'll know you're done when nothing has changed ... from the user's perspective :) This exercise is all about developer experience and maintainable/testable code bases.
 
 ---
 

@@ -8,11 +8,8 @@ const EXERCISE_NAME = path.basename(__filename);
 const START = Date.now();
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId} (${Date.now() - START} ms):\n`,
-  value,
-);
-
+const log = (logId, value) =>
+  console.log(`\nlog ${logId} (${Date.now() - START} ms):\n`, value);
 
 // --- main script ---
 console.log(`\n--- ${EXERCISE_NAME} ---`);
@@ -25,9 +22,10 @@ const fileName2 = process.argv[3];
 const filePath2 = path.join(__dirname, fileName2);
 log(2, filePath2);
 
-const yourGuess = process.argv[4] === 'true'
-  ? true
-  : process.argv[4] === 'false'
+const yourGuess =
+  process.argv[4] === 'true'
+    ? true
+    : process.argv[4] === 'false'
     ? false
     : undefined;
 log(3, yourGuess);
@@ -45,4 +43,4 @@ log(7, 'asserting your guess ...');
 assert.strictEqual(yourGuess, expected);
 
 log(8, '\033[32mpass!\x1b[0m');
-fs.appendFileSync(__filename, `\n// pass: ${(new Date()).toLocaleString()}`);
+fs.appendFileSync(__filename, `\n// pass: ${new Date().toLocaleString()}`);

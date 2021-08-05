@@ -9,16 +9,16 @@ const fs = require('fs');
 const START = Date.now();
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
-  value,
-);
+const log = (logId, value) =>
+  console.log(
+    `\nlog ${logId}, ${Date.now() - START} ms: ${typeof value}\n`,
+    value,
+  );
 
 // -- main script --
 
 const filePath = __dirname + '/' + process.argv[2];
 log(1, filePath);
-
 
 log(2, '...');
 fs.readFileSync(filePath, 'utf-8');

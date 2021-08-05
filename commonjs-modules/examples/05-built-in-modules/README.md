@@ -1,12 +1,12 @@
 # Built-In Modules
 
-Built-in modules come pre-packaged with Node.js.  You don't need to install or use any scripts before using them in your code.
+Built-in modules come pre-packaged with Node.js. You don't need to install or use any scripts before using them in your code.
 
 Notice that you require built-in modules without giving a path in your `require('module-name')` statement.
 
 Assert is the built-in module you will explore in these examples
 
-* [`assert` docs](https://nodejs.org/api/assert.html)
+- [`assert` docs](https://nodejs.org/api/assert.html)
 
 There are many more methods on `assert`, but these three are all you need for now:
 

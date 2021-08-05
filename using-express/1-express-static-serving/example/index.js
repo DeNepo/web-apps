@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const express = require('express');
 
@@ -11,9 +11,8 @@ app.use(logger);
 
 app.use(express.static('public'));
 
-app.listen(
-  config.PORT,
-  () => {
-    console.log(`Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`);
-  }
-)
+app.listen(config.PORT, () => {
+  console.log(
+    `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`,
+  );
+});

@@ -5,7 +5,7 @@ const deserializeTodo = require('./deserializeTodo');
 function createTodo(todo, request, response) {
   deserializeTodo(request, response)
     .then(({ description }) => todo.create(description))
-    .then(todo => {
+    .then((todo) => {
       response.status(201);
       response.json({ todo });
     })
@@ -13,6 +13,6 @@ function createTodo(todo, request, response) {
       response.status(500);
       response.json({ error: message });
     });
-};
+}
 
 module.exports = createTodo;

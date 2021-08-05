@@ -22,12 +22,13 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // log to file
-app.use(morgan('combined', {
-  stream: fs.createWriteStream(
-    path.join(__dirname, 'access.log'),
-    { flags: 'a' }
-  )
-}));
+app.use(
+  morgan('combined', {
+    stream: fs.createWriteStream(path.join(__dirname, 'access.log'), {
+      flags: 'a',
+    }),
+  }),
+);
 // log to console
 app.use(morgan('dev'));
 
@@ -44,7 +45,7 @@ app.post('/api/param/:value', (req, res) => {
   console.log(`param value: ${paramValue}`);
 
   const fileName = 'param.txt';
-  fs.writeFile(`${FILES_DIR}/${fileName}`, paramValue, err => {
+  fs.writeFile(`${FILES_DIR}/${fileName}`, paramValue, (err) => {
     if (err && err.code === 'ENOENT') {
       console.log(err);
       res.status(404).end();
@@ -66,7 +67,7 @@ app.post('/api/query', (req, res) => {
   console.log(`query value: ${queryValue}`);
 
   const fileName = 'query.txt';
-  fs.writeFile(`${FILES_DIR}/${fileName}`, queryValue, err => {
+  fs.writeFile(`${FILES_DIR}/${fileName}`, queryValue, (err) => {
     if (err && err.code === 'ENOENT') {
       console.log(err);
       res.status(404).end();
@@ -88,7 +89,7 @@ app.post('/api/body', (req, res) => {
   console.log(`body value: ${bodyValue}`);
 
   const fileName = 'body.txt';
-  fs.writeFile(`${FILES_DIR}/${fileName}`, bodyValue, err => {
+  fs.writeFile(`${FILES_DIR}/${fileName}`, bodyValue, (err) => {
     if (err && err.code === 'ENOENT') {
       console.log(err);
       res.status(404).end();
@@ -111,6 +112,6 @@ app.use(function (err, req, res, next) {
 
 app.listen(config.PORT, () => {
   console.log(
-    `listening at http://localhost:${config.PORT} (${config.MODE} mode)`
+    `listening at http://localhost:${config.PORT} (${config.MODE} mode)`,
   );
 });

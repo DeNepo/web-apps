@@ -26,7 +26,7 @@ const appendFilePromise = util.promisify(fs.appendFile);
 const newFileContents = 'written by example with async/await';
 log(1, newFileContents);
 
-const writeReadAssert = async toWrite => {
+const writeReadAssert = async (toWrite) => {
   try {
     log(2, 'writing file ...');
     await writeFilePromise(FILE_PATH, toWrite);

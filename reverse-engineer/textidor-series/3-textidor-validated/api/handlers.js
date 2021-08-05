@@ -6,8 +6,8 @@ _;
 _;
 _;
 
-const readFile = util.promisify(fs.readFile)
-const writeFile = util.promisify(fs.writeFile)
+const readFile = util.promisify(fs.readFile);
+const writeFile = util.promisify(fs.writeFile);
 
 const handlers = {
   readAll: async (req, res) => {
@@ -15,16 +15,14 @@ const handlers = {
       _;
       _;
 
-      const fileNames = filesData.files
-        .map(entry => ({
-          id: entry.id,
-          name: entry.name,
-        }));
+      const fileNames = filesData.files.map((entry) => ({
+        id: entry.id,
+        name: entry.name,
+      }));
 
-      res.json(fileNames)
-
+      res.json(fileNames);
     } catch (err) {
-      console.log(err)
+      console.log(err);
 
       if (err && err.code === 'ENOENT') {
         res.status(404).end();
@@ -41,17 +39,15 @@ const handlers = {
       const filesDataString = await readFile(DATA_PATH, 'utf-8');
       const filesData = JSON.parse(filesDataString);
 
-      const entryWithId = filesData.files
-        .find(entry => _);
+      const entryWithId = filesData.files.find((entry) => _);
 
       if (entryWithId) {
         _;
       } else {
         res.status(404).end();
       }
-
     } catch (err) {
-      console.log(err)
+      console.log(err);
 
       if (err && err.code === 'ENOENT') {
         res.status(404).end();
@@ -74,16 +70,16 @@ const handlers = {
       const isValid = _;
 
       if (!isValid) {
-        const error = tv4.error
-        console.error(error)
+        const error = tv4.error;
+        console.error(error);
 
         res.status(400).json({
           error: {
             message: error.message,
-            dataPath: error.dataPath
-          }
-        })
-        return
+            dataPath: error.dataPath,
+          },
+        });
+        return;
       }
 
       filesData.files.push(newFile);
@@ -93,7 +89,6 @@ const handlers = {
       await _;
 
       res.json(newFile);
-
     } catch (err) {
       console.log(err);
 
@@ -104,7 +99,6 @@ const handlers = {
 
       next(err);
     }
-
   },
   update: async (req, res) => {
     const idToUpdate = Number(req.params.id);
@@ -115,23 +109,24 @@ const handlers = {
 
     if (!isValid) {
       _;
-      console.error(error)
+      console.error(error);
 
       res.status(400).json({
         error: {
           message: error.message,
-          dataPath: error.dataPath
-        }
-      })
-      return
+          dataPath: error.dataPath,
+        },
+      });
+      return;
     }
 
     try {
       const filesDataString = await readFile(DATA_PATH, 'utf-8');
       const filesData = JSON.parse(filesDataString);
 
-      const entryToUpdate = filesData.files
-        .find(file => file.id === idToUpdate);
+      const entryToUpdate = filesData.files.find(
+        (file) => file.id === idToUpdate,
+      );
 
       if (entryToUpdate) {
         _;
@@ -145,7 +140,6 @@ const handlers = {
       } else {
         res.json(`no entry with id ${idToUpdate}`);
       }
-
     } catch (err) {
       console.log(err);
 
@@ -164,11 +158,11 @@ const handlers = {
       const filesDataString = await readFile(DATA_PATH, 'utf-8');
       const filesData = JSON.parse(filesDataString);
 
-      const entryToDelete = filesData.files
-        .find(file => file.id === idToDelete);
+      const entryToDelete = filesData.files.find(
+        (file) => file.id === idToDelete,
+      );
 
       if (_) {
-
         _;
 
         const newFileDataString = JSON.stringify(filesData, null, '  ');
@@ -179,7 +173,6 @@ const handlers = {
       } else {
         res.send(`no entry with id ${idToDelete}`);
       }
-
     } catch (err) {
       console.log(err);
 

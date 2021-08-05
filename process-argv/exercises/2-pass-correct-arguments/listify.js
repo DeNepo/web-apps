@@ -9,7 +9,7 @@ const listify = (arrOfStrings = []) => {
   if (!Array.isArray(arrOfStrings)) {
     throw new TypeError('arrOfStrings is not an array');
   }
-  if (arrOfStrings.some(item => typeof item !== 'string')) {
+  if (arrOfStrings.some((item) => typeof item !== 'string')) {
     throw new TypeError('arrOfStrings is not an array of strings');
   }
 

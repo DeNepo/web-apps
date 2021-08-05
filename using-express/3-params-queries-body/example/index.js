@@ -33,6 +33,6 @@ app.post('/api/:value', (req, res) => {
 
 app.listen(config.PORT, () => {
   console.log(
-    `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`
+    `Example app listening at http://localhost:${config.PORT} (${config.MODE} mode)`,
   );
 });

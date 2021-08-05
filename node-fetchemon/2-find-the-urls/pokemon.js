@@ -21,7 +21,7 @@ process.on('SIGINT', function onSIGINT() {
 });
 
 // log uncaught errors
-const handleError = err => {
+const handleError = (err) => {
   log(err);
   process.exit(1);
 };
@@ -38,7 +38,7 @@ const URL = 'https://pokeapi.co/api/v2/_';
 
 log('fetching ' + URL + ' ...');
 nodeFetch(URL)
-  .then(res => {
+  .then((res) => {
     clearInterval(dotDotDot);
 
     log('testing response ...');
@@ -48,7 +48,7 @@ nodeFetch(URL)
     log('parsing response ...');
     return res.json();
   })
-  .then(data => {
+  .then((data) => {
     log('testing data ...');
     assert.strictEqual(data.height, 13);
     assert.strictEqual(data.weight, 1);
@@ -56,6 +56,6 @@ nodeFetch(URL)
 
     log('... PASS!');
   })
-  .catch(err => log(err.stack));
+  .catch((err) => log(err.stack));
 
 const dotDotDot = setInterval(() => log('...'), 100);

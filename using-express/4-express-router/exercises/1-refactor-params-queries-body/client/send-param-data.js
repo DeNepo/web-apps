@@ -1,4 +1,4 @@
-const sendParamDataHandler = event => {
+const sendParamDataHandler = (event) => {
   // debugger;
 
   const paramVal = event.target.form.paramData.value;
@@ -6,14 +6,14 @@ const sendParamDataHandler = event => {
   fetch(`/api/param/${paramVal}`, {
     method: 'POST',
   })
-    .then(res => {
+    .then((res) => {
       if (!res.ok) {
         throw res;
       }
       return res.json();
     })
-    .then(data => console.log(data))
-    .catch(err => console.error(err));
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
 
   event.preventDefault();
 };

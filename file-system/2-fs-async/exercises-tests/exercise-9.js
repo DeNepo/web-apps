@@ -33,11 +33,8 @@ FLAGS:
 `;
 
 // declare logging function
-const log = (logId, value) => console.log(
-  `\nlog ${logId}, ${Date.now() - START} ms. \n`,
-  value
-);
-
+const log = (logId, value) =>
+  console.log(`\nlog ${logId}, ${Date.now() - START} ms. \n`, value);
 
 // --- main script ---
 
@@ -58,11 +55,9 @@ if (_) {
 }
 _;
 
-
 if (_) {
   _;
-};
-
+}
 
 if (_) {
   _;
@@ -70,26 +65,22 @@ if (_) {
 }
 _;
 
-
 if (_) {
   _;
   _;
 }
 _;
 
-
 if (_) {
   _;
   _;
   _;
   _;
-
 } else if (_) {
   _;
   _;
   _;
   _;
-
 } else {
   _;
 }

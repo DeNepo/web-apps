@@ -24,9 +24,7 @@ FLAGS:
     print this helpful message
 `;
 
-
 // --- begin main script ---
-
 
 // step 0: log the docs for
 if (process.argv.includes('-h')) {
@@ -38,7 +36,6 @@ if (process.argv.includes('-h')) {
 
 // step 1: declare main app function
 const entriesManager = (entries, command, key, value) => {
-
   // step 5: make sure command is defined
   //  alert the user and exit early if it is not
   if (_) {
@@ -64,7 +61,9 @@ const entriesManager = (entries, command, key, value) => {
   // step 8: all remaining commands require at least a key
   //  alert the user and exit early if there is no key
   if (key === undefined) {
-    console.log(`a key is required, cannot ${command}  \nSee "node file.js -h"`);
+    console.log(
+      `a key is required, cannot ${command}  \nSee "node file.js -h"`,
+    );
     _;
   }
 
@@ -81,7 +80,6 @@ const entriesManager = (entries, command, key, value) => {
     //  exit early, there are no changes to save
     console.log(`${key}: ${entries[key]}`);
     _;
-
   } else if (_) {
     // step 9 b.1: make sure the key exists before trying to delete it
     //  alert the user and exit early if it does not
@@ -93,7 +91,6 @@ const entriesManager = (entries, command, key, value) => {
     // step 9 b.2: delete the correct entry
     //  do not exit early!  this change needs to be saved to the file system
     _;
-
   } else if (_) {
     // step 9 c.1: make sure the value is defined
     //  alert the user and exit early if they did not
@@ -107,7 +104,6 @@ const entriesManager = (entries, command, key, value) => {
     _;
   }
 
-
   // step 10: convert the new entries object to a string
   const newEntriesString = _;
 
@@ -115,7 +111,7 @@ const entriesManager = (entries, command, key, value) => {
   const writeFileCallback = (err) => {
     // step 13: let the user know if their changes were successfully saved
     if (_) {
-      _
+      _;
     }
 
     console.log('your changes were saved');
@@ -124,7 +120,6 @@ const entriesManager = (entries, command, key, value) => {
 
   // step 12: save changes to the file system
   _;
-
 };
 
 // step 2: declare callback that uses main app function

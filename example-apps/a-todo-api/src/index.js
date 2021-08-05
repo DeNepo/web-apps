@@ -5,18 +5,13 @@ const Express = require('express');
 const Config = require('./config');
 
 // import our CRUD actions
-const {
-  createTodo,
-  readTodos,
-  updateTodo,
-  deleteTodo
-} = require('./actions');
+const { createTodo, readTodos, updateTodo, deleteTodo } = require('./actions');
 
 // import our Todo class
 const Todo = require('./todo');
 
-const FILENAME  = 'todos.json';
-const PORT      = Config.PORT;
+const FILENAME = 'todos.json';
+const PORT = Config.PORT;
 const TODO_SLUG = 'todos';
 
 // let's make a new instance of our Todo class
@@ -31,15 +26,14 @@ const app = new Express();
 app.use(Express.json());
 
 // CRUD style RESTful routes
-app.post(`/${TODO_SLUG}`,       createTodo.bind(null, todo));
-app.get(`/${TODO_SLUG}`,        readTodos.bind(null, todo));
-app.put(`/${TODO_SLUG}/:id`,    updateTodo.bind(null, todo));
+app.post(`/${TODO_SLUG}`, createTodo.bind(null, todo));
+app.get(`/${TODO_SLUG}`, readTodos.bind(null, todo));
+app.put(`/${TODO_SLUG}/:id`, updateTodo.bind(null, todo));
 app.delete(`/${TODO_SLUG}/:id`, deleteTodo.bind(null, todo));
 
 // let's start the server listening on PORT for new connections
-app.listen(PORT, error => {
-  if (error)
-    return console.error(error);
+app.listen(PORT, (error) => {
+  if (error) return console.error(error);
 
   console.log(`Server started on http://localhost:${PORT}`);
 });

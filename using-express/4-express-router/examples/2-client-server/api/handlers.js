@@ -14,7 +14,7 @@ const handlers = {
       bodyValue,
     };
     res.json(responseData);
-  }
+  },
 };
 
 module.exports = handlers;

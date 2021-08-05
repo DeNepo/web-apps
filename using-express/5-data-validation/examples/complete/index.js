@@ -9,7 +9,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 const config = require('./config');
-const api = require('./api/routes');
+const api = require('./api');
 
 const app = express();
 

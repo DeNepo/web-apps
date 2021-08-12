@@ -252,7 +252,18 @@ References and Practice to help you master this module.
 
 #### Before Break
 
+- What are servers? What's a server-client architecture?
+- What is NodeJS?
+- How can we use the Expressjs library to build servers on NodeJs?
+- What's the difference between static and dynamic data?
+- How can we read data from requests? (route params, query params, body)
+- How do we store/load data?
+- How do we separate our concerns? (multi-tier architecture)
+
 #### After Break
+
+- Walkthrough of a starter-project where one path has been fully implemented
+- Class project: implement the missing path
 
 ### After Class
 

@@ -17,6 +17,7 @@
   - [Week 2](#week-2)
   - [Week 3](#week-3)
   - [Week 4](#week-4)
+  - [Week 5](#week-5)
 - [Class Recordings](#class-recordings)
 - [Curriculum](https://home.hackyourfuture.be/curriculum) (external)
 - [HYF Home](https://home.hackyourfuture.be/) (external)
@@ -27,56 +28,49 @@
 
 <details>
 <summary>expand/collapse</summary>
+<br>
 
-### Programming Skills
-
-- Comfortably work with the file system
-- Explain "persistence"
-- Build basic fullstack projects (SPA/API) that save to the file system
-- Write RESTful APIs for simple data relationships
-- Using NPM Packages in your projects
-- Using Postman to develop APIs without a frontend
-- Running and writing tests for API routes
-- Documenting your code with JSDoc
-
-### Native Node.js
-
-- Node.js CLI scripts
-  - [argsv](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/) - Use command line arguments in Node
-- Native Node.js modules
-  - [assert](https://nodejs.org/api/assert.html) - Test values in Node.js
-  - [fs](https://nodejs.org/api/fs.html) - Read & write form the file system
-  - [path](https://nodejs.org/api/path.html) - Manipulate file paths
-  - [util.promisify](https://nodejs.org/api/util.html#util_util_promisify_original) - Convert functions that take callbacks into Promises
-
-### NPM Packages
-
-- for fun:
-  - [cowsay](https://github.com/piuccio/cowsay) - make cows say things
-- for serious:
-  - [node-fetch](https://github.com/node-fetch/node-fetch) - Make API requests from Node
-  - [express](https://github.com/expressjs/express) - Minimalist web framework for node
-  - [body-parser](https://github.com/expressjs/body-parser) - Parse HTTP request body into JS object
-  - [cors](https://github.com/expressjs/cors) - Cross Origin Resource Sharing for Express
-  - [morgan](https://github.com/expressjs/morgan) - logging for Express
-  - [joi](https://github.com/hapijs/joi), [tv4](https://github.com/geraintluff/tv4) - JSON schemas & validation
-  -
-
-### Development Tools
-
-- [JSDoc](https://github.com/jsdoc/jsdoc) - Generate documentation for your projects
-- [Postman](https://www.postman.com/) - Test your APIs without a frontend
+- 🥚 **HTTP**: You can explain these basic notions of the HTTP protocol, the main verbs, headers, ...
+- 🥚 **Client/Server Architecture**: You can draw a diagram of your project explaining how the front- and back-ends connect, and can generalize this idea to any web app they use.
+- 🥚 **Persistence**: You can explain what persistence is and how it is used in the backend of a web app. You can implement persistence using the backend's file system.
+- 🥚 **Postman**: You can use Postman to test and inspect HTTP request/response cycles.
+- 🥚 **VSCode Debugger**: You can use breakpoints to pause and step through a Node.js scripts and APIs using the VSCode debugger.
+- 🥚 **Promisification**: You can convert built-in node modules from consuming callbacks being `async` functions.
+- 🥚 **NPM Modules**: You can find, install, require and use an NPM module in your projects
+- 🥚 **Function Roles**: You can explain and apply these 4 function roles in your backend code:
+  - _controllers_: like event handlers, but for HTTP requests. (like event handlers in the frontend)
+  - _middleware_: do things with a request before it is handled. (no frontend analogy)
+  - _data access_: read/write from your data source and return the prepared data, in this module the data source is the file system. (like api calls in the frontend)
+  - _logic_: pure functions that transform data and have unit tests. (same as for the frontend)
+  - _utils_: functions with side-effects that do one helpful thing. (like procedures in the frontend)
+- 🥚 **Express.js**: You can ...
+  - listen a new server
+  - use middleware
+  - `.get`, `.post`, `.put`, `.delete`
+  - route params
+  - request body
+  - send response
+  - Express Router
+  - static serving
+- 🥚 **Entry Points**: You can identify the entry points for your app:
+  - _Initialization_: npm scripts, first file, configuration points, server listening
+  - _Request/Response Cycle_: first middleware, logging, routes, error handling
+- 🥚 **API Documentation**: You can use JSDoc-style comments to document your API, and a documentation script to build API documentation
+- 🐣 **File System**: You can read, write and append to .txt files. You can can parse, manipulate and re-save data stored in a .json file using the built-in `fs` and `util.promisify` functions.
+- 🐣 **Data Validation**: You can validate data sent in a request to the backend before saving it to a .json file
+- 🐣 **RESTful Routes**: You can implement RESTful routes in Express.js, including using the correct `app._` verbs.
+- 🐣 **Authentication**: You can explain the principles of authentication and can contribute to a group project that has basic authentication
+- 🐣 **Authentication vs. Authorization**: You can explain the difference and how it is implemented in your projects
+- 🐣 **Environmental Variables**: You can explain what an environmental variable is, what they're used for, and how they're configured
+- 🐣 **Backend Configuration**: You can use environmental variables to launch your backend in different modes
+- 🐥 **Asynchronous Callbacks**: You can read, trace and complete simple scripts that use callbacks to work with the file system
+- 🐥 **CI Deployment**: You can set up a deployment for your web apps and connect it to your repository using a CI action so `main`/`master` is always deployed.
+- 🐔 **CLI Apps**: You can complete a simple CLI app that takes user input from the command line and accesses the file system
+- 🐔 **`node-fetch`**: You make API requests from the backend, and use the data in your web apps
+- 🐔 **Testing Routes**: You can explain how tests for API routes work, and can write routes that pass given tests. You can also write tests for a route that already exists.
 
 </details>
 <br>
-
-[TOP](#web-apps)
-
----
-
-## About the Projects
-
-Projects in this module will build on what you learned in the last module by adding in _network calls_ to APIS and scheduled tasks on the event loop.
 
 [TOP](#web-apps)
 
@@ -90,21 +84,39 @@ References and Practice to help you master this module.
 <summary>expand/collapse</summary>
 <br>
 
-> https://hackyourfuture.github.io/study/#/node-js/
+> https://hackyourfuture.github.io/study/#
 >
 > [Class Recordings](#class-recordings)
 
+### HTTP Statuses
+
+- [In 60 Seconds](https://www.youtube.com/watch?v=GrNrcmD6HLA)
+- [httpstatuses.com](https://httpstatuses.com/)
+- [wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+- [http.cat](https://http.cat/)
+
+### NPM
+
+- [What is it? How to use it?](https://www.youtube.com/watch?v=8Rmj5UY5mJk)
+- packages for fun:
+  - [cowsay](https://github.com/piuccio/cowsay) - make cows say things
+- packages for serious:
+  - [node-fetch](https://github.com/node-fetch/node-fetch) - Make API requests from Node
+  - [express](https://github.com/expressjs/express) - Minimalist web framework for node
+  - [body-parser](https://github.com/expressjs/body-parser) - Parse HTTP request body into JS object
+  - [cors](https://github.com/expressjs/cors) - Cross Origin Resource Sharing for Express
+  - [morgan](https://github.com/expressjs/morgan) - logging for Express
+  - [joi](https://github.com/hapijs/joi), [tv4](https://github.com/geraintluff/tv4) - JSON schemas & validation
+
 ### Debugging Node in VSCode
+
+> [Postman](https://www.postman.com/) - use your APIs without a frontend
 
 - [Getting started with Node.js debugging in VS Code](https://www.youtube.com/watch?v=2oFKNL7vYV8)
 - [Burke Holland](https://www.youtube.com/watch?v=NW2HG9C_mZc)
 - [VSCode Channel Intro](https://www.youtube.com/watch?v=2oFKNL7vYV8)
 - [James Q Quick](https://www.youtube.com/watch?v=yFtU6_UaOtA)
 - [CodeSpace, 2 Ways](https://www.youtube.com/watch?v=N8O-Yf3hc-A)
-
-### NPM
-
-- [What is it? How to use it?](https://www.youtube.com/watch?v=8Rmj5UY5mJk)
 
 ### Node.js
 
@@ -113,17 +125,18 @@ References and Practice to help you master this module.
   - [Traversy: Node for Absolute Beginners](https://www.youtube.com/watch?v=U8XF6AFGqlc)
   - [Traversy: Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
   - [NetNinja: Node Js Crash Course](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
+  - [`argsv`](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/) - Use command line arguments in Node
 - **Built-In Modules**
-  - [About _/examples-and-exercises:_ `fs`](https://vimeo.com/414475261) (first 20 minutes)
-  - [promisifying-fs](https://github.com/hackyourfuturebelgium/promisifying-fs)
-- **CLIs**
-  - [cowsaydex](https://github.com/hackyourfuturebelgium/cowsaydex)
-    - Practice using NPM Packages into your projects, starting with [cowsay](https://github.com/piuccio/cowsay)
-  - [node-practice-replace](https://github.com/HackYourFutureBelgium/node-practice-replace)
+  - [The file system](https://vimeo.com/414475261) (first 20 minutes)
+  - references
+    - [assert](https://nodejs.org/api/assert.html) - Test values in Node.js
+    - [fs](https://nodejs.org/api/fs.html) - Read & write form the file system
+    - [path](https://nodejs.org/api/path.html) - Manipulate file paths
+    - [util.promisify](https://nodejs.org/api/util.html#util_util_promisify_original) - Convert functions that take callbacks into Promises
 - **API Calls**
   - [node-fetch](https://www.npmjs.com/package/node-fetch): a module for using `fetch` syntax in Node.js
   - To study a full app with `node-fetch`, head over to [weather-it-promised](../integrate/weather-it-promised) & [weather-it-async-await](../integrate/weather-it-async-await)
-  - [node-fetchemon](https://github.com/hackyourfuturebelgium/node-fetchemon) (exercises to practice `node-fetch`)
+  - [/node-fetchemon](./node-fetchemon) (exercises to practice `node-fetch`)
 
 ### About Servers
 
@@ -144,6 +157,7 @@ References and Practice to help you master this module.
 ### Express
 
 - [Traversy: Express.js Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE)
+  [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh
 - How To Build a Job Search App (Node, APIs, Vanilla JS): [video](https://www.youtube.com/watch?v=v7cprTuAnlA), [code](https://github.com/codebubb/job-search-app/)
 - Error Handling
   - [The Net Ninja](https://www.youtube.com/watch?v=w1V2SdzdQBs)
@@ -154,7 +168,6 @@ References and Practice to help you master this module.
   - [Hungry Turtle](https://www.youtube.com/watch?v=paNikhYqdz0)
   - [Rithm School](https://www.youtube.com/watch?v=Lxp7147emnM)
   - [The Docs](https://expressjs.com/en/guide/routing.html)
-- [pokedex-api](https://github.com/hackyourfuturebelgium/pokedex-api)
 
 ### Best Practices
 
@@ -167,6 +180,21 @@ References and Practice to help you master this module.
 - Schema Validation
   - [jsonschemavalidator.net](https://www.jsonschemavalidator.net/) (used in the prep videos)
   - [tv4 validation library](https://github.com/geraintluff/tv4) (prep video and your projects)
+
+### Examples and Exercises
+
+- 🥚 **[`/commonjs-modules`](./commonjs-modules)**: Node.js doesn't use `import`/`export`, it uses `require`/`module.exports`. Explore some examples to understand how this works
+- 🥚 **[`/process-argv`](./process-argv)**: learn to use process.argv to get user input from the command line. you won't need this to write an API, but it's simple enough and helps to understand how command line tools work.
+- 🐣 **[`/file-system`](./file-system)**: practice using the `fs` module with callbacks, promises and `async`/`await`.
+- 🐣 **[`/using-express`](./using-express)**: examples and exercises covering how to use express to build a web app.
+- **[`/reverse-engineer'](./reverse-engineer)**: projects with a `demo.min.js` file to reverse-engineer
+  - 🐣 `/textidor-series`
+  - 🐥 `/entries-manager`, `/cowsaydex`
+- 🥚🐣🐥🐔 **[`/example-apps`](./example-apps)**: a variety of projects to study, some are simple and some are advanced. Enjoy!
+- 🐔 [`/node-fetchemon'](./node-fetchemon)
+- 🐔 [node-practice-replace](https://github.com/hackyourfuturebelgium/node-practice-replace) (separate repo)
+- 🐔 [pokedex-api](https://github.com/hackyourfuturebelgium/pokedex-api) (separate repo)
+- 🐔 [diy-wiki](https://github.com/hackyourfuturebelgium/diy-wiki) (separate repo)
 
 ### Deployment
 
@@ -201,142 +229,47 @@ References and Practice to help you master this module.
 
 ## Week 1
 
-**In Class:** File system I/O & basic Node.js CLI programs
-
-**At Home:** Express APIs that access the file system
+- Developing an Express API with RESTful routes
+- Persisting API data to the file system using a .json file
 
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
-- [Week 1 Prep Video](https://vimeo.com/467644885)
-  - Running .js files in Node
-  - `process.argv`
-  - `assert`
-  - `fs`
 - **Have Node**
   - Install [NVM (node version manager)](https://github.com/nvm-sh/nvm)
-  - Make sure you have the latest Node.js installed (14._._)
-- **VS Code Debugger**
-  - [Getting started with Node.js debugging in VS Code](https://www.youtube.com/watch?v=2oFKNL7vYV8)
+  - Make sure you have the latest Node.js installed (16._._)
+- **[Postman](https://www.postman.com/)**: install it and make an API request
 - **Error-First Callbacks**
   - [fredkschott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (article)
   - [Sid Harder](https://duckduckgo.com/?q=sid+harder+javascript+error+first&atb=v214-1&iax=videos&ia=videos&iai=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D0h8r2K7ZHZU) (video)
   - [David Connelly](https://www.youtube.com/watch?v=Pov477mI57A) (video)
-- **`/examples-and-exercises`**
-  - 2. Modules (examples)
-  - 3. `process.argv` (example.js)
-  - 4. `fs` Sync (examples)
+- Read and run [./example-apps/storage-server](./example-apps/storage-server)
+  - You do not need to understand everything, just enough that it's not totally new.
 
 ### Lesson Plan
 
-> during class
-
 #### Before Break
 
-- all together: [Class Slides](./slides/1-class.html)
-- in groups: [04-fs-sync](./examples-and-exercises/04-fs-sync)
+- What are servers? What's a server-client architecture?
+- What is NodeJS?
+- How can we use the Expressjs library to build servers on NodeJs?
+- What's the difference between static and dynamic data?
+- How can we read data from requests? (route params, query params, body)
+- How do we store/load data?
+- How do we separate our concerns? (multi-tier architecture)
 
 #### After Break
 
-- [05-fs-async](./examples-and-exercises/05-fs-async)
-  - examples: all together
-  - exercises: in groups
+- Walkthrough of a starter-project where one path has been fully implemented
+- Class project: implement the missing path
 
 ### After Class
 
-#### Practice Project
+No project! There's enough to study without one ;)
 
-Not required, but it will help.
-
-- [entries-manager-cli](./practice-projects/1-entries-manager)
-
-#### `restful-courses` (project)
-
-> Group Project, [Code-Along](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
-
-This week's project is to follow the [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh. Besides just Express and writing RESTful routes you will learn how to use _JSON schemas_, test your API's with _Postman_, use _environmental variables-, and practice continuous development using \_nodemon_.
-
-Don't worry if you don't understand everything in this project. The tutorial covers a lot of material very quickly, we'll spend the next weeks going deeper into the topics Mosh covers here. Think of this week's project as a sneak preview of the coming 3 weeks.
-
-Just copying his code is not all! After finishing with the tutorial you will need to refactor the code so that It reads and writes from a file called `courses.json` instead of using a local variable. ie:
-
-1. ```js
-   app.post('/api/courses', (req, res) => {
-     const { error } = validateCourse(req.body);
-     if (error) return res.status(400).send(error.details[0].message);
-     const course = {
-       id: courses.length + 1,
-       name: req.body.name,
-     };
-     courses.push(course);
-     res.send(course);
-   });
-   ```
-1. ```js
-   // there are some mistakes in this, we can't give it all away ;)
-   app.post('/api/courses', (req, res) => {
-     const { error } = validateCourse(req.body);
-     if (error) {
-       return res.status(400).send(error.details[0].message);
-     }
-     fs.writeFile(COURSES_PATH, (err, content) => {
-       if (err) {
-         res.status(500).send(err.message);
-         return;
-       }
-       const parsedCourses = JSON.stringify(content);
-       const course = {
-         id: courses.length + 1,
-         name: req.body.name,
-       };
-       parsedCourses.push(course);
-       const stringifiedCourses = JSON.parse(parsedCourses, null, '  ');
-       fs.readFile(COURSES_PATH, parsedCourses, (err) => {
-         if (err) {
-           res.status(500).send(err.message);
-           return;
-         }
-         res.send(course);
-       });
-     });
-   });
-   ```
-
-And here's a suggestion for how to organize your `courses.json` file:
-
-```json
-{
-  "nextId": 3,
-  "courses": [
-    {
-      "id": 0,
-      "name": "x-ray"
-    },
-    {
-      "id": 2,
-      "name": "gamma-ray"
-    }
-  ]
-}
-```
-
-You will be expected to turn in your code from his tutorial on a new repository called `restful-courses`. you will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README. Your repo must include:
-
-#### Checklist
-
-```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- Project Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
-- Implementation
-  - [ ] API data is saved in `courses.json`
-  - [ ] Deployed - [deployment url]()
-```
+If you want to begin preparing for the _group project in Week 3_ you can begin experimenting with the [Web Apps Starter Repo]()
 
 </details>
 <br>
@@ -347,63 +280,25 @@ You will be expected to turn in your code from his tutorial on a new repository 
 
 ## Week 2
 
-APIs & Client/Server web apps
+- Using middleware
+- Authentication
+- Authorization
+- Authentication vs. Authorization
 
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
-- Slides: [live](./slides/2-prep.html)
-- Examples & Exercises: [07-express-static-serving](./examples-and-exercises/07-express-static-serving)
-- Recordings: [Part 1](https://vimeo.com/415924788), [Part 2](https://vimeo.com/415919630), [Part 3](https://vimeo.com/416350569)
-- [About Servers](#about-servers)
-- `config` file: [how to](https://goenning.net/2016/05/13/how-i-manage-application-configuration-with-nodejs/)
-- HTTP Statuses
-  - [In 60 Seconds](https://www.youtube.com/watch?v=GrNrcmD6HLA)
-  - [httpstatuses.com](https://httpstatuses.com/)
-  - [wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-  - [http.cat](https://http.cat/)
-
 ### During Class
 
 #### Before Break
 
-- all together: [Class Slides](./slides/2-class.html)
-- in groups: [08-express-dynamic-serving](./examples-and-exercises/08-express-dynamic-serving/exercise)
-
 #### After Break
-
-- [09-params-queries-body](./examples-and-exercises/09-params-queries-body)
-  - examples: all together
-  - exercises: in groups
 
 ### After Class
 
-#### Practice Project
-
-It's not required, but it will help.
-
-- [textidor](./practice-projects/2-textidor)
-
-#### Project
-
-**DIY Wiki**: [Starer Code](https://home.hackyourfuture.be/students/weekly-assignments#projects) (Individual Project)
-
-This week's project is to complete the code in [the `diy-wiki` repository](https://github.com/hackyourfuturebelgium/diy-wiki).
-
-#### Checklist
-
-```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- Project Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
-- Implementation
-  - [ ] Deployed - [deployment url]()
-```
+Again, no project. Just more study and prep for next week.
 
 </details>
 <br>
@@ -414,74 +309,24 @@ This week's project is to complete the code in [the `diy-wiki` repository](https
 
 ## Week 3
 
-- HTTP status codes
-- Error handling middleware
-- Separating concerns in Node/Express servers
-- Using Express Routers to write modular servers
+- JWT - JSON Web Tokens (fancy authentication)
 
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
-- [slides](./slides/3-prep.html)
-- videos: [Part 1](https://vimeo.com/417960548), [Part 2](https://vimeo.com/418360319), [Part 3](https://vimeo.com/418359614)
-- Examples: [10-refactoring-apis](./examples-and-exercises/10-refactoring-apis)
-- Express Router
-  - [Scotch.io](https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4)
-  - [Hungry Turtle](https://www.youtube.com/watch?v=paNikhYqdz0)
-  - [Rithm School](https://www.youtube.com/watch?v=Lxp7147emnM)
-  - [The Docs](https://expressjs.com/en/guide/routing.html)
-- Express Error Handling
-  - [The Net Ninja](https://www.youtube.com/watch?v=w1V2SdzdQBs)
-  - [Andrew Mead](https://www.youtube.com/watch?v=R4uiu3fR38I)
-  - [Devnami](https://www.youtube.com/watch?v=pYj48mDXHBU)
-
 ### During Class
 
 #### Before Break
 
-Practice refactoring small Express apps from single-file servers into multiple files using `express.Router()`.
-
-- all together: [Class Slides](./slides/3-class.html)
-- in groups: [10-refactoring-apis](./examples-and-exercises/10-refactoring-apis)
-
 #### After Break
 
-- [11-middleware-and-error-handling](./examples-and-exercises/11-middleware-and-error-handling)
-  - examples: all together
-  - exercises: in groups
+Meet in groups and begin planning.
 
 ### After Class
 
-#### Practice Project
-
-It's not required, but it will help. Revisit the text editor app you studied last week, this time refactoring the server from a single file to the same folder structure as the exercises. The code in this repo works! Your job is to make sure it _still_ works after you've refactored it :)
-
-- [textidor-refactor](./practice-projects/3-textidor-refactor)
-
-#### Project
-
-- [the `courses-web-app` template repo](https://github.com/HackYourFutureBelgium/courses-web-app) (Group Project)
-
-Again with the refactors?! This week's project is refactor the API from [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) into a full web app. To help you get started, you can use [the `courses-web-app` template repo](https://github.com/HackYourFutureBelgium/courses-web-app).
-
-Besides refactoring the backend into multiple files, you are also expected to develope a frontend for your API in the `/client` directory. You can design the frontend however you like, and organize the code in a way that makes sense to you. The main objective this week is to understand how the frontend & backend are related.
-
-#### Checklist
-
-```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- Project Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
-- Implementation
-  - [ ] Config
-  - [ ] Deployed - [deployment url]()
-  - [ ] data in a .json file
-```
+_group project_: begin a 3-week fullstack project around [this data]() using [this starter]()
 
 </details>
 <br>
@@ -492,73 +337,60 @@ Besides refactoring the backend into multiple files, you are also expected to de
 
 ## Week 4
 
-- JSON Schemas
-- Schema Validation
-- Adding a `schema.json` file to your projects
+- continue group project
 
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
-- [slides](./slides/4-prep.html)
-- videos: [Part 1](https://vimeo.com/420678014), [Part 2](https://vimeo.com/422487341)
-- Examples: [12-data-validation](./examples-and-exercises/12-data-validation)
-- JSON Schemas
-  - [The Docs](https://json-schema.org/learn/getting-started-step-by-step.html)
-  - [a video](https://www.youtube.com/watch?v=tp4IzG6oDA0)
-- JSON Schema Validation
-  - [jsonschemavalidator.net](https://www.jsonschemavalidator.net/) (used in the prep videos)
-  - [tv4 validation library](https://github.com/geraintluff/tv4) (prep video and your projects)
+code review
 
 ### During Class
 
 #### Before Break
 
-Practice using JSON Schemas & `tv4` to protect data saved in a .json file.
-
-- all together: [Class Slides](./slides/4-class.html)
-- in groups: [12-data-validation/exercises/1-write-data](./examples-and-exercises/12-data-validation/exercises/)
-
 #### After break
 
-- in groups: [2-write-data & 3-write-handlers](./examples-and-exercises/12-data-validation/exercises/)
+review common problems as a class
 
 ### After Class
 
 #### Practice Project
 
-It's not required, but it will help. Build a simple _virtual file system_ using a .json data file and schema. This API is very similar to the one you studied the last two weeks, but instead of reading and writing actual files it stores file names and text contents as entries in a single .json file.
+continue group project
 
-- [textidor-validated](./practice-projects/4-textidor-validated)
+</details>
+<br>
 
-#### Project
+[TOP](#web-apps)
 
-**impress yourselves!** (Group Project)
+---
 
-This week's project is open-ended. Starting with the [tv4-validation-fs-template](https://github.com/HackYourFutureBelgium/tv4-validation-fs-template), build a project to impress yourself. You've been at HYF for a few months now and every week your projects have been given to you. You've hopefully learned about planning the steps of your projects, organizing your code, and writing clean code. It's time to put yourself to the test.
+## Week 5
 
-Here are some tips to help you find your way:
+- finish group project
 
-1. _start with your user_ Begin by identifying the type of person who will want ot use your app, and why they would want to use it. Who is this project for? What does the app do for them? Why is this helpful?
-2. _define your data_ Before you start coding, understand the data your application will be using. This includes writing the schema and creating some starter data by hand.
-3. _write your backend first_ After defining your data, write an API that allows users to create, read, update, and delete entries in your data file(s).
+<details>
+<summary>expand/collapse</summary>
 
-#### Checklist
+### Before Class
 
-```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- Project Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
-- Implementation
-  - [ ] Deployed - [deployment link]()
-  - [ ] A working frontend in the `/client` directory
-  - [ ] A working API in the `/api` directory
-  - [ ] A schema and valid data in the `/data` directory
-```
+### During Class
+
+#### Before Break
+
+code review
+
+#### After break
+
+review common problems as a class
+
+### After Class
+
+#### Practice Project
+
+continue group project
 
 </details>
 <br>

@@ -2,9 +2,10 @@
   "name": "web-apps",
   "version": "2.0.0",
   "description": "the web-apps module for HYF Belgium",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests",
+    "format": "prettier --write",
+    "document": "node lib/document.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/HackYourFutureBelgium/web-apps/issues"
   },
-  "homepage": "https://github.com/HackYourFutureBelgium/web-apps"
+  "homepage": "https://github.com/HackYourFutureBelgium/web-apps",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cowsay": "^1.4.0",
+    "date-fns": "^2.23.0",
+    "dependency-cruiser": "^10.0.6",
+    "graphviz-cli": "^1.0.0",
+    "jest": "^27.0.6",
+    "node-fetch": "^2.6.0",
+    "prettier": "^2.3.2"
+  }
 }

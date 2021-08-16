@@ -243,7 +243,7 @@ References and Practice to help you master this module.
 - **[Postman](https://www.postman.com/)**: install it and make an API request
 - **Error-First Callbacks**
   - [fredkschott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (article)
-  - [Sid Harder](https://duckduckgo.com/?q=sid+harder+javascript+error+first&atb=v214-1&iax=videos&ia=videos&iai=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D0h8r2K7ZHZU) (video)
+  - [Sid Harder](https://www.youtube.com/watch?v=0h8r2K7ZHZU) (video)
   - [David Connelly](https://www.youtube.com/watch?v=Pov477mI57A) (video)
 - Read and run [./example-apps/storage-server](./example-apps/storage-server)
   - You do not need to understand everything, just enough that it's not totally new.

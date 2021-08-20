@@ -53,7 +53,7 @@
         <section>
           <h2>Web Apps</h2>
           <br>
-          <h3>Week 2 - Lecture</h3>
+          <h3>Week 2</h3>
           <br>
           <code>"s"</code> for speaker notes
           <br>
@@ -77,36 +77,219 @@
         </section>
       </section>
 
-      <section id='what-you-will-build'>
+      <section id='learning-objectives'>
         <section>
-          <h2>What You'll Build</h2>
-          <br>
-          <h3>A Simple Text Editor!</h3>
+          <h1>Learning Objectives</h1>
+          <p>
+            What can you expect to cover in class today?
+          </p>
+          <ul>
+            <li>POST Requests</li>
+            <li>Data Storage and Separation of Concerns</li>
+            <li>Middlewares</li>
+          </ul>
+        </section>
+      </section>
 
-          <a href="https://github.com/hackyourfuturebelgium/textidor">Source</a>
+      <section id='new-material'>
+        <section>
+          <h1>New Material</h1>
+        </section>
+
+        <section>
+          <h2>Quick Refresher - Server // Client Architecture</h2>
+
+          <img width="50%" class="fragment fade-in-then-out"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/1200px-Client-server-model.svg.png"
+            alt="">
+        </section>
+
+        <section>
+          <h2>Restaurant Metaphor</h2>
+
+          <img class="fragment fade-in-then-out"
+            src="https://cdn.touchbistro.com/wp-content/uploads/2019/07/28-01-empty-dining-room.jpg" alt="">
+        </section>
+      </section>
+
+      <section id="http-status-codes">
+
+        <section>
+          <h1>HTTP Status Codes</h1>
+
+          <p>The fastest way to fail.</p>
+        </section>
+
+        <section>
+
+          <p>HTTP response status codes indicate whether a specific HTTP request has been successfully completed.</p>
 
           <p>
-          <h4>Functionality</h4>
+            Responses are grouped in five classes:
+
           <ul>
-            <li>List text files</li>
-            <li>View a file</li>
-            <li>Create a new file</li>
-            <li>Update an existing file</li>
-            <li>Delete a file</li>
+            <li>Informational responses (100–199)</li>
+            <li>Successful responses (200–299)</li>
+            <li>Redirects (300–399)</li>
+            <li>Client errors (400–499)</li>
+            <li>Server errors (500–599)</li>
           </ul>
           </p>
+
         </section>
+
+      </section>
+
+      <section id="dynamic-data">
+
+        <section>
+          <h1>Dynamic Data</h1>
+
+          <p class="fragment fade-in-then-out">
+            Submitting forms, uploading pictures, viewing pictures uploaded by other users. All forms of Dynamic Data
+            being and the things we can do with them.
+          </p>
+
+          <p class="fragment fade-in-then-out">
+            This is what gives true power and interactivity to the Internet.
+          </p>
+        </section>
+
+        <section>
+          <h1>POST Requests</h1>
+
+          <p>
+            A way for users to modify the backend by POSTing data.
+            POST is used to send data to a server to create/update a resource.
+            The data sent to the server with POST is stored in the request body of the HTTP request.
+          </p>
+        </section>
+
+        <section>
+
+          <h1>Request Body</h1>
+
+          <pre>
+            <code>
+              const express = require('express')
+              const bodyParser = require('body-parser')
+
+              const app = express()
+
+              app.use(bodyParser.json())
+
+              ...
+
+              app.post('/endpoint', function(req, res) {
+
+                const body = req.body
+              })
+            </code>
+          </pre>
+        </section>
+      </section>
+
+      <section id="data-storage">
+
+        <section>
+          <h1>Data Storage - Memory Vs. Filesystem</h1>
+
+          <p>
+            Memory is volatile, disk is forever.
+          </p>
+        </section>
+
+        <section>
+          <h1>In-Memory Storage</h1>
+
+          <pre>
+            <code>
+
+            const items = []
+
+            ...
+
+            app.post(`/endpoint`, function(req, res) {
+
+              const item = req.body.item
+
+              items.push(item)
+            })
+          </code>
+          </pre>
+        </section>
+
+        <section>
+
+          <h1>On-Disk Storage</h1>
+
+          <pre>
+            <code>
+
+            writeFileSync('/items.txt', '')
+
+            ...
+
+            app.post(`/endpoint`, async function(req, res) {
+
+              const item = req.body.item
+
+              await appendFileAsync('/items.txt', `${item}\n`)
+            })
+
+          </code>
+          </pre>
+        </section>
+      </section>
+
+      <section id="separation-of-concerns">
+        <section>
+          <h1>Separation of Concerns</h1>
+
+          <p>What is Multi-tier architecture?</p>
+        </section>
+
+        <section>
+          <img width="40%" src="/diagrams/layered-architecture.png" alt="">
+        </section>
+      </section>
+
+      <section id="middlewares">
+
+        <section>
+
+          <h1>Middlewares</h1>
+
+          <p>
+            A middleware performs some specific function on the HTTP request or response at a specific stage in the
+            HTTP pipeline before or after the user defined controller.
+          </p>
+        </section>
+
+        <section>
+
+          <h1>What is it good for?</h1>
+
+          <p>Absolutely everything!</p>
+
+          <ul>
+            <li>Logging</li>
+            <li>Validation</li>
+            <li>Error Handling</li>
+          </ul>
+        </section>
+
       </section>
 
       <section id='finale-slide'>
         <h2>Web Apps</h2>
         <br>
-        <h3>Week 2 - Lecture</h3>
+        <h3>Week 2 - Prep</h3>
         <br>
         <code>"s"</code> for speaker notes
         <br>
         <br>
-        <a href="https://github.com/hackyourfuturebelgium/web-apps/tree/master/week-2" target='_blank'>
+        <a href="https://github.com/hackyourfuturebelgium/Node.js/tree/master/week-1" target='_blank'>
           -- back to repo --
         </a>
       </section>

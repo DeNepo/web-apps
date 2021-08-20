@@ -475,3 +475,22 @@ continue group project
 4. Week 4: [JSON Schemas](https://vimeo.com/523723387), [Schema Validation](https://vimeo.com/523722229), [`t4v` validation library](https://vimeo.com/523722129), [conclusion](https://vimeo.com/523722804)
 
 </details>
+
+---
+
+<details open>
+<summary><strong>Class 13-14</strong></summary>
+<br>
+
+> [Shaun](https://github.com/badgerbadgerbadgerbadger), [Yoshi](https://github.com/yoshimalaise)
+
+1. Week 1:
+   1. [Node, NPM, Packages]()
+   2. [Express, `localhost`, Request/Response]()
+   3. [Dynamic data, File System, Postman]()
+   4. [Routing and Parameters, Persistence, Multi-Tier architecture]()
+   5. [Slack clone part 1]()
+   6. [Slack clone part 2]()
+   7. [Monday review session](https://vimeo.com/588250826)
+
+</details>

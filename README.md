@@ -155,7 +155,8 @@ References and Practice to help you master this module.
   - [http.cat](https://http.cat/)
 
 ### Express
-
+- [What is Express?](https://www.besanttechnologies.com/what-is-expressjs)
+- [LearnWebCode](https://www.youtube.com/watch?v=z7ikpQCWbtQ)
 - [Traversy: Express.js Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE)
   [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh
 - How To Build a Job Search App (Node, APIs, Vanilla JS): [video](https://www.youtube.com/watch?v=v7cprTuAnlA), [code](https://github.com/codebubb/job-search-app/)

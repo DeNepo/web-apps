@@ -241,11 +241,11 @@ References and Practice to help you master this module.
 - **Have Node**
   - Install [NVM (node version manager)](https://github.com/nvm-sh/nvm)
   - Make sure you have the latest Node.js installed (16._._)
-  - [The Net Ninja, Introduction to Node.js](https://youtu.be/zb3Qk8SG5Ms)(video, for this week watch at least first 2 lessons or up to 6th to cover Express too)
+  - [The Net Ninja, Introduction to Node.js](https://youtu.be/zb3Qk8SG5Ms)(video, for this week watch at least first 2 lessons or up to 5th, unfortunately lesson 6 about Express is outdated due to the new version of Express, where some methods were deprecated)
 - **[Postman](https://www.postman.com/)**: install it and make an API request
    -[Postman tutorial](https://youtu.be/VywxIQ2ZXw4) (video, you need only first half 'Unit 1')
 -**Express**
-  - [What is Express?](https://www.besanttechnologies.com/what-is-expressjs)
+  - [What is Express?](https://www.besanttechnologies.com/what-is-expressjs)(article)
   - [LearnWebCode](https://www.youtube.com/watch?v=z7ikpQCWbtQ)(video)
 - **Error-First Callbacks**
   - [fredkschott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (article)

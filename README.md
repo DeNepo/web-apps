@@ -318,6 +318,7 @@ Again, no project. Just more study and prep for next week.
 
 ## Week 3
 
+- CORS
 - Authentication (BasicAuth, followed by Token-Based Auth, simple-password storage)
 - Authorization
 - Authentication vs. Authorization
@@ -330,6 +331,8 @@ Again, no project. Just more study and prep for next week.
 ### During Class
 
 #### Before Break
+
+Lecture on CORS and Authentication/Authorization.
 
 #### After Break
 

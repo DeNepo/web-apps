@@ -340,7 +340,7 @@ Meet in groups and begin planning.
 
 ### After Class
 
-_group project_: begin a 3-week fullstack project around [this data]() using [this starter]()
+_group project_: begin a 3-week fullstack project around [this data]() using [this starter](https://github.com/yoshimalaise/hyf-backend-introduction/tree/start-of-class)
 
 </details>
 <br>

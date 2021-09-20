@@ -155,7 +155,8 @@ References and Practice to help you master this module.
   - [http.cat](https://http.cat/)
 
 ### Express
-
+- [What is Express?](https://www.besanttechnologies.com/what-is-expressjs)
+- [LearnWebCode](https://www.youtube.com/watch?v=z7ikpQCWbtQ)
 - [Traversy: Express.js Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE)
   [Build RESTful APIs with Node and Express](https://www.youtube.com/watch?v=pKd0Rpw7O48) by Mosh
 - How To Build a Job Search App (Node, APIs, Vanilla JS): [video](https://www.youtube.com/watch?v=v7cprTuAnlA), [code](https://github.com/codebubb/job-search-app/)
@@ -229,10 +230,14 @@ References and Practice to help you master this module.
 - **Have Node**
   - Install [NVM (node version manager)](https://github.com/nvm-sh/nvm)
   - Make sure you have the latest Node.js installed (16._._)
+  - [The Net Ninja, Introduction to Node.js](https://youtu.be/zb3Qk8SG5Ms)(video, for this week watch at least first 2 lessons or up to 5th, unfortunately lesson 6 about Express is outdated due to the new version of Express, where some methods were deprecated)
 - **[Postman](https://www.postman.com/)**: install it and make an API request
+   -[Postman tutorial](https://youtu.be/VywxIQ2ZXw4) (video, you need only first half 'Unit 1')
+-**Express**
+  - [What is Express?](https://www.besanttechnologies.com/what-is-expressjs)(article)
+  - [LearnWebCode](https://www.youtube.com/watch?v=z7ikpQCWbtQ)(video)
 - **Error-First Callbacks**
   - [fredkschott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (article)
-  - [Sid Harder](https://www.youtube.com/watch?v=0h8r2K7ZHZU) (video)
   - [David Connelly](https://www.youtube.com/watch?v=Pov477mI57A) (video)
 - Read and run [./example-apps/storage-server](./example-apps/storage-server)
   - You do not need to understand everything, just enough that it's not totally new.
@@ -302,6 +307,7 @@ Again, no project. Just more study and prep for next week.
 
 ## Week 3
 
+- CORS
 - Authentication (BasicAuth, followed by Token-Based Auth, simple-password storage)
 - Authorization
 - Authentication vs. Authorization
@@ -315,13 +321,13 @@ Again, no project. Just more study and prep for next week.
 
 #### Before Break
 
-#### After Break
+Lecture on CORS and Authentication/Authorization.
 
-Meet in groups and begin planning.
+#### After Break
 
 ### After Class
 
-_group project_: begin a 3-week fullstack project around [this data]() using [this starter]()
+Implement some form of authentification, preferably Basic Authentification in [this project](https://github.com/yoshimalaise/hyf-backend-introduction/tree/start-of-class)
 
 </details>
 <br>

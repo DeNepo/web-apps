@@ -50,7 +50,7 @@ app.delete('/data/:ownerName', async (req, res) => {
   });
 });
 
-// error-handling middleware
+// 404 middleware
 app.use(function (req, res) {
   res.status(404).json({
     message: "the route you're looking for does not exist",

@@ -173,23 +173,12 @@ References and Practice to help you master this module.
 
 - `config` file: [how to](https://goenning.net/2016/05/13/how-i-manage-application-configuration-with-nodejs/)
 
-### JSON Schemas
-
-- [The Docs](https://json-schema.org/learn/getting-started-step-by-step.html)
-- [a video](https://www.youtube.com/watch?v=tp4IzG6oDA0)
-- Schema Validation
-  - [jsonschemavalidator.net](https://www.jsonschemavalidator.net/) (used in the prep videos)
-  - [tv4 validation library](https://github.com/geraintluff/tv4) (prep video and your projects)
-
 ### Examples and Exercises
 
-- 🥚 **[`/commonjs-modules`](./commonjs-modules)**: Node.js doesn't use `import`/`export`, it uses `require`/`module.exports`. Explore some examples to understand how this works
-- 🥚 **[`/process-argv`](./process-argv)**: learn to use process.argv to get user input from the command line. you won't need this to write an API, but it's simple enough and helps to understand how command line tools work.
-- 🐣 **[`/file-system`](./file-system)**: practice using the `fs` module with callbacks, promises and `async`/`await`.
 - 🐣 **[`/using-express`](./using-express)**: examples and exercises covering how to use express to build a web app.
 - **[`/reverse-engineer'](./reverse-engineer)**: projects with a `demo.min.js` file to reverse-engineer
   - 🐣 `/textidor-series`
-  - 🐥 `/entries-manager`, `/cowsaydex`
+  - 🐥 `/cowsaydex`
 - 🥚🐣🐥🐔 **[`/example-apps`](./example-apps)**: a variety of projects to study, some are simple and some are advanced. Enjoy!
 - 🐔 [`/node-fetchemon'](./node-fetchemon)
 - 🐔 [node-practice-replace](https://github.com/hackyourfuturebelgium/node-practice-replace) (separate repo)

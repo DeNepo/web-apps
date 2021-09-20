@@ -155,6 +155,7 @@ References and Practice to help you master this module.
   - [http.cat](https://http.cat/)
 
 ### Express
+
 - [What is Express?](https://www.besanttechnologies.com/what-is-expressjs)
 - [LearnWebCode](https://www.youtube.com/watch?v=z7ikpQCWbtQ)
 - [Traversy: Express.js Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE)
@@ -231,9 +232,7 @@ References and Practice to help you master this module.
   - Install [NVM (node version manager)](https://github.com/nvm-sh/nvm)
   - Make sure you have the latest Node.js installed (16._._)
   - [The Net Ninja, Introduction to Node.js](https://youtu.be/zb3Qk8SG5Ms)(video, for this week watch at least first 2 lessons or up to 5th, unfortunately lesson 6 about Express is outdated due to the new version of Express, where some methods were deprecated)
-- **[Postman](https://www.postman.com/)**: install it and make an API request
-   -[Postman tutorial](https://youtu.be/VywxIQ2ZXw4) (video, you need only first half 'Unit 1')
--**Express**
+- **[Postman](https://www.postman.com/)**: install it and make an API request -[Postman tutorial](https://youtu.be/VywxIQ2ZXw4) (video, you need only first half 'Unit 1') -**Express**
   - [What is Express?](https://www.besanttechnologies.com/what-is-expressjs)(article)
   - [LearnWebCode](https://www.youtube.com/watch?v=z7ikpQCWbtQ)(video)
 - **Error-First Callbacks**
@@ -494,5 +493,13 @@ continue group project
    5. [Slack clone part 1](https://vimeo.com/589768369)
    6. [Slack clone part 2](https://vimeo.com/589768677)
    7. [Monday review session](https://vimeo.com/588250826)
+1. Week 2:
+   - [part 1](https://vimeo.com/manage/591000419/general)
+   - [part 2](https://vimeo.com/manage/591002265/general)
+1. Week 3:
+   - [part 1](https://vimeo.com/manage/594234206/general)
+   - [part 2](https://vimeo.com/manage/594235051/general)
+1. [Week 4](https://vimeo.com/manage/598760351/general)
+1. [Week 5](https://vimeo.com/manage/604636340/general)
 
 </details>

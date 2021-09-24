@@ -181,7 +181,7 @@ References and Practice to help you master this module.
 - **[`/reverse-engineer'](./reverse-engineer)**: projects with a `demo.min.js` file to reverse-engineer
   - 🐣 `/textidor-series`
   - 🐥 `/cowsaydex`
-- 🥚🐣🐥🐔 **[`/example-apps`](./example-apps)**: a variety of projects to study, some are simple and some are advanced. Enjoy!
+- 🥚🐣🐥🐔 **[`/example-apps`](./example-apps)**: a variety of projects to study with code organized in different ways. some are simple and some are advanced. Enjoy!
 - 🐔 [`/node-fetchemon'](./node-fetchemon)
 - 🐔 [node-practice-replace](https://github.com/hackyourfuturebelgium/node-practice-replace) (separate repo)
 - 🐔 [pokedex-api](https://github.com/hackyourfuturebelgium/pokedex-api) (separate repo)

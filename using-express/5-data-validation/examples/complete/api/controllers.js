@@ -1,6 +1,6 @@
 const businessLogic = require('./business-logic');
 
-const handlers = {
+const controllers = {
   create: async (req, res) => {
     const newProfile = req.body;
 
@@ -107,4 +107,4 @@ const handlers = {
   },
 };
 
-module.exports = handlers;
+module.exports = controllers;

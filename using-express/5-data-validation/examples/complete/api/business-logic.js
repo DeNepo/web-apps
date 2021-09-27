@@ -24,7 +24,7 @@ const businessLogic = {
 
     profilesData.profiles.push(newProfile);
 
-    await dataAccess.write(newProfileDataString);
+    await dataAccess.write(profilesData);
 
     return {
       profile: newProfile,

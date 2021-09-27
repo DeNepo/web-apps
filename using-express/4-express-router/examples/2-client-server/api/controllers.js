@@ -1,4 +1,4 @@
-const handlers = {
+const controllers = {
   readValues: (req, res) => {
     const paramValue = req.params.value;
     const queryValue = req.query.value;
@@ -17,4 +17,4 @@ const handlers = {
   },
 };
 
-module.exports = handlers;
+module.exports = controllers;

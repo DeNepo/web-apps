@@ -1,4 +1,4 @@
-const handlers = require('./handlers.js');
+const controllers = require('./controllers.js');
 const express = require('express');
 
 const router = express.Router();
@@ -12,10 +12,10 @@ router.get('/', (req, res) => {
   res.send('routes!');
 });
 
-router.get('/say-hello', handlers.sayHello);
+router.get('/say-hello', controllers.sayHello);
 
-router.get('/say-bye', handlers.sayBye);
+router.get('/say-bye', controllers.sayBye);
 
-router.post('/do-something', handlers.doSomething);
+router.post('/do-something', controllers.doSomething);
 
 module.exports = router;

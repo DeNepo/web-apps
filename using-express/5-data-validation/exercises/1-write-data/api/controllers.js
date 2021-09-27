@@ -9,7 +9,7 @@ const DATA_PATH = path.join(__dirname, '..', 'data', 'animals-data.json');
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
-const handlers = {
+const controllers = {
   create: async (req, res) => {
     const newAnimal = req.body;
 
@@ -173,4 +173,4 @@ const handlers = {
   },
 };
 
-module.exports = handlers;
+module.exports = controllers;

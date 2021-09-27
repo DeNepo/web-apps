@@ -1,4 +1,4 @@
-const handlers = {
+const controllers = {
   sayHello: (req, res) => {
     const name = req.query.name;
     const reply = `Hello ${name}! Your tree is ${req.query.tree}`;
@@ -17,4 +17,4 @@ const handlers = {
   },
 };
 
-module.exports = handlers;
+module.exports = controllers;

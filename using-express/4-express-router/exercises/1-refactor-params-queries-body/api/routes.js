@@ -1,4 +1,4 @@
-const handlers = require('./handlers.js');
+const controllers = require('./controllers.js');
 const express = require('express');
 
 // create the router

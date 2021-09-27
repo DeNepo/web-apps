@@ -1,4 +1,4 @@
-const handlers = require('./handlers.js');
+const controllers = require('./controllers.js');
 const express = require('express');
 
 const router = express.Router();
@@ -12,6 +12,6 @@ router.get('/', (req, res) => {
   res.send('routes!');
 });
 
-router.post('/:value', handlers.readValues);
+router.post('/:value', controllers.readValues);
 
 module.exports = router;

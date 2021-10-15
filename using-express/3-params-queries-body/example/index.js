@@ -9,8 +9,8 @@ const logger = require('./middleware/logger');
 const app = express();
 
 app.use(logger);
-app.use(bodyParser.json());
-app.use(bodyParser.raw({ type: 'text/plain' }));
+app.use(express.json());
+app.use(express.raw({ type: 'text/plain' }));
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 

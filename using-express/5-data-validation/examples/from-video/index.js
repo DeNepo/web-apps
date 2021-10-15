@@ -1,11 +1,12 @@
 'use strict';
 
 const express = require('express');
-const bodyParser = require('body-parser');
+
 const tv4 = require('tv4');
 
 const app = express();
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const inputSchema = require('./input-schema.json');

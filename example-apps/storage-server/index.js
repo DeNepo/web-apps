@@ -1,7 +1,7 @@
 'use strict';
 
 // require dependencies
-const bodyParser = require('body-parser');
+
 const express = require('express');
 const morgan = require('morgan');
 
@@ -11,6 +11,7 @@ const { readData, writeData, deleteData } = require('./data-access');
 const app = express();
 
 // use parsing and logging middleware
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 

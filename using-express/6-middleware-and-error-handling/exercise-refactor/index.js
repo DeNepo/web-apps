@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const express = require('express');
-const bodyParser = require('body-parser');
+
 const datefns = require('date-fns');
 
 const config = require('./config');
@@ -13,6 +13,7 @@ const FILE_DIR = path.join(__dirname, config.FILES_DIR);
 
 const app = express();
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {

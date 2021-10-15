@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 const express = require('express');
-const bodyParser = require('body-parser');
+
 const config = require('./config');
 const logger = require('./middleware/logger');
 
@@ -11,6 +11,7 @@ const FILE_DIR = `${__dirname}/files`;
 
 const app = express();
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 

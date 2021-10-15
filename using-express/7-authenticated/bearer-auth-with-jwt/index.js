@@ -6,7 +6,6 @@ const readAsync = util.promisify(fs.readFile);
 const writeAsync = util.promisify(fs.writeFile);
 const deleteAsync = util.promisify(fs.unlink);
 
-const bodyParser = require('body-parser');
 const express = require('express');
 const morgan = require('morgan');
 const moment = require('moment');
@@ -17,6 +16,7 @@ const signingSecret =
 
 const app = express();
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 

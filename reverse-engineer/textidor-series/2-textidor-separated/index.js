@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const bodyParser = require('body-parser');
+
 const morgan = require('morgan');
 const cors = require('cors');
 const fs = require('fs');
@@ -17,6 +17,7 @@ const app = express();
 // allow Cross Origin Resource Sharing
 app.use(cors());
 // parse the body
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // https://github.com/expressjs/morgan#write-logs-to-a-file

@@ -17,7 +17,7 @@ const app = express();
 // allow Cross Origin Resource Sharing
 app.use(cors());
 // parse the body
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 
 // https://github.com/expressjs/morgan#write-logs-to-a-file
 const accessLogStream = fs.createWriteStream(

@@ -11,7 +11,7 @@ const { readData, writeData, deleteData } = require('./data-access');
 const app = express();
 
 // use parsing and logging middleware
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 // define routes

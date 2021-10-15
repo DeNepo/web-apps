@@ -17,7 +17,7 @@ const config = require('./config');
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 
 // log to file
 app.use(

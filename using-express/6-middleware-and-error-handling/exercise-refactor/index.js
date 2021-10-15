@@ -13,7 +13,7 @@ const FILE_DIR = path.join(__dirname, config.FILES_DIR);
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
   const currentDatetime = new Date();

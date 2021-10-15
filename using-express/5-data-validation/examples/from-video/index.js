@@ -6,7 +6,7 @@ const tv4 = require('tv4');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 
 const inputSchema = require('./input-schema.json');
 

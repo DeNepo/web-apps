@@ -13,7 +13,7 @@ const moment = require('moment');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 app.post('/login', async (req, res, next) => {

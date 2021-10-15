@@ -11,7 +11,7 @@ const FILE_DIR = `${__dirname}/files`;
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 
 app.use((req, res, next) => {

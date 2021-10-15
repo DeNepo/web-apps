@@ -11,7 +11,7 @@ const morgan = require('morgan');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 app.use('/data/:username', async (req, res, next) => {

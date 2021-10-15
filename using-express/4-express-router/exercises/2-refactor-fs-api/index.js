@@ -19,7 +19,7 @@ const FILES_DIR = path.join(__dirname, config.FILES_DIR);
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 
 // log to file
 app.use(

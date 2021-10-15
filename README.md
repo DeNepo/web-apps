@@ -103,7 +103,7 @@ References and Practice to help you master this module.
 - packages for serious:
   - [node-fetch](https://github.com/node-fetch/node-fetch) - Make API requests from Node
   - [express](https://github.com/expressjs/express) - Minimalist web framework for node
-  - [body-parser](https://github.com/expressjs/body-parser) - Parse HTTP request body into JS object
+  - [express.urlencoded()](https://www.geeksforgeeks.org/express-js-express-urlencoded-function/) - Parse HTTP request body into JS object
   - [cors](https://github.com/expressjs/cors) - Cross Origin Resource Sharing for Express
   - [morgan](https://github.com/expressjs/morgan) - logging for Express
   - [joi](https://github.com/hapijs/joi), [tv4](https://github.com/geraintluff/tv4) - JSON schemas & validation

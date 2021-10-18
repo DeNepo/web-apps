@@ -409,7 +409,7 @@ continue group project
   - Give your name
   - and a helpful description
 
-<details open>
+<details>
 <summary><strong>Class 7-8</strong></summary>
 <br>
 
@@ -434,9 +434,7 @@ continue group project
 
 </details>
 
----
-
-<details open>
+<details>
 <summary><strong>Class 9-10</strong></summary>
 <br>
 
@@ -462,9 +460,7 @@ continue group project
 
 </details>
 
----
-
-<details open>
+<details>
 <summary><strong>Class 11-12</strong></summary>
 <br>
 
@@ -477,9 +473,7 @@ continue group project
 
 </details>
 
----
-
-<details open>
+<details>
 <summary><strong>Class 13-14</strong></summary>
 <br>
 
@@ -493,13 +487,23 @@ continue group project
    5. [Slack clone part 1](https://vimeo.com/589768369)
    6. [Slack clone part 2](https://vimeo.com/589768677)
    7. [Monday review session](https://vimeo.com/588250826)
-1. Week 2:
+2. Week 2:
    - [part 1](https://vimeo.com/manage/591000419/general)
    - [part 2](https://vimeo.com/manage/591002265/general)
-1. Week 3:
+3. Week 3:
    - [part 1](https://vimeo.com/manage/594234206/general)
    - [part 2](https://vimeo.com/manage/594235051/general)
-1. [Week 4](https://vimeo.com/manage/598760351/general)
-1. [Week 5](https://vimeo.com/manage/604636340/general)
+4. [Week 4](https://vimeo.com/manage/598760351/general)
+5. [Week 5](https://vimeo.com/manage/604636340/general)
+
+</details>
+
+<details>
+<summary><strong>Class 15</strong></summary>
+<br>
+
+> [Yoshi](https://github.com/yoshimalaise)
+
+- Week 1: [Developing an Express API - API data to the file system](https://vimeo.com/manage/628980023/general)
 
 </details>

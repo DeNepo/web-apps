@@ -21,7 +21,7 @@
     "chalk": "^4.1.0",
     "cowsay": "^1.4.0",
     "date-fns": "^2.23.0",
-    "dependency-cruiser": "^10.0.6",
+    "dependency-cruiser": "^12.3.0",
     "graphviz-cli": "^1.0.0",
     "jest": "^27.0.6",
     "node-fetch": "^2.6.0",
